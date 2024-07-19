@@ -152,10 +152,10 @@ def generate_html_table(successful_results):
     rendered_html = template.render(successful_results=successful_results)
 
     # Save the rendered HTML to a file
-    with open('movie_results.html', 'w', encoding='utf-8') as html_file:
+    with open('downloaded.html', 'w', encoding='utf-8') as html_file:
         html_file.write(rendered_html)
 
-    print('HTML file generated successfully: movie_results.html')
+    print('HTML file generated successfully: downloaded.html')
 
 # Function to process video files from multiple directories
 def process_video_files(directories, tmdb_api_key):
