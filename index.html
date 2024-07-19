@@ -31,6 +31,12 @@
             max-height: 225px;
             object-fit: cover;
         }
+        a {
+            color: #1a0dab;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -46,7 +52,7 @@
     <table id="movieTable">
         <thead>
             <tr>
-                <th onclick="sortTable(0)">Poster</th>
+                <th>Poster</th>
                 <th onclick="sortTable(1)">Title</th>
                 <th onclick="sortTable(2)">Genre</th>
                 <th onclick="sortTable(3)">Year</th>
@@ -57,6 +63,7 @@
                 <th>TMDB Link</th>
                 <th>Toloka Link</th>
                 <th>Rutracker Link</th>
+                <th>Trailer</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -130,6 +137,13 @@
                     const creditsData = await creditsResponse.json();
                     const director = creditsData.crew.find(person => person.job === 'Director')?.name || 'N/A';
 
+                    // Fetching the movie videos to get the trailer
+                    const videosUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${tmdbApiKey}`;
+                    const videosResponse = await fetch(videosUrl);
+                    const videosData = await videosResponse.json();
+                    const trailer = videosData.results.find(video => video.type === 'Trailer');
+                    const trailerLink = trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : 'N/A';
+
                     const movieData = {
                         poster: moviePosterPath,
                         title: movieTitle,
@@ -142,6 +156,7 @@
                         tmdbLink: tmdbLink,
                         tolokaLink: tolokaLink,
                         rutrackerLink: rutrackerLink,
+                        trailer: trailerLink,
                         id: movieId
                     };
 
@@ -162,7 +177,7 @@
 
         function isDuplicateMovie(movieId) {
             const movies = JSON.parse(localStorage.getItem('movies')) || [];
-            return movies.some(movie => movie.id === movieId);
+            return movies.some(movie => movie.id === parseInt(movieId));
         }
 
         function saveMovieToLocalStorage(movieData) {
@@ -190,6 +205,7 @@
                     <td><a href="${movie.tmdbLink}" target="_blank">${movie.tmdbLink}</a></td>
                     <td><a href="${movie.tolokaLink}" target="_blank">${movie.tolokaLink}</a></td>
                     <td><a href="${movie.rutrackerLink}" target="_blank">${movie.rutrackerLink}</a></td>
+                    <td><a href="${movie.trailer}" target="_blank">${movie.trailer}</a></td>
                     <td><button onclick="removeMovie('${movie.id}')">Remove</button></td>
                 `;
                 tbody.appendChild(row);
@@ -208,7 +224,6 @@
             displayMoviesFromLocalStorage();
         }
 
-
         function removeAllMovies() {
             localStorage.removeItem('movies');
             displayMoviesFromLocalStorage();
@@ -218,13 +233,10 @@
             const table = document.querySelector('#movieTable');
             const rows = Array.from(table.querySelectorAll('tbody tr'));
             const isAscending = table.querySelectorAll('th')[columnIndex].classList.contains('asc');
-            rows.sort((rowA, rowB) => {
-                const cellA = rowA.children[columnIndex].textContent.trim();
-                const cellB = rowB.children[columnIndex].textContent.trim();
 
-                if (!isNaN(cellA) && !isNaN(cellB)) {
-                    return isAscending ? cellA - cellB : cellB - cellA;
-                }
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.children[columnIndex].innerText.trim();
+                const cellB = rowB.children[columnIndex].innerText.trim();
                 return isAscending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
             });
 
