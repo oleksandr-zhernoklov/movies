@@ -3,702 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Results</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <title>Movie Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin-top: 10px;
+        }
+        .poster {
+            max-width: 150px;
+            max-height: 225px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
+    <h1>Movie Search</h1>
+    <input type="text" id="movieInput" placeholder="Enter movie name">
+    <button onclick="searchMovie()">Search</button>
+    <button onclick="removeAllMovies()">Remove All</button>
 
-<h2>Successful Results</h2>
+    <h2>Movie Results</h2>
+    <table id="movieTable">
+        <thead>
+            <tr>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Length</th>
+                <th>Rating</th>
+                <th>Description</th>
+                <th>Director</th>
+                <th>TMDB Link</th>
+                <th>Toloka Link</th>
+                <th>Rutracker Link</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Movie results will be added here -->
+        </tbody>
+    </table>
 
-<table id="movieTable" class="tablesorter">
-    <thead>
-        <tr>
-            <th>File</th>
-            <th>File Size (GB)</th>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>TMDB ID</th>
-            <th>Year</th>
-            <th>TMDB Link</th>
-            <th>Description</th>
-            <th>Rating</th>
-            <th>Downloaded</th>
-            <th>Watched</th>
-        </tr>
-    </thead>
-    <tbody>
+    <div class="links">
+        <a href="downloaded.html" target="_self">View Downloaded Page</a>
+    </div>
 
-  
-            
-                <tr>
-                    <td>D:/Movies\Taxi Driver (1976) [4K Remastered] BDRip 1080p H.265 [2xUKR_ENG] [Hurtom].mkv</td>
-                    <td>7.31</td>
-                    <td>Taxi Driver</td>
-                    <td>Crime, Drama</td>
-                    <td>103</td>
-                    <td>1976</td>
-                    <td><a href="https://www.themoviedb.org/movie/103" target="_blank">https://www.themoviedb.org/movie/103</a></td>
-                    <td>A mentally unstable Vietnam War veteran works as a night-time taxi driver in New York City where the perceived decadence and sleaze feed his urge for violent action.</td>
-                    <td>8.15</td>
-                    
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Baraka (1992) [Sub Ukr Eng] BDRip 720p DTS [Hurtom].mkv</td>
-                    <td>4.37</td>
-                    <td>Baraka</td>
-                    <td>Documentary</td>
-                    <td>14002</td>
-                    <td>1992</td>
-                    <td><a href="https://www.themoviedb.org/movie/14002" target="_blank">https://www.themoviedb.org/movie/14002</a></td>
-                    <td>A paralysingly beautiful documentary with a global vision—an odyssey through landscape and time—that attempts to capture the essence of life.</td>
-                    <td>8.225</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Before Sunrise (1995) WEB-DL 720p [ukr eng] [Hurtom].mkv</td>
-                    <td>3.17</td>
-                    <td>Before Sunrise</td>
-                    <td>Drama, Romance</td>
-                    <td>76</td>
-                    <td>1995</td>
-                    <td><a href="https://www.themoviedb.org/movie/76" target="_blank">https://www.themoviedb.org/movie/76</a></td>
-                    <td>A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.</td>
-                    <td>7.971</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Yi yi (2000) BDRip-AVC.mkv</td>
-                    <td>2.92</td>
-                    <td>Yi Yi</td>
-                    <td>Drama</td>
-                    <td>25538</td>
-                    <td>2000</td>
-                    <td><a href="https://www.themoviedb.org/movie/25538" target="_blank">https://www.themoviedb.org/movie/25538</a></td>
-                    <td>Each member of a family in Taipei asks hard questions about life's meaning as they live through everyday quandaries. NJ is morose: his brother owes him money, his mother is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions.</td>
-                    <td>7.871</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Amores perros (2000) [ukrspa] BDRip 720p [Hurtom].mkv</td>
-                    <td>5.2</td>
-                    <td>Amores Perros</td>
-                    <td>Drama, Thriller</td>
-                    <td>55</td>
-                    <td>2000</td>
-                    <td><a href="https://www.themoviedb.org/movie/55" target="_blank">https://www.themoviedb.org/movie/55</a></td>
-                    <td>A fatalistic car crash in Mexico city sets off a chain of events in the lives of three people: a supermodel, a young man wanting to run off with his sister-in-law, and a homeless man. Their lives are catapulted into unforeseen situations instigated by the seemingly inconsequential destiny of a dog.</td>
-                    <td>7.635</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Y tu mama tambien - І твою маму теж (2001).mkv</td>
-                    <td>2.05</td>
-                    <td>Y Tu Mamá También</td>
-                    <td>Drama, Romance</td>
-                    <td>1391</td>
-                    <td>2001</td>
-                    <td><a href="https://www.themoviedb.org/movie/1391" target="_blank">https://www.themoviedb.org/movie/1391</a></td>
-                    <td>In Mexico, two teenage boys and an attractive older woman embark on a road trip and learn a thing or two about life, friendship, sex, and each other.</td>
-                    <td>7.416</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Identity (2003) BDRip 720p.mkv</td>
-                    <td>4.7</td>
-                    <td>Identity</td>
-                    <td>Mystery, Thriller</td>
-                    <td>2832</td>
-                    <td>2003</td>
-                    <td><a href="https://www.themoviedb.org/movie/2832" target="_blank">https://www.themoviedb.org/movie/2832</a></td>
-                    <td>Complete strangers stranded at a remote desert motel during a raging storm soon find themselves the target of a deranged murderer. As their numbers thin out, the travelers begin to turn on each other, as each tries to figure out who the killer is.</td>
-                    <td>7.18</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\2046 (2004) [UkrChi] BDRip-AVC [Hurtom].mkv</td>
-                    <td>2.49</td>
-                    <td>2046</td>
-                    <td>Drama, Science Fiction, Romance</td>
-                    <td>844</td>
-                    <td>2004</td>
-                    <td><a href="https://www.themoviedb.org/movie/844" target="_blank">https://www.themoviedb.org/movie/844</a></td>
-                    <td>Women enter and exit a science fiction author's life over the course of a few years after the author loses the woman he considers his one true love.</td>
-                    <td>7.2</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Eternal Sunshine of the Spotless Mind (2004).mkv</td>
-                    <td>7.56</td>
-                    <td>Eternal Sunshine of the Spotless Mind</td>
-                    <td>Science Fiction, Drama, Romance</td>
-                    <td>38</td>
-                    <td>2004</td>
-                    <td><a href="https://www.themoviedb.org/movie/38" target="_blank">https://www.themoviedb.org/movie/38</a></td>
-                    <td>Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake.</td>
-                    <td>8.099</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\The Machinist (2004) BDRip 1080p H.265 [UKR_ENG] [Hurtom].mkv</td>
-                    <td>8.16</td>
-                    <td>The Machinist</td>
-                    <td>Thriller, Drama</td>
-                    <td>4553</td>
-                    <td>2004</td>
-                    <td><a href="https://www.themoviedb.org/movie/4553" target="_blank">https://www.themoviedb.org/movie/4553</a></td>
-                    <td>Trevor, an insomniac lathe operator, experiences unusual occurrences at work and home. A strange man follows him everywhere, but no one else seems to notice him.</td>
-                    <td>7.5</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Flawless (2007) BDRip 1080p UkrEng  Sub Eng.mkv</td>
-                    <td>7.8</td>
-                    <td>Flawless</td>
-                    <td>Crime, Drama, Thriller</td>
-                    <td>13195</td>
-                    <td>2007</td>
-                    <td><a href="https://www.themoviedb.org/movie/13195" target="_blank">https://www.themoviedb.org/movie/13195</a></td>
-                    <td>A female executive and a night janitor conspire to commit a daring diamond heist from their mutual employer, The London Diamond Corporation.</td>
-                    <td>6.671</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\The Ramen Girl (2008) [UkrEng] BDRip-AVC [Hurtom].mkv</td>
-                    <td>1.87</td>
-                    <td>The Ramen Girl</td>
-                    <td>Romance, Comedy, Drama</td>
-                    <td>18585</td>
-                    <td>2008</td>
-                    <td><a href="https://www.themoviedb.org/movie/18585" target="_blank">https://www.themoviedb.org/movie/18585</a></td>
-                    <td>An American woman is stranded in Tokyo after breaking up with her boyfriend. Searching for direction in life, she trains to be a râmen chef under a tyrannical Japanese master.</td>
-                    <td>6.437</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\A Single Man (2009) BDRip-AVC [2xUKR_ENG] [Hurtom].mkv</td>
-                    <td>2.34</td>
-                    <td>A Single Man</td>
-                    <td>Drama, Romance</td>
-                    <td>34653</td>
-                    <td>2009</td>
-                    <td><a href="https://www.themoviedb.org/movie/34653" target="_blank">https://www.themoviedb.org/movie/34653</a></td>
-                    <td>The life of George Falconer, a British college professor, is reeling with the recent and sudden loss of his longtime partner. This traumatic event makes George challenge his own will to live as he seeks the console of his close girl friend Charley, who is struggling with her own questions about life.</td>
-                    <td>7.281</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Frequently Asked Questions About Time Travel (2009) WEB-DL 1080p [UKR_ENG] [Hurtom].mkv</td>
-                    <td>5.87</td>
-                    <td>Frequently Asked Questions About Time Travel</td>
-                    <td>Comedy, Drama, Romance, Science Fiction</td>
-                    <td>22494</td>
-                    <td>2009</td>
-                    <td><a href="https://www.themoviedb.org/movie/22494" target="_blank">https://www.themoviedb.org/movie/22494</a></td>
-                    <td>Follows three social outcasts -- two geeks and a cynic -- as they attempt to navigate a time-travel conundrum in the middle of a British pub. Faris plays a girl from the future who sets the adventure in motion.</td>
-                    <td>6.887</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Carnage (2011) BDRip 1080p H.265 [UKR_ENG].mkv</td>
-                    <td>2.73</td>
-                    <td>Carnage</td>
-                    <td>Comedy, Drama</td>
-                    <td>72113</td>
-                    <td>2011</td>
-                    <td><a href="https://www.themoviedb.org/movie/72113" target="_blank">https://www.themoviedb.org/movie/72113</a></td>
-                    <td>After 11-year-old Zachary Cowan strikes his classmate across the face with a stick after an argument, the victim's parents invite Zachary's parents to their Brooklyn apartment to deal with the incident in a civilized manner.</td>
-                    <td>7.2</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\The Tree of Life (2011) BDRip-AVC.mkv</td>
-                    <td>3.16</td>
-                    <td>The Tree of Life</td>
-                    <td>Drama, Fantasy</td>
-                    <td>8967</td>
-                    <td>2011</td>
-                    <td><a href="https://www.themoviedb.org/movie/8967" target="_blank">https://www.themoviedb.org/movie/8967</a></td>
-                    <td>The impressionistic story of a Texas family in the 1950s. The film follows the life journey of the eldest son, Jack, through the innocence of childhood to his disillusioned adult years as he tries to reconcile a complicated relationship with his father. Jack finds himself a lost soul in the modern world, seeking answers to the origins and meaning of life while questioning the existence of faith.</td>
-                    <td>6.743</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Jagten (2012) BDRip 1080p H.265 [2xUKR_DAN] [Hurtom].mkv</td>
-                    <td>5.89</td>
-                    <td>The Hunt</td>
-                    <td>Drama</td>
-                    <td>103663</td>
-                    <td>2012</td>
-                    <td><a href="https://www.themoviedb.org/movie/103663" target="_blank">https://www.themoviedb.org/movie/103663</a></td>
-                    <td>A teacher lives a lonely life, all the while struggling over his son’s custody. His life slowly gets better as he finds love and receives good news from his son, but his new luck is about to be brutally shattered by an innocent little lie.</td>
-                    <td>8.1</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Lawless (2012) BDRip-AVC.mkv</td>
-                    <td>1.75</td>
-                    <td>Lawless</td>
-                    <td>Crime, Drama, Western</td>
-                    <td>82633</td>
-                    <td>2012</td>
-                    <td><a href="https://www.themoviedb.org/movie/82633" target="_blank">https://www.themoviedb.org/movie/82633</a></td>
-                    <td>In 1931, the Bondurant brothers of Franklin County, Virginia, run a multipurpose backwoods establishment that hides their true business — bootlegging. Middle brother Forrest is the brain of the operation; older Howard is the brawn, and younger Jack, the lookout. Though the local police have taken bribes and left the brothers alone, a violent war erupts when a sadistic lawman from Chicago arrives and tries to shut down the Bondurants operation.</td>
-                    <td>7.055</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\12 Years a Slave (2013) BDRip-AVC [2xUkrEng] [Hurtom].mkv</td>
-                    <td>3.12</td>
-                    <td>12 Years a Slave</td>
-                    <td>Drama, History</td>
-                    <td>76203</td>
-                    <td>2013</td>
-                    <td><a href="https://www.themoviedb.org/movie/76203" target="_blank">https://www.themoviedb.org/movie/76203</a></td>
-                    <td>In the pre-Civil War United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery. Facing cruelty as well as unexpected kindnesses Solomon struggles not only to stay alive, but to retain his dignity. In the twelfth year of his unforgettable odyssey, Solomon’s chance meeting with a Canadian abolitionist will forever alter his life.</td>
-                    <td>7.943</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Before Midnight (2013) BDRip 1080p H.265 [Criterion Collection] [Ukr_Eng [Hurtom].mkv</td>
-                    <td>5.31</td>
-                    <td>Before Midnight</td>
-                    <td>Romance, Drama</td>
-                    <td>132344</td>
-                    <td>2013</td>
-                    <td><a href="https://www.themoviedb.org/movie/132344" target="_blank">https://www.themoviedb.org/movie/132344</a></td>
-                    <td>It has been nine years since we last met Jesse and Celine, the French-American couple who once met on a train in Vienna. They now live in Paris with twin daughters but have spent a summer in Greece at the invitation of an author colleague of Jesse's. When the vacation is over and Jesse must send his teenage son off to the States, he begins to question his life decisions, and his relationship with Celine is at risk.</td>
-                    <td>7.514</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Enemy (2013) BDRip 1080p H.265 [UKR_ENG].mkv</td>
-                    <td>5.88</td>
-                    <td>Enemy</td>
-                    <td>Thriller, Mystery</td>
-                    <td>181886</td>
-                    <td>2014</td>
-                    <td><a href="https://www.themoviedb.org/movie/181886" target="_blank">https://www.themoviedb.org/movie/181886</a></td>
-                    <td>A mild-mannered college professor discovers a look-alike actor and delves into the other man's private affairs.</td>
-                    <td>6.876</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\UKR\Креденс (2013) [Ukr] SATRip [Hurtom].avi</td>
-                    <td>1.35</td>
-                    <td>Credenza</td>
-                    <td>Drama</td>
-                    <td>305257</td>
-                    <td>2014</td>
-                    <td><a href="https://www.themoviedb.org/movie/305257" target="_blank">https://www.themoviedb.org/movie/305257</a></td>
-                    <td>Christmas Lviv. Cellist Orest is entangled in a chain of personal, domestic and work problems. And at some point it reaches the boiling point.</td>
-                    <td>0.0</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Il racconto dei racconti  (2015) BDRip-AVC [UKR_ENG] [Hurtom].mkv</td>
-                    <td>2.65</td>
-                    <td>Tale of Tales</td>
-                    <td>Romance, Fantasy, Horror</td>
-                    <td>314405</td>
-                    <td>2015</td>
-                    <td><a href="https://www.themoviedb.org/movie/314405" target="_blank">https://www.themoviedb.org/movie/314405</a></td>
-                    <td>The Queen of Selvascura risks everything to be a mother; the King of Roccaforte falls in love with the voice of a mysterious girl; the King of Altomonte becomes obsessed with a flea and neglects his daughter.</td>
-                    <td>6.399</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Love (2015) BDRip 720p [UKR_ENG] [Hurtom].mkv</td>
-                    <td>4.95</td>
-                    <td>Love</td>
-                    <td>Drama, Romance</td>
-                    <td>292431</td>
-                    <td>2015</td>
-                    <td><a href="https://www.themoviedb.org/movie/292431" target="_blank">https://www.themoviedb.org/movie/292431</a></td>
-                    <td>Murphy is an American living in Paris who enters a highly sexually and emotionally charged relationship with the unstable Electra. Unaware of the seismic effect it will have on their relationship, they invite their pretty neighbor into their bed.</td>
-                    <td>6.4</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Mia madre (2015) [UkrIta; Sub UkrItaEng] BDRip-AVC [Hurtom].mkv</td>
-                    <td>1.26</td>
-                    <td>Mia madre</td>
-                    <td>Drama</td>
-                    <td>315872</td>
-                    <td>2015</td>
-                    <td><a href="https://www.themoviedb.org/movie/315872" target="_blank">https://www.themoviedb.org/movie/315872</a></td>
-                    <td>Margherita, a director in the middle of an existential crisis, has to deal with the inevitable and still unacceptable loss of her mother.</td>
-                    <td>6.6</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Queen of the Desert (2015) BDRip-AVC [Ukr.Eng] [Sub Ukr.Eng] [Hurtom].mkv</td>
-                    <td>1.91</td>
-                    <td>Queen of the Desert</td>
-                    <td>Drama, Adventure, History</td>
-                    <td>157843</td>
-                    <td>2015</td>
-                    <td><a href="https://www.themoviedb.org/movie/157843" target="_blank">https://www.themoviedb.org/movie/157843</a></td>
-                    <td>A chronicle of Gertrude Bell's life, a traveler, writer, archaeologist, explorer, cartographer, and political attaché for the British Empire at the dawn of the twentieth century.</td>
-                    <td>5.901</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Trainwreck (2015) BDRip-AVC [2xUKR_ENG] [Hurtom].mkv</td>
-                    <td>2.35</td>
-                    <td>Trainwreck</td>
-                    <td>Comedy, Romance</td>
-                    <td>271718</td>
-                    <td>2015</td>
-                    <td><a href="https://www.themoviedb.org/movie/271718" target="_blank">https://www.themoviedb.org/movie/271718</a></td>
-                    <td>Having thought that monogamy was never possible, a commitment-phobic career woman may have to face her fears when she meets a good guy.</td>
-                    <td>5.804</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Our Kind of Traitor (2016) BDRip 720p [ukr eng] [Hurtom].mkv</td>
-                    <td>4.28</td>
-                    <td>Our Kind of Traitor</td>
-                    <td>Thriller</td>
-                    <td>205588</td>
-                    <td>2016</td>
-                    <td><a href="https://www.themoviedb.org/movie/205588" target="_blank">https://www.themoviedb.org/movie/205588</a></td>
-                    <td>A young Oxford academic and his attorney girlfriend holiday in Morocco. They bump into a Russian millionaire who owns a peninsula and a diamond watch. He wants a game of tennis. What else he wants propels the lovers on a tortuous journey to the City of London and its unholy alliance with Britain's intelligence establishment, to Paris and the Alps.</td>
-                    <td>6.032</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\My Grandmother Fanny Kaplan (2016) WEB-DL 1080p [UKR] [Hurtom].mkv</td>
-                    <td>3.11</td>
-                    <td>My Grandmother Fanny Kaplan</td>
-                    <td>Drama</td>
-                    <td>407856</td>
-                    <td>2016</td>
-                    <td><a href="https://www.themoviedb.org/movie/407856" target="_blank">https://www.themoviedb.org/movie/407856</a></td>
-                    <td>The film focuses on the little-known love affair of the terrorist Fanny Kaplan with the brother of Vladimir Lenin, Dmitriy Ilyich Ulyanov, and questions whether she really tried to assassinate Lenin in 1918.</td>
-                    <td>5.833</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Marshall (2017) BDRip 1080p H.265 [UKR_ENG] [Hurtom].mkv</td>
-                    <td>5.74</td>
-                    <td>Marshall</td>
-                    <td>Drama</td>
-                    <td>392982</td>
-                    <td>2017</td>
-                    <td><a href="https://www.themoviedb.org/movie/392982" target="_blank">https://www.themoviedb.org/movie/392982</a></td>
-                    <td>Thurgood Marshall, the first African-American Supreme Court Justice, battles through one of his career-defining cases.</td>
-                    <td>7.252</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Oxygène (2021) WEB-DL 1080p [UKR][FRA][Hurtom].mkv</td>
-                    <td>8.98</td>
-                    <td>Oxygen</td>
-                    <td>Science Fiction, Thriller, Horror</td>
-                    <td>471498</td>
-                    <td>2021</td>
-                    <td><a href="https://www.themoviedb.org/movie/471498" target="_blank">https://www.themoviedb.org/movie/471498</a></td>
-                    <td>A woman wakes in a cryogenic chamber with no recollection of how she got there, and must find a way out before running out of air.</td>
-                    <td>6.616</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Beast (2022) BDRip 1080p H.265 [UKR_ENG] [Hurtom].mkv</td>
-                    <td>5.08</td>
-                    <td>Beast</td>
-                    <td>Thriller, Action, Horror</td>
-                    <td>760741</td>
-                    <td>2022</td>
-                    <td><a href="https://www.themoviedb.org/movie/760741" target="_blank">https://www.themoviedb.org/movie/760741</a></td>
-                    <td>A recently widowed man and his two teenage daughters travel to a game reserve in South Africa. However, their journey of healing soon turns into a fight for survival when a bloodthirsty lion starts to stalk them.</td>
-                    <td>6.637</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Lamborghini. The Man Behind the Legend (2022) BDRip 1080p [2xUkr.Eng] [Sub Eng] [Hurtom].mkv</td>
-                    <td>5.31</td>
-                    <td>Lamborghini: The Man Behind the Legend</td>
-                    <td>Drama, History</td>
-                    <td>457232</td>
-                    <td>2022</td>
-                    <td><a href="https://www.themoviedb.org/movie/457232" target="_blank">https://www.themoviedb.org/movie/457232</a></td>
-                    <td>Follow the launch of Lamborghini’s career as a manufacturer of tractors, a creator of military vehicles during World War II, and the designer of Lamborghini cars, which he launched in 1963 as the high-end sports car company Automobili Lamborghini.</td>
-                    <td>6.468</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\The Lost City (2022) BDRip 1080p [2xUKR_ENG] [Hurtom].mkv</td>
-                    <td>13.24</td>
-                    <td>The Lost City</td>
-                    <td>Action, Adventure, Comedy</td>
-                    <td>752623</td>
-                    <td>2022</td>
-                    <td><a href="https://www.themoviedb.org/movie/752623" target="_blank">https://www.themoviedb.org/movie/752623</a></td>
-                    <td>Reclusive author Loretta Sage writes about exotic places in her popular adventure novels that feature a handsome cover model named Alan. While on tour promoting her new book with Alan, Loretta gets kidnapped by an eccentric billionaire who hopes she can lead him to the ancient city's lost treasure that featured in her latest story. Alan, determined to prove he can be a hero in real life and not just on the pages of her books, sets off to rescue her.</td>
-                    <td>6.517</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Bones and All (2022) BDRip 1080p H.265 [Ukr_Eng] [Hurtom].mkv</td>
-                    <td>6.63</td>
-                    <td>Bones and All</td>
-                    <td>Drama, Horror, Romance</td>
-                    <td>791177</td>
-                    <td>2022</td>
-                    <td><a href="https://www.themoviedb.org/movie/791177" target="_blank">https://www.themoviedb.org/movie/791177</a></td>
-                    <td>Abandoned by her father, a young woman embarks on a thousand-mile odyssey through the backroads of America where she meets a disenfranchised drifter. But despite their best efforts, all roads lead back to their terrifying pasts and to a final stand that will determine whether their love can survive their otherness.</td>
-                    <td>7.069</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Dog (2022) WEB-DL .2160p H.265 HDR [Ukr_Eng] [Hurtom].mkv</td>
-                    <td>10.55</td>
-                    <td>Dog</td>
-                    <td>Drama, Comedy</td>
-                    <td>626735</td>
-                    <td>2022</td>
-                    <td><a href="https://www.themoviedb.org/movie/626735" target="_blank">https://www.themoviedb.org/movie/626735</a></td>
-                    <td>An army ranger and his dog embark on a road trip along the Pacific Coast Highway to attend a friend's funeral.</td>
-                    <td>7.337</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\American Fiction (2023) WEB-DLRip-AVC [Ukr.Eng] [Sub Eng] [ExTerminus].mkv</td>
-                    <td>1.74</td>
-                    <td>American Fiction</td>
-                    <td>Comedy, Drama</td>
-                    <td>1056360</td>
-                    <td>2023</td>
-                    <td><a href="https://www.themoviedb.org/movie/1056360" target="_blank">https://www.themoviedb.org/movie/1056360</a></td>
-                    <td>A novelist fed up with the establishment profiting from "Black" entertainment uses a pen name to write a book that propels him into the heart of hypocrisy and the madness he claims to disdain.</td>
-                    <td>7.3</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\La vie pour de vrai (2023) BDRip-AVC [Ukr.Fre] [Sub Fre] [ExTerminus].mkv</td>
-                    <td>2.35</td>
-                    <td>Life For Real</td>
-                    <td>Comedy</td>
-                    <td>967370</td>
-                    <td>2023</td>
-                    <td><a href="https://www.themoviedb.org/movie/967370" target="_blank">https://www.themoviedb.org/movie/967370</a></td>
-                    <td>Tridan Lagache has spent his whole life at Club Med, changing friends every 8 days. At 50, he resigns from the vacation spot where he was born, determined to track down his great mini-club childhood love, Violette.
- He shows up in Paris, naïve and lost but glad to be lodged by Louis, a half-brother he never knew he had. In order to be rid of the cumbersome Tridan, Louis passes one of his fling off as Violette, and Tridan, all emotional, thinks he recognizes her at first glance.</td>
-                    <td>5.402</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\A Family Affair (2024) WEB-DL 1080p HDR DV Ukr Eng [Hurtom].mkv</td>
-                    <td>3.31</td>
-                    <td>A Family Affair</td>
-                    <td>Romance, Comedy</td>
-                    <td>987686</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/987686" target="_blank">https://www.themoviedb.org/movie/987686</a></td>
-                    <td>The only thing worse than being the assistant to a high-maintenance movie star who doesn't take you seriously? Finding out he's smitten with your mom.</td>
-                    <td>6.05</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Bob Marley One Love (2024) WEB-DL 1080p Ukr.Eng [Hurtom].mkv</td>
-                    <td>5.89</td>
-                    <td>Bob Marley: One Love</td>
-                    <td>Music, History, Drama</td>
-                    <td>802219</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/802219" target="_blank">https://www.themoviedb.org/movie/802219</a></td>
-                    <td>Jamaican singer-songwriter Bob Marley overcomes adversity to become the most famous reggae musician in the world.</td>
-                    <td>6.9</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Mea Culpa (2024) WEB-DL 1080p [Ukr.Eng] [sub Ukr.Eng].mkv</td>
-                    <td>5.32</td>
-                    <td>Mea Culpa</td>
-                    <td>Drama, Crime, Thriller</td>
-                    <td>1090874</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/1090874" target="_blank">https://www.themoviedb.org/movie/1090874</a></td>
-                    <td>A criminal defense attorney must choose between family, duty and her own dangerous desires when she takes on the case of an artist accused of murder.</td>
-                    <td>5.8</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Romantik Hirsiz (2024) WEB-DL 1080p [Ukr.Tur] Sub Ukr.Eng] [ExTerminus].mkv</td>
-                    <td>4.31</td>
-                    <td>Art of Love</td>
-                    <td>Romance, Action, Drama</td>
-                    <td>1248795</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/1248795" target="_blank">https://www.themoviedb.org/movie/1248795</a></td>
-                    <td>After learning that the art thief she has been chasing is her ex-lover, an officer working for Interpol concocts a plan to catch him red-handed.</td>
-                    <td>6.457</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>D:/Movies\Будинок «Слово» (2017) WEB-DL 1080p [UKR] [Hurtom].mkv</td>
-                    <td>2.38</td>
-                    <td>“Slovo” House. Unfinished Novel</td>
-                    <td>Drama</td>
-                    <td>876910</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/876910" target="_blank">https://www.themoviedb.org/movie/876910</a></td>
-                    <td>Kharkiv, the 1930s. The heyday of Ukrainian art. Ambitious young poet Vladimir Akimov happily settles in at the new luxury "Slovo" House built specifically for artists. He comes from the provinces and works as a proof-reader in a printing press, and has never even dreamed of living under one roof with prominent Ukrainian writers and artists. He thinks his own poetry is genius, but nobody takes his literary efforts seriously, not to mention the occasional chuckles over his epigone poems. But fate smiles at him. The head of the political intelligence agency suggests that he become the author of a play written earlier. Akimov agrees, signing a non- disclosure note. The poet has no idea what price he will pay for this success. “‘Slovo’ House” is a story about a generation of Ukrainian artists persecuted by the totalitarian system, unfolding against the backdrop of one of the largest genocides of the 20th century: the Holodomor, which caused the death of almost 7 million people.</td>
-                    <td>8.75</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Arthur the King (2024) WEB-DL 1080p [Ukr_Eng] [Hurtom].mkv</td>
-                    <td>5.84</td>
-                    <td>Arthur the King</td>
-                    <td>Adventure, Drama</td>
-                    <td>618588</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/618588" target="_blank">https://www.themoviedb.org/movie/618588</a></td>
-                    <td>Over the course of ten days and 435 miles, an unbreakable bond is forged between pro adventure racer Michael Light and a scrappy street dog companion dubbed Arthur. As the team is pushed to their outer limits of endurance in the race, Arthur redefines what victory, loyalty and friendship truly mean.</td>
-                    <td>7.928</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Challengers (2024) WEB-DL 1080p H264 [UKR_ENG] [Hurtom].mkv</td>
-                    <td>9.6</td>
-                    <td>Challengers</td>
-                    <td>Romance, Drama</td>
-                    <td>937287</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/937287" target="_blank">https://www.themoviedb.org/movie/937287</a></td>
-                    <td>Tennis player turned coach Tashi has taken her husband, Art, and transformed him into a world-famous Grand Slam champion. To jolt him out of his recent losing streak, she signs him up for a "Challenger" event — close to the lowest level of pro tournament — where he finds himself standing across the net from his former best friend and Tashi's former boyfriend.</td>
-                    <td>7.198</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-                <tr>
-                    <td>C:/Users/zhern/Videos\Miller's Girl (2024) WEB-DL 1080p [Ukr.Eng] [Sub Eng] [ExTerminus].mkv</td>
-                    <td>6.29</td>
-                    <td>Miller's Girl</td>
-                    <td>Thriller, Comedy, Drama</td>
-                    <td>1026436</td>
-                    <td>2024</td>
-                    <td><a href="https://www.themoviedb.org/movie/1026436" target="_blank">https://www.themoviedb.org/movie/1026436</a></td>
-                    <td>Gothic Tennessean high school senior and writer Cairo studies literature under Jonathan Miller, an author who turned to teaching when his novels failed to take off. Being a bookworm, she’d already read his assigned reading, leaving him impressed. He takes her under his wing as his star pupil, and the two spend time together outside the school grounds, attending writing events. Cairo's lesbian best friend Winnie – amused by flirting with the school's coach to get what she wants – convinces her to use her writing to seduce the already-wed Miller. When Miller assigns her a midterm assignment earlier than everyone else, she uses his prompt to project her inner desires about him onto the page, catapulting them into a controversial situation.</td>
-                    <td>6.8</td>
-            <td><input type="checkbox" class="downloaded"></td>
-            <td><input type="checkbox" class="watched"></td>
-</tr>
-            
-            </tbody>
-        </table>
-        
-        <script>
-        $(document).ready(function() {
-            $("#movieTable").tablesorter();
-        
-            // Load saved checkbox states from localStorage
-            $('input[type="checkbox"]').each(function() {
-                var checkboxId = $(this).closest('tr').find('td').eq(2).text() + '_' + $(this).attr('class');
-                $(this).prop('checked', localStorage.getItem(checkboxId) === 'true');
+    <script>
+        const tmdbApiKey = 'fb70d4fb95572e0ddd9bc99f90734e46';
+        const genreMapping = {
+            28: 'Action',
+            12: 'Adventure',
+            16: 'Animation',
+            35: 'Comedy',
+            80: 'Crime',
+            99: 'Documentary',
+            18: 'Drama',
+            10751: 'Family',
+            14: 'Fantasy',
+            36: 'History',
+            27: 'Horror',
+            10402: 'Music',
+            9648: 'Mystery',
+            10749: 'Romance',
+            878: 'Science Fiction',
+            10770: 'TV Movie',
+            53: 'Thriller',
+            10752: 'War',
+            37: 'Western'
+        };
+
+        function getGenreName(genreIds) {
+            return genreIds.map(id => genreMapping[id] || 'Unknown').join(', ');
+        }
+
+        async function searchMovie() {
+            const movieName = document.querySelector('#movieInput').value.trim();
+            if (!movieName) {
+                alert('Please enter a movie name');
+                return;
+            }
+
+            const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&query=${encodeURIComponent(movieName)}`;
+            try {
+                const searchResponse = await fetch(searchUrl);
+                const searchData = await searchResponse.json();
+
+                if (searchData.results.length > 0) {
+                    const movie = searchData.results[0];
+                    const movieId = movie.id;
+                    const movieTitle = movie.title;
+                    const movieGenreIds = movie.genre_ids;
+                    const movieYear = new Date(movie.release_date).getFullYear();
+                    const moviePosterPath = movie.poster_path ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` : 'https://via.placeholder.com/200x300?text=No+Poster';
+
+                    const detailsUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${tmdbApiKey}`;
+                    const detailsResponse = await fetch(detailsUrl);
+                    const detailsData = await detailsResponse.json();
+
+                    const movieDescription = detailsData.overview || 'N/A';
+                    const movieRating = detailsData.vote_average || 'N/A';
+                    const movieLength = detailsData.runtime ? `${detailsData.runtime} mins` : 'N/A';
+                    const tmdbLink = `https://www.themoviedb.org/movie/${movieId}`;
+                    const tolokaLink = `https://toloka.to/tracker.php?nm=${encodeURIComponent(movieTitle)}`;
+                    const rutrackerLink = `https://rutracker.org/forum/tracker.php?nm=${encodeURIComponent(movieTitle)}`;
+
+                    // Fetching the movie credits to get the director
+                    const creditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${tmdbApiKey}`;
+                    const creditsResponse = await fetch(creditsUrl);
+                    const creditsData = await creditsResponse.json();
+                    const director = creditsData.crew.find(person => person.job === 'Director')?.name || 'N/A';
+
+                    const movieData = {
+                        poster: moviePosterPath,
+                        title: movieTitle,
+                        genre: getGenreName(movieGenreIds),
+                        year: movieYear,
+                        length: movieLength,
+                        rating: movieRating,
+                        description: movieDescription,
+                        director: director,
+                        tmdbLink: tmdbLink,
+                        tolokaLink: tolokaLink,
+                        rutrackerLink: rutrackerLink
+                    };
+
+                    saveMovieToLocalStorage(movieData);
+                    displayMoviesFromLocalStorage();
+                } else {
+                    alert('No movie found');
+                }
+            } catch (error) {
+                alert('Failed to retrieve movie information');
+                console.error('Error:', error);
+            }
+        }
+
+        function saveMovieToLocalStorage(movieData) {
+            let movies = JSON.parse(localStorage.getItem('movies')) || [];
+            movies.push(movieData);
+            localStorage.setItem('movies', JSON.stringify(movies));
+        }
+
+        function displayMoviesFromLocalStorage() {
+            const tbody = document.querySelector('#movieTable tbody');
+            tbody.innerHTML = ''; // Clear previous results
+
+            let movies = JSON.parse(localStorage.getItem('movies')) || [];
+            movies.forEach(movie => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${movie.poster}" alt="${movie.title} Poster" class="poster"></td>
+                    <td>${movie.title}</td>
+                    <td>${movie.genre}</td>
+                    <td>${movie.year}</td>
+                    <td>${movie.length}</td>
+                    <td>${movie.rating}</td>
+                    <td>${movie.description}</td>
+                    <td>${movie.director}</td>
+                    <td><a href="${movie.tmdbLink}" target="_blank">${movie.tmdbLink}</a></td>
+                    <td><a href="${movie.tolokaLink}" target="_blank">${movie.tolokaLink}</a></td>
+                    <td><a href="${movie.rutrackerLink}" target="_blank">${movie.rutrackerLink}</a></td>
+                    <td><button onclick="removeMovie('${movie.title}')">Remove</button></td>
+                `;
+                tbody.appendChild(row);
             });
-        
-            // Save checkbox state to localStorage on change
-            $('input[type="checkbox"]').change(function() {
-                var checkboxId = $(this).closest('tr').find('td').eq(2).text() + '_' + $(this).attr('class');
-                localStorage.setItem(checkboxId, $(this).prop('checked'));
-            });
-        });
-        </script>
-        
-        </body>
-        </html>
-        
+        }
+
+        function removeMovie(title) {
+            let movies = JSON.parse(localStorage.getItem('movies')) || [];
+            movies = movies.filter(movie => movie.title !== title);
+            localStorage.setItem('movies', JSON.stringify(movies));
+            displayMoviesFromLocalStorage();
+        }
+
+        function removeAllMovies() {
+            localStorage.removeItem('movies');
+            displayMoviesFromLocalStorage();
+        }
+
+        // Display movies from localStorage when the page loads
+        displayMoviesFromLocalStorage();
+    </script>
+</body>
+</html>

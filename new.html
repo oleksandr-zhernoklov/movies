@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDB Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .poster {
+            max-width: 150px;
+            max-height: 225px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>TMDB Features</h1>
+
+    <h2>Popular Movies</h2>
+    <button onclick="fetchPopularMovies()">Fetch Popular Movies</button>
+    <table id="popularMoviesTable">
+        <thead>
+            <tr>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Overview</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Popular movies will be added here -->
+        </tbody>
+    </table>
+
+    <script>
+        const tmdbApiKey = 'fb70d4fb95572e0ddd9bc99f90734e46';
+
+        async function fetchPopularMovies() {
+            const url = `https://api.themoviedb.org/3/movie/popular?api_key=${tmdbApiKey}`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const movies = data.results;
+
+                const tbody = document.querySelector('#popularMoviesTable tbody');
+                tbody.innerHTML = ''; // Clear previous results
+
+                movies.forEach(movie => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title} Poster" class="poster"></td>
+                        <td>${movie.title}</td>
+                        <td>${movie.overview}</td>
+                        <td>${movie.release_date}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error fetching popular movies:', error);
+            }
+        }
+    </script>
+</body>
+</html>
