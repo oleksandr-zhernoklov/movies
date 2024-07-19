@@ -18,6 +18,7 @@
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
+            cursor: pointer;
         }
         th {
             background-color: #f2f2f2;
@@ -33,10 +34,10 @@
     </style>
 </head>
 <body>
+    <h1>Movie Search</h1>
     <div class="links">
         <a href="downloaded.html" target="_self">View Downloaded Page</a>
     </div>
-    <h1>Movie Search</h1>
     <input type="text" id="movieInput" placeholder="Enter movie name">
     <button onclick="searchMovie()">Search</button>
     <button onclick="removeAllMovies()">Remove All</button>
@@ -45,14 +46,14 @@
     <table id="movieTable">
         <thead>
             <tr>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Length</th>
-                <th>Rating</th>
-                <th>Description</th>
-                <th>Director</th>
+                <th onclick="sortTable(0)">Poster</th>
+                <th onclick="sortTable(1)">Title</th>
+                <th onclick="sortTable(2)">Genre</th>
+                <th onclick="sortTable(3)">Year</th>
+                <th onclick="sortTable(4)">Length</th>
+                <th onclick="sortTable(5)">Rating</th>
+                <th onclick="sortTable(6)">Description</th>
+                <th onclick="sortTable(7)">Director</th>
                 <th>TMDB Link</th>
                 <th>Toloka Link</th>
                 <th>Rutracker Link</th>
@@ -63,8 +64,6 @@
             <!-- Movie results will be added here -->
         </tbody>
     </table>
-
-
 
     <script>
         const tmdbApiKey = 'fb70d4fb95572e0ddd9bc99f90734e46';
@@ -197,6 +196,25 @@
         function removeAllMovies() {
             localStorage.removeItem('movies');
             displayMoviesFromLocalStorage();
+        }
+
+        function sortTable(columnIndex) {
+            const table = document.querySelector('#movieTable');
+            const rows = Array.from(table.querySelectorAll('tbody tr'));
+            const isAscending = table.querySelectorAll('th')[columnIndex].classList.contains('asc');
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.children[columnIndex].textContent.trim();
+                const cellB = rowB.children[columnIndex].textContent.trim();
+
+                if (!isNaN(cellA) && !isNaN(cellB)) {
+                    return isAscending ? cellA - cellB : cellB - cellA;
+                }
+                return isAscending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+            });
+
+            table.querySelector('tbody').append(...rows);
+            table.querySelectorAll('th').forEach(th => th.classList.remove('asc', 'desc'));
+            table.querySelectorAll('th')[columnIndex].classList.add(isAscending ? 'desc' : 'asc');
         }
 
         // Display movies from localStorage when the page loads
