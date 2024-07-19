@@ -197,11 +197,17 @@
         }
 
         function removeMovie(movieId) {
+            console.log(`Removing movie with ID: ${movieId}`);
             let movies = JSON.parse(localStorage.getItem('movies')) || [];
-            movies = movies.filter(movie => movie.id !== movieId);
+            console.log('Movies before removal:', JSON.stringify(movies));
+
+            movies = movies.filter(movie => movie.id !== parseInt(movieId));
+            console.log('Movies after removal:', JSON.stringify(movies));
+
             localStorage.setItem('movies', JSON.stringify(movies));
             displayMoviesFromLocalStorage();
         }
+
 
         function removeAllMovies() {
             localStorage.removeItem('movies');
