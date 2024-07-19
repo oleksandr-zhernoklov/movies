@@ -141,11 +141,16 @@
                         director: director,
                         tmdbLink: tmdbLink,
                         tolokaLink: tolokaLink,
-                        rutrackerLink: rutrackerLink
+                        rutrackerLink: rutrackerLink,
+                        id: movieId
                     };
 
-                    saveMovieToLocalStorage(movieData);
-                    displayMoviesFromLocalStorage();
+                    if (!isDuplicateMovie(movieId)) {
+                        saveMovieToLocalStorage(movieData);
+                        displayMoviesFromLocalStorage();
+                    } else {
+                        alert('Movie already exists in the list.');
+                    }
                 } else {
                     alert('No movie found');
                 }
@@ -153,6 +158,11 @@
                 alert('Failed to retrieve movie information');
                 console.error('Error:', error);
             }
+        }
+
+        function isDuplicateMovie(movieId) {
+            const movies = JSON.parse(localStorage.getItem('movies')) || [];
+            return movies.some(movie => movie.id === movieId);
         }
 
         function saveMovieToLocalStorage(movieData) {
@@ -180,15 +190,15 @@
                     <td><a href="${movie.tmdbLink}" target="_blank">${movie.tmdbLink}</a></td>
                     <td><a href="${movie.tolokaLink}" target="_blank">${movie.tolokaLink}</a></td>
                     <td><a href="${movie.rutrackerLink}" target="_blank">${movie.rutrackerLink}</a></td>
-                    <td><button onclick="removeMovie('${movie.title}')">Remove</button></td>
+                    <td><button onclick="removeMovie('${movie.id}')">Remove</button></td>
                 `;
                 tbody.appendChild(row);
             });
         }
 
-        function removeMovie(title) {
+        function removeMovie(movieId) {
             let movies = JSON.parse(localStorage.getItem('movies')) || [];
-            movies = movies.filter(movie => movie.title !== title);
+            movies = movies.filter(movie => movie.id !== movieId);
             localStorage.setItem('movies', JSON.stringify(movies));
             displayMoviesFromLocalStorage();
         }
