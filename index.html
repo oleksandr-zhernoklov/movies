@@ -37,6 +37,9 @@
         a:hover {
             text-decoration: underline;
         }
+        .file-input {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -47,8 +50,12 @@
     <input type="text" id="movieInput" placeholder="Enter movie name">
     <button onclick="searchMovie()">Search</button>
     <button onclick="removeAllMovies()">Remove All</button>
+    <button onclick="exportMovies()">Export Movies</button>
+    <label for="importFile" class="button">Import Movies</label>
+    <input type="file" id="importFile" class="file-input" accept=".json" onchange="importMovies(event)">
 
     <h2>Movie Results</h2>
+    <div id="summary"></div>
     <table id="movieTable">
         <thead>
             <tr>
@@ -71,6 +78,7 @@
             <!-- Movie results will be added here -->
         </tbody>
     </table>
+    <p id="rowCount">Total Movies: 0</p>
 
     <script>
         const tmdbApiKey = 'fb70d4fb95572e0ddd9bc99f90734e46';
@@ -163,6 +171,7 @@
                     if (!isDuplicateMovie(movieId)) {
                         saveMovieToLocalStorage(movieData);
                         displayMoviesFromLocalStorage();
+                        displaySummary(movieData);
                     } else {
                         alert('Movie already exists in the list.');
                     }
@@ -210,16 +219,32 @@
                 `;
                 tbody.appendChild(row);
             });
+
+            document.getElementById('rowCount').innerText = `Total Movies: ${movies.length}`;
+        }
+
+        function displaySummary(movieData) {
+            const summary = document.querySelector('#summary');
+            summary.innerHTML = `
+                <h3>Last Added Movie</h3>
+                <img src="${movieData.poster}" alt="${movieData.title} Poster" class="poster">
+                <p>Title: ${movieData.title}</p>
+                <p>Genre: ${movieData.genre}</p>
+                <p>Year: ${movieData.year}</p>
+                <p>Length: ${movieData.length}</p>
+                <p>Rating: ${movieData.rating}</p>
+                <p>Description: ${movieData.description}</p>
+                <p>Director: ${movieData.director}</p>
+                <p>TMDB Link: <a href="${movieData.tmdbLink}" target="_blank">${movieData.tmdbLink}</a></p>
+                <p>Toloka Link: <a href="${movieData.tolokaLink}" target="_blank">${movieData.tolokaLink}</a></p>
+                <p>Rutracker Link: <a href="${movieData.rutrackerLink}" target="_blank">${movieData.rutrackerLink}</a></p>
+                <p>Trailer: <a href="${movieData.trailer}" target="_blank">${movieData.trailer}</a></p>
+            `;
         }
 
         function removeMovie(movieId) {
-            console.log(`Removing movie with ID: ${movieId}`);
             let movies = JSON.parse(localStorage.getItem('movies')) || [];
-            console.log('Movies before removal:', JSON.stringify(movies));
-
             movies = movies.filter(movie => movie.id !== parseInt(movieId));
-            console.log('Movies after removal:', JSON.stringify(movies));
-
             localStorage.setItem('movies', JSON.stringify(movies));
             displayMoviesFromLocalStorage();
         }
@@ -231,7 +256,7 @@
 
         function sortTable(columnIndex) {
             const table = document.querySelector('#movieTable');
-            const rows = Array.from(table.querySelectorAll('tbody tr'));
+            const rows = Array.from(table.querySelectorAll('tbody > tr'));
             const isAscending = table.querySelectorAll('th')[columnIndex].classList.contains('asc');
 
             rows.sort((rowA, rowB) => {
@@ -243,6 +268,38 @@
             table.querySelector('tbody').append(...rows);
             table.querySelectorAll('th').forEach(th => th.classList.remove('asc', 'desc'));
             table.querySelectorAll('th')[columnIndex].classList.add(isAscending ? 'desc' : 'asc');
+        }
+
+        function exportMovies() {
+            const movies = JSON.parse(localStorage.getItem('movies')) || [];
+            const blob = new Blob([JSON.stringify(movies, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'movies.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function importMovies(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const importedMovies = JSON.parse(e.target.result);
+                    let existingMovies = JSON.parse(localStorage.getItem('movies')) || [];
+
+                    importedMovies.forEach(importedMovie => {
+                        if (!existingMovies.some(movie => movie.id === importedMovie.id)) {
+                            existingMovies.push(importedMovie);
+                        }
+                    });
+
+                    localStorage.setItem('movies', JSON.stringify(existingMovies));
+                    displayMoviesFromLocalStorage();
+                };
+                reader.readAsText(file);
+            }
         }
 
         // Display movies from localStorage when the page loads
