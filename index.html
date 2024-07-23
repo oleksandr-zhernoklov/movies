@@ -164,6 +164,8 @@
                     searchMovie();
                 }, 100);
             });
+
+            displayMoviesFromLocalStorage(); // Load existing movies on page load
         });
 
         function searchMovie() {
@@ -359,7 +361,26 @@
                 const reader = new FileReader();
                 reader.onload = () => {
                     const movies = JSON.parse(reader.result);
-                    localStorage.setItem('movies', JSON.stringify(movies));
+                    // Ensure all movies have the new attributes
+                    const updatedMovies = movies.map(movie => ({
+                        title: movie.title || '',
+                        genre: movie.genre || '',
+                        year: movie.year || '',
+                        length: movie.length || '',
+                        rating: movie.rating || '',
+                        description: movie.description || '',
+                        director: movie.director || '',
+                        actors: movie.actors || '',
+                        review: movie.review || '',
+                        tmdbLink: movie.tmdbLink || '',
+                        imdbLink: movie.imdbLink || '',
+                        tolokaLink: movie.tolokaLink || '',
+                        rutrackerLink: movie.rutrackerLink || '',
+                        trailer: movie.trailer || '',
+                        poster: movie.poster || '',
+                        id: movie.id || null
+                    }));
+                    localStorage.setItem('movies', JSON.stringify(updatedMovies));
                     displayMoviesFromLocalStorage();
                 };
                 reader.readAsText(file);
@@ -375,26 +396,24 @@
                 reader.onload = () => {
                     const rows = reader.result.split('\n').map(row => row.split(','));
                     const header = rows.shift();
-                    const movies = rows.map(row => {
-                        return {
-                            title: row[0],
-                            genre: row[1],
-                            year: row[2],
-                            length: row[3],
-                            rating: row[4],
-                            description: row[5],
-                            director: row[6],
-                            actors: row[7],
-                            review: row[8],
-                            tmdbLink: row[9],
-                            imdbLink: row[10],
-                            tolokaLink: row[11],
-                            rutrackerLink: row[12],
-                            trailer: row[13],
-                            poster: '', // CSV does not include poster URLs, you may want to add this field or manage separately
-                            id: parseInt(row[9].match(/movie\/(\d+)/)[1]) // Extract TMDB ID from URL
-                        };
-                    });
+                    const movies = rows.map(row => ({
+                        title: row[0] || '',
+                        genre: row[1] || '',
+                        year: row[2] || '',
+                        length: row[3] || '',
+                        rating: row[4] || '',
+                        description: row[5] || '',
+                        director: row[6] || '',
+                        actors: row[7] || '',
+                        review: row[8] || '',
+                        tmdbLink: row[9] || '',
+                        imdbLink: row[10] || '',
+                        tolokaLink: row[11] || '',
+                        rutrackerLink: row[12] || '',
+                        trailer: row[13] || '',
+                        poster: '', // CSV does not include poster URLs
+                        id: parseInt(row[9].match(/movie\/(\d+)/)?.[1] || null) // Extract TMDB ID from URL
+                    }));
                     localStorage.setItem('movies', JSON.stringify(movies));
                     displayMoviesFromLocalStorage();
                 };
