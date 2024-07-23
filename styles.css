@@ -4,8 +4,18 @@ body {
     flex-direction: column;
     align-items: center;
 }
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
 #searchForm {
-    margin: 20px;
+    display: flex;
+    align-items: center;
 }
 input[type="text"] {
     padding: 10px;
@@ -14,7 +24,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-button, a.button {
+button, a.button, label.button {
     padding: 10px;
     font-size: 16px;
     margin-right: 5px;
@@ -29,12 +39,12 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-a.button {
+a.button, label.button {
     text-decoration: none;
     color: white;
     background-color: #28a745;
 }
-a.button:hover {
+a.button:hover, label.button:hover {
     background-color: #218838;
 }
 #summary {
@@ -42,6 +52,8 @@ a.button:hover {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 #movieTable {
     width: 100%;
@@ -74,4 +86,6 @@ a.button:hover {
     margin: 10px;
     font-size: 16px;
     font-weight: bold;
+    width: 100%;
+    text-align: left;
 }

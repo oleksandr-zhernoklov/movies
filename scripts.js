@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     displayMoviesFromLocalStorage();
     
     const searchInput = document.querySelector('#search');
+    
     searchInput.addEventListener('paste', (event) => {
-        event.preventDefault();
-        const pastedText = event.clipboardData.getData('text');
-        searchInput.value = pastedText;
-        searchMovie();
+        setTimeout(() => {
+            searchMovie();
+        }, 100);
     });
     
     searchInput.addEventListener('keydown', (event) => {
