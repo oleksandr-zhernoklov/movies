@@ -14,69 +14,71 @@ header {
 }
 #controls {
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ccc;
 }
-#controls button, #controls a {
-    margin: 0 5px;
+input[type="text"] {
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    text-align: center;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
-#controls button:hover, #controls a:hover {
+button, a.button {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+}
+button:hover {
     background-color: #0056b3;
+}
+a.button {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+}
+a.button:hover {
+    background-color: #218838;
+}
+#summary {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 #movieTable {
     width: 100%;
     border-collapse: collapse;
-    margin: 0;
+    margin: 10px 0;
 }
 #movieTable th, #movieTable td {
     border: 1px solid #ddd;
     padding: 8px;
 }
 #movieTable th {
-    background-color: #007bff;
-    color: white;
-}
-#movieTable .collapsible {
-    display: none;
-}
-#movieTable .collapsible.expanded {
-    display: table-cell;
+    background-color: #f4f4f4;
 }
 #movieTable td img.poster {
-    max-width: 100px;
+    width: 50px;
+    height: auto;
 }
-#summary {
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-}
-#summary p {
-    margin: 5px 0;
-}
-.collapsed {
-    max-height: 50px;
+.collapsible {
     overflow: hidden;
-    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
 }
-.collapsed::after {
-    content: '...';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: white;
-    padding-left: 10px;
+.collapsible.expanded {
+    white-space: normal;
+    max-width: none;
 }
-.expanded {
-    max-height: none;
+#rowCount {
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }

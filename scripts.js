@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#search').value = pastedText;
         searchMovie();
     });
+    document.querySelector('#search').focus();
 });
 
 function searchMovie() {
@@ -21,10 +22,9 @@ function searchMovie() {
 
 function toggleReviewColumn() {
     const reviewColumn = document.querySelector('#movieTable th.collapsible');
-    reviewColumn.classList.toggle('collapsed');
-    document.querySelectorAll('#movieTable td.collapsible').forEach(td => {
-        td.classList.toggle('collapsed');
-    });
+    const reviewCells = document.querySelectorAll('#movieTable td.collapsible');
+    reviewColumn.classList.toggle('expanded');
+    reviewCells.forEach(td => td.classList.toggle('expanded'));
 }
 
 function addMovieToLocalStorage(movieData) {
@@ -51,10 +51,10 @@ function displayMoviesFromLocalStorage() {
             <td>${movie.year}</td>
             <td>${movie.length}</td>
             <td>${movie.rating}</td>
-            <td>${movie.description}</td>
-            <td>${movie.director}</td>
-            <td>${movie.actors}</td>
-            <td class="collapsible ${movie.review ? 'expanded' : 'collapsed'}">${movie.review}</td>
+            <td>${movie.description || 'N/A'}</td>
+            <td>${movie.director || 'N/A'}</td>
+            <td class="collapsible">${movie.actors || 'N/A'}</td>
+            <td class="collapsible">${movie.review || 'N/A'}</td>
             <td><a href="${movie.tmdbLink}" target="_blank">TMDB</a></td>
             <td><a href="${movie.imdbLink}" target="_blank">IMDb</a></td>
             <td><a href="${movie.tolokaLink}" target="_blank">Toloka</a></td>
@@ -91,10 +91,10 @@ function displaySummary(movieData) {
         <p><strong>Year:</strong> ${movieData.year}</p>
         <p><strong>Length:</strong> ${movieData.length}</p>
         <p><strong>Rating:</strong> ${movieData.rating}</p>
-        <p><strong>Description:</strong> ${movieData.description}</p>
-        <p><strong>Director:</strong> ${movieData.director}</p>
-        <p><strong>Actors:</strong> ${movieData.actors}</p>
-        <p><strong>Review:</strong> ${movieData.review}</p>
+        <p><strong>Description:</strong> ${movieData.description || 'N/A'}</p>
+        <p><strong>Director:</strong> ${movieData.director || 'N/A'}</p>
+        <p><strong>Actors:</strong> ${movieData.actors || 'N/A'}</p>
+        <p><strong>Review:</strong> ${movieData.review || 'N/A'}</p>
         <p><strong>TMDB Link:</strong> <a href="${movieData.tmdbLink}" target="_blank">${movieData.tmdbLink}</a></p>
         <p><strong>IMDb Link:</strong> <a href="${movieData.imdbLink}" target="_blank">${movieData.imdbLink}</a></p>
         <p><strong>Toloka Link:</strong> <a href="${movieData.tolokaLink}" target="_blank">${movieData.tolokaLink}</a></p>
@@ -129,10 +129,10 @@ function exportMoviesCSV() {
             movie.year,
             movie.length,
             movie.rating,
-            movie.description,
-            movie.director,
-            movie.actors,
-            movie.review,
+            movie.description || 'N/A',
+            movie.director || 'N/A',
+            movie.actors || 'N/A',
+            movie.review || 'N/A',
             movie.tmdbLink,
             movie.imdbLink,
             movie.tolokaLink,
