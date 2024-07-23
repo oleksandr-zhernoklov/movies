@@ -133,24 +133,29 @@
             10752: 'War',
             37: 'Western'
         };
+        document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector('#movieInput');
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const movieInput = document.querySelector('#movieInput');
-            movieInput.focus(); // Focus on search input on load
+    // Focus on the search input field on page load
+    searchInput.focus();
 
-            movieInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    document.querySelector('#searchButton').click(); // Trigger search on Enter key
-                }
-            });
+    // Event listener for search input
+    searchInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent default action
+            searchMovie(); // Trigger search
+        }
+    });
 
-            document.addEventListener('paste', (e) => {
-                const pastedData = e.clipboardData.getData('text');
-                movieInput.value = pastedData;
-            });
+    // Handle paste event to put pasted text into the search input
+    searchInput.addEventListener('paste', function(event) {
+        event.preventDefault();
+        const pasteData = (event.clipboardData || window.clipboardData).getData('text');
+        searchInput.value = pasteData; // Set the pasted text to the input
+        searchMovie(); // Trigger search after pasting
+    });
+});
 
-            displayMoviesFromLocalStorage(); // Display movies from localStorage when the page loads
-        });
 
         function getGenreName(genreIds) {
             return genreIds.map(id => genreMapping[id] || 'Unknown').join(', ');
