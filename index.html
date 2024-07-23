@@ -20,7 +20,7 @@
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 8px;
             text-align: left;
         }
         th {
@@ -32,13 +32,13 @@
             background-color: #0056b3;
         }
         button, label.button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
+            margin: 5px;
+            padding: 8px 15px;
+            font-size: 14px;
             background-color: #007bff;
             color: #ffffff;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
         }
         button:hover, label.button:hover {
@@ -135,12 +135,20 @@
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('#movieInput').focus(); // Focus on search input on load
-            document.querySelector('#movieInput').addEventListener('keypress', (e) => {
+            const movieInput = document.querySelector('#movieInput');
+            movieInput.focus(); // Focus on search input on load
+
+            movieInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     document.querySelector('#searchButton').click(); // Trigger search on Enter key
                 }
             });
+
+            document.addEventListener('paste', (e) => {
+                const pastedData = e.clipboardData.getData('text');
+                movieInput.value = pastedData;
+            });
+
             displayMoviesFromLocalStorage(); // Display movies from localStorage when the page loads
         });
 
