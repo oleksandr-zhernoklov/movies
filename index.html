@@ -14,11 +14,11 @@
     <a href="downloaded.html" class="button">Downloaded Movies</a>
     <button onclick="exportMovies()">Export to JSON</button>
     <button onclick="exportMoviesCSV()">Export to CSV</button>
-    <button onclick="removeAllMovies()">Remove All</button>
     <input type="file" id="importMoviesJSON" style="display:none;" onchange="importMoviesJSON(event)">
     <label for="importMoviesJSON" class="button">Import from JSON</label>
     <input type="file" id="importMoviesCSV" style="display:none;" onchange="importMoviesCSV(event)">
     <label for="importMoviesCSV" class="button">Import from CSV</label>
+    <button onclick="removeAllMovies()" style="float: right;">Remove All</button>
     <div id="summary"></div>
     <div id="rowCount"></div>
     <table id="movieTable">
