@@ -19,9 +19,9 @@
         }
         .container {
             width: 90%;
-            max-width: 1200px; /* Limit container width to prevent excessive stretching */
+            max-width: 1200px;
             margin: 2rem auto;
-            overflow-x: hidden; /* Hide horizontal scroll */
+            overflow-x: hidden;
         }
         input[type="text"] {
             width: calc(100% - 150px);
@@ -30,7 +30,7 @@
             font-size: 1rem;
             border: 1px solid #ddd;
             border-radius: 5px;
-            box-sizing: border-box; /* Include padding and border in width */
+            box-sizing: border-box;
         }
         button {
             padding: 0.5rem 1rem;
@@ -40,7 +40,7 @@
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            box-sizing: border-box; /* Include padding and border in width */
+            box-sizing: border-box;
         }
         button:hover {
             background-color: #555;
@@ -57,17 +57,17 @@
             align-items: center;
         }
         .summary input[type="text"] {
-            flex: 1; /* Allow input to take up remaining space */
+            flex: 1;
         }
         .import-export {
             margin-bottom: 2rem;
-            gap: 10px; /* Space between import/export buttons */
+            gap: 10px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 1rem;
-            overflow-x: auto; /* Allow horizontal scroll if needed */
+            overflow-x: auto;
         }
         th, td {
             padding: 0.75rem;
@@ -93,7 +93,7 @@
             font-size: 1rem;
         }
         .table-container {
-            overflow-x: auto; /* Allow horizontal scroll if table is too wide */
+            overflow-x: auto;
         }
     </style>
 </head>
@@ -133,6 +133,7 @@
                         <th>Actors</th>
                         <th>Review</th>
                         <th>TMDB</th>
+                        <th>IMDb</th>
                         <th>Toloka</th>
                         <th>Rutracker</th>
                         <th>Trailer</th>
@@ -183,6 +184,7 @@
                         actors: movieDetails.credits.cast.map(actor => actor.name).join(', '),
                         review: movieDetails.reviews.results[0]?.content || 'N/A',
                         tmdbLink: `https://www.themoviedb.org/movie/${movieId}`,
+                        imdbLink: `https://www.imdb.com/title/${movieDetails.imdb_id}`,
                         tolokaLink: `https://toloka.to/tracker.php?nm=${movie.title}`,
                         rutrackerLink: `https://rutracker.org/forum/tracker.php?nm=${movie.title}`,
                         trailer: movieDetails.videos.results.length > 0 ? `https://www.youtube.com/watch?v=${movieDetails.videos.results[0].key}` : 'N/A',
@@ -238,7 +240,10 @@
                     <td>${movie.actors}</td>
                     <td>${movie.review}</td>
                     <td><a href="${movie.tmdbLink}" target="_blank">TMDB</a></td>
-                    <td><a href="${movie.tolokaLink}" target="_blank">Toloka</a></td>
+                    <td><a href="${movie.imdbLink}" target="_blank">IMDb</a></td>
+                    <td><a href="${movie
+
+.tolokaLink}" target="_blank">Toloka</a></td>
                     <td><a href="${movie.rutrackerLink}" target="_blank">Rutracker</a></td>
                     <td><a href="${movie.trailer}" target="_blank">Trailer</a></td>
                     <td><button class="button" onclick="removeMovie(${movie.id})">Remove</button></td>
@@ -277,6 +282,7 @@
                 <p><strong>Actors:</strong> ${movieData.actors}</p>
                 <p><strong>Review:</strong> ${movieData.review}</p>
                 <p><strong>TMDB Link:</strong> <a href="${movieData.tmdbLink}" target="_blank">${movieData.tmdbLink}</a></p>
+                <p><strong>IMDb Link:</strong> <a href="${movieData.imdbLink}" target="_blank">${movieData.imdbLink}</a></p>
                 <p><strong>Toloka Link:</strong> <a href="${movieData.tolokaLink}" target="_blank">${movieData.tolokaLink}</a></p>
                 <p><strong>Rutracker Link:</strong> <a href="${movieData.rutrackerLink}" target="_blank">${movieData.rutrackerLink}</a></p>
                 <p><strong>Trailer Link:</strong> <a href="${movieData.trailer}" target="_blank">${movieData.trailer}</a></p>
@@ -298,10 +304,10 @@
         function exportMoviesCSV() {
             const movies = JSON.parse(localStorage.getItem('movies')) || [];
             const header = [
-                'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB Link', 'Toloka Link', 'Rutracker Link', 'Trailer Link'
+                'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB Link', 'IMDb Link', 'Toloka Link', 'Rutracker Link', 'Trailer Link'
             ];
             const rows = movies.map(movie => [
-                movie.title, movie.genre, movie.year, movie.length, movie.rating, movie.description, movie.director, movie.actors, movie.review, movie.tmdbLink, movie.tolokaLink, movie.rutrackerLink, movie.trailer
+                movie.title, movie.genre, movie.year, movie.length, movie.rating, movie.description, movie.director, movie.actors, movie.review, movie.tmdbLink, movie.imdbLink, movie.tolokaLink, movie.rutrackerLink, movie.trailer
             ]);
             let csvContent = 'data:text/csv;charset=utf-8,' + [header, ...rows].map(e => e.join(',')).join('\n');
             const encodedUri = encodeURI(csvContent);
@@ -345,9 +351,10 @@
                             actors: row[7],
                             review: row[8],
                             tmdbLink: row[9],
-                            tolokaLink: row[10],
-                            rutrackerLink: row[11],
-                            trailer: row[12],
+                            imdbLink: row[10],
+                            tolokaLink: row[11],
+                            rutrackerLink: row[12],
+                            trailer: row[13],
                             poster: '', // CSV does not include poster URLs, you may want to add this field or manage separately
                             id: parseInt(row[9].match(/movie\/(\d+)/)[1]) // Extract TMDB ID from URL
                         };
