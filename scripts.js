@@ -1,11 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     displayMoviesFromLocalStorage();
-    document.querySelector('#search').addEventListener('paste', (event) => {
+    
+    const searchInput = document.querySelector('#search');
+    searchInput.addEventListener('paste', (event) => {
+        event.preventDefault();
         const pastedText = event.clipboardData.getData('text');
-        document.querySelector('#search').value = pastedText;
+        searchInput.value = pastedText;
         searchMovie();
     });
-    document.querySelector('#search').focus();
+    
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            searchMovie();
+        }
+    });
+
+    searchInput.focus();
 });
 
 function searchMovie() {
@@ -17,6 +27,7 @@ function searchMovie() {
     // Your TMDB search logic here
     // On success:
     // displayMoviesFromLocalStorage();
+    document.querySelector('#search').value = ''; // Clear input after search
     document.querySelector('#search').focus();
 }
 
