@@ -95,6 +95,10 @@
         .table-container {
             overflow-x: auto;
         }
+        .button {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -153,10 +157,19 @@
 
             document.querySelector('#importJSON').addEventListener('change', importMoviesJSON);
             document.querySelector('#importCSV').addEventListener('change', importMoviesCSV);
+
+            // Handle paste event to input field
+            document.querySelector('#movieInput').addEventListener('paste', (event) => {
+                setTimeout(() => {
+                    searchMovie();
+                }, 100);
+            });
         });
 
         function searchMovie() {
-            const movieName = document.querySelector('#movieInput').value.trim();
+            let movieName = document.querySelector('#movieInput').value.trim();
+            movieName = movieName.replace(/^\.+/, ''); // Remove leading dots
+
             if (!movieName) return;
 
             fetchMovieData(movieName);
@@ -184,7 +197,7 @@
                         actors: movieDetails.credits.cast.map(actor => actor.name).join(', '),
                         review: movieDetails.reviews.results[0]?.content || 'N/A',
                         tmdbLink: `https://www.themoviedb.org/movie/${movieId}`,
-                        imdbLink: `https://www.imdb.com/title/${movieDetails.imdb_id}`,
+                        imdbLink: movieDetails.imdb_id ? `https://www.imdb.com/title/${movieDetails.imdb_id}` : 'N/A',
                         tolokaLink: `https://toloka.to/tracker.php?nm=${movie.title}`,
                         rutrackerLink: `https://rutracker.org/forum/tracker.php?nm=${movie.title}`,
                         trailer: movieDetails.videos.results.length > 0 ? `https://www.youtube.com/watch?v=${movieDetails.videos.results[0].key}` : 'N/A',
@@ -209,6 +222,31 @@
             }
         }
 
+        function getGenreName(genreIds) {
+            const genreMap = {
+                28: 'Action',
+                12: 'Adventure',
+                16: 'Animation',
+                35: 'Comedy',
+                80: 'Crime',
+                99: 'Documentary',
+                18: 'Drama',
+                10751: 'Family',
+                14: 'Fantasy',
+                36: 'History',
+                27: 'Horror',
+                10402: 'Music',
+                9648: 'Mystery',
+                10749: 'Romance',
+                878: 'Science Fiction',
+                10770: 'TV Movie',
+                53: 'Thriller',
+                10752: 'War',
+                37: 'Western'
+            };
+            return genreIds.map(id => genreMap[id] || 'Unknown').join(', ');
+        }
+
         function isDuplicateMovie(movieId) {
             const movies = JSON.parse(localStorage.getItem('movies')) || [];
             return movies.some(movie => movie.id === movieId);
@@ -229,7 +267,7 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${index + 1}</td>
-                    <td><img src="${movie.poster}" class="poster" alt="${movie.title} Poster"></td>
+                    <td><img src="${movie.poster}" class="poster" alt="${movie.title} poster"></td>
                     <td>${movie.title}</td>
                     <td>${movie.genre}</td>
                     <td>${movie.year}</td>
@@ -241,9 +279,7 @@
                     <td>${movie.review}</td>
                     <td><a href="${movie.tmdbLink}" target="_blank">TMDB</a></td>
                     <td><a href="${movie.imdbLink}" target="_blank">IMDb</a></td>
-                    <td><a href="${movie
-
-.tolokaLink}" target="_blank">Toloka</a></td>
+                    <td><a href="${movie.tolokaLink}" target="_blank">Toloka</a></td>
                     <td><a href="${movie.rutrackerLink}" target="_blank">Rutracker</a></td>
                     <td><a href="${movie.trailer}" target="_blank">Trailer</a></td>
                     <td><button class="button" onclick="removeMovie(${movie.id})">Remove</button></td>
