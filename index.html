@@ -8,37 +8,61 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f8f9fa;
+            color: #343a40;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 10px;
             text-align: left;
-            cursor: pointer;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
         }
-        button {
+        th:hover {
+            background-color: #0056b3;
+        }
+        button, label.button {
             margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover, label.button:hover {
+            background-color: #0056b3;
+        }
+        .links a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .links a:hover {
+            text-decoration: underline;
         }
         .poster {
-            max-width: 150px;
-            max-height: 225px;
+            max-width: 100px;
+            max-height: 150px;
             object-fit: cover;
-        }
-        a {
-            color: #1a0dab;
-        }
-        a:hover {
-            text-decoration: underline;
         }
         .file-input {
             display: none;
+        }
+        #summary img {
+            max-width: 150px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -48,28 +72,31 @@
         <a href="downloaded.html" target="_self">View Downloaded Page</a>
     </div>
     <input type="text" id="movieInput" placeholder="Enter movie name">
-    <button onclick="searchMovie()">Search</button>
-    <button onclick="removeAllMovies()">Remove All</button>
+    <button id="searchButton" onclick="searchMovie()">Search</button>
     <button onclick="exportMovies()">Export Movies (JSON)</button>
     <button onclick="exportMoviesCSV()">Export Movies (CSV)</button>
     <label for="importFileJSON" class="button">Import Movies (JSON)</label>
     <input type="file" id="importFileJSON" class="file-input" accept=".json" onchange="importMoviesJSON(event)">
     <label for="importFileCSV" class="button">Import Movies (CSV)</label>
     <input type="file" id="importFileCSV" class="file-input" accept=".csv" onchange="importMoviesCSV(event)">
+    <button onclick="removeAllMovies()" style="float: right;">Remove All</button>
 
     <h2>Movie Results</h2>
     <div id="summary"></div>
     <table id="movieTable">
         <thead>
             <tr>
+                <th>#</th>
                 <th>Poster</th>
-                <th onclick="sortTable(1)">Title</th>
-                <th onclick="sortTable(2)">Genre</th>
-                <th onclick="sortTable(3)">Year</th>
-                <th onclick="sortTable(4)">Length</th>
-                <th onclick="sortTable(5)">Rating</th>
-                <th onclick="sortTable(6)">Description</th>
-                <th onclick="sortTable(7)">Director</th>
+                <th onclick="sortTable(2)">Title</th>
+                <th onclick="sortTable(3)">Genre</th>
+                <th onclick="sortTable(4)">Year</th>
+                <th onclick="sortTable(5)">Length</th>
+                <th onclick="sortTable(6)">Rating</th>
+                <th onclick="sortTable(7)">Description</th>
+                <th onclick="sortTable(8)">Director</th>
+                <th onclick="sortTable(9)">Actors</th>
+                <th onclick="sortTable(10)">Review</th>
                 <th>TMDB Link</th>
                 <th>Toloka Link</th>
                 <th>Rutracker Link</th>
@@ -107,6 +134,16 @@
             37: 'Western'
         };
 
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#movieInput').focus(); // Focus on search input on load
+            document.querySelector('#movieInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    document.querySelector('#searchButton').click(); // Trigger search on Enter key
+                }
+            });
+            displayMoviesFromLocalStorage(); // Display movies from localStorage when the page loads
+        });
+
         function getGenreName(genreIds) {
             return genreIds.map(id => genreMapping[id] || 'Unknown').join(', ');
         }
@@ -142,11 +179,18 @@
                     const tolokaLink = `https://toloka.to/tracker.php?nm=${encodeURIComponent(movieTitle)}`;
                     const rutrackerLink = `https://rutracker.org/forum/tracker.php?nm=${encodeURIComponent(movieTitle)}`;
 
-                    // Fetching the movie credits to get the director
+                    // Fetching the movie credits to get the director and actors
                     const creditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${tmdbApiKey}`;
                     const creditsResponse = await fetch(creditsUrl);
                     const creditsData = await creditsResponse.json();
                     const director = creditsData.crew.find(person => person.job === 'Director')?.name || 'N/A';
+                    const actors = creditsData.cast.slice(0, 5).map(actor => actor.name).join(', ') || 'N/A';
+
+                    // Fetching the movie reviews to get one review
+                    const reviewsUrl = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${tmdbApiKey}`;
+                    const reviewsResponse = await fetch(reviewsUrl);
+                    const reviewsData = await reviewsResponse.json();
+                    const review = reviewsData.results.length > 0 ? reviewsData.results[0].content : 'N/A';
 
                     // Fetching the movie videos to get the trailer
                     const videosUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${tmdbApiKey}`;
@@ -164,6 +208,8 @@
                         rating: movieRating,
                         description: movieDescription,
                         director: director,
+                        actors: actors,
+                        review: review,
                         tmdbLink: tmdbLink,
                         tolokaLink: tolokaLink,
                         rutrackerLink: rutrackerLink,
@@ -173,39 +219,41 @@
 
                     if (!isDuplicateMovie(movieId)) {
                         saveMovieToLocalStorage(movieData);
-                        displayMoviesFromLocalStorage();
                         displaySummary(movieData);
+                        displayMoviesFromLocalStorage();
                     } else {
-                        alert('Movie already exists in the list.');
+                        alert('This movie is already in your list.');
                     }
                 } else {
-                    alert('No movie found');
+                    alert('No movies found with that name.');
                 }
+
+                document.querySelector('#movieInput').value = ''; // Clear input after search
             } catch (error) {
-                alert('Failed to retrieve movie information');
-                console.error('Error:', error);
+                console.error('Error fetching movie data:', error);
             }
         }
 
         function isDuplicateMovie(movieId) {
             const movies = JSON.parse(localStorage.getItem('movies')) || [];
-            return movies.some(movie => movie.id === parseInt(movieId));
+            return movies.some(movie => movie.id === movieId);
         }
 
         function saveMovieToLocalStorage(movieData) {
-            let movies = JSON.parse(localStorage.getItem('movies')) || [];
+            const movies = JSON.parse(localStorage.getItem('movies')) || [];
             movies.push(movieData);
             localStorage.setItem('movies', JSON.stringify(movies));
         }
 
         function displayMoviesFromLocalStorage() {
+            const movies = JSON.parse(localStorage.getItem('movies')) || [];
             const tbody = document.querySelector('#movieTable tbody');
-            tbody.innerHTML = ''; // Clear previous results
+            tbody.innerHTML = '';
 
-            let movies = JSON.parse(localStorage.getItem('movies')) || [];
-            movies.forEach(movie => {
+            movies.forEach((movie, index) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <td>${index + 1}</td>
                     <td><img src="${movie.poster}" alt="${movie.title} Poster" class="poster"></td>
                     <td>${movie.title}</td>
                     <td>${movie.genre}</td>
@@ -214,10 +262,12 @@
                     <td>${movie.rating}</td>
                     <td>${movie.description}</td>
                     <td>${movie.director}</td>
-                    <td><a href="${movie.tmdbLink}" target="_blank">${movie.tmdbLink}</a></td>
-                    <td><a href="${movie.tolokaLink}" target="_blank">${movie.tolokaLink}</a></td>
-                    <td><a href="${movie.rutrackerLink}" target="_blank">${movie.rutrackerLink}</a></td>
-                    <td><a href="${movie.trailer}" target="_blank">${movie.trailer}</a></td>
+                    <td>${movie.actors}</td>
+                    <td>${movie.review}</td>
+                    <td><a href="${movie.tmdbLink}" target="_blank">TMDB</a></td>
+                    <td><a href="${movie.tolokaLink}" target="_blank">Toloka</a></td>
+                    <td><a href="${movie.rutrackerLink}" target="_blank">Rutracker</a></td>
+                    <td><a href="${movie.trailer}" target="_blank">Trailer</a></td>
                     <td><button onclick="removeMovie(${movie.id})">Remove</button></td>
                 `;
                 tbody.appendChild(row);
@@ -238,6 +288,8 @@
                 <p>Rating: ${movieData.rating}</p>
                 <p>Description: ${movieData.description}</p>
                 <p>Director: ${movieData.director}</p>
+                <p>Actors: ${movieData.actors}</p>
+                <p>Review: ${movieData.review}</p>
                 <p>TMDB Link: <a href="${movieData.tmdbLink}" target="_blank">${movieData.tmdbLink}</a></p>
                 <p>Toloka Link: <a href="${movieData.tolokaLink}" target="_blank">${movieData.tolokaLink}</a></p>
                 <p>Rutracker Link: <a href="${movieData.rutrackerLink}" target="_blank">${movieData.rutrackerLink}</a></p>
@@ -253,8 +305,10 @@
         }
 
         function removeAllMovies() {
-            localStorage.removeItem('movies');
-            displayMoviesFromLocalStorage();
+            if (confirm('Are you sure you want to remove all movies?')) {
+                localStorage.removeItem('movies');
+                displayMoviesFromLocalStorage();
+            }
         }
 
         function sortTable(columnIndex) {
@@ -287,7 +341,7 @@
         function exportMoviesCSV() {
             const movies = JSON.parse(localStorage.getItem('movies')) || [];
             const csvRows = [
-                ['Poster', 'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'TMDB Link', 'Toloka Link', 'Rutracker Link', 'Trailer']
+                ['Poster', 'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB Link', 'Toloka Link', 'Rutracker Link', 'Trailer']
             ];
 
             movies.forEach(movie => {
@@ -300,6 +354,8 @@
                     movie.rating,
                     movie.description,
                     movie.director,
+                    movie.actors,
+                    movie.review,
                     movie.tmdbLink,
                     movie.tolokaLink,
                     movie.rutrackerLink,
@@ -358,11 +414,13 @@
                             rating: parseFloat(cells[5]),
                             description: cells[6],
                             director: cells[7],
-                            tmdbLink: cells[8],
-                            tolokaLink: cells[9],
-                            rutrackerLink: cells[10],
-                            trailer: cells[11],
-                            id: parseInt(new URL(cells[8]).pathname.split('/')[2]) // Extract TMDB ID from the URL
+                            actors: cells[8],
+                            review: cells[9],
+                            tmdbLink: cells[10],
+                            tolokaLink: cells[11],
+                            rutrackerLink: cells[12],
+                            trailer: cells[13],
+                            id: parseInt(new URL(cells[10]).pathname.split('/')[2]) // Extract TMDB ID from the URL
                         };
                     });
 
@@ -380,9 +438,6 @@
                 reader.readAsText(file);
             }
         }
-
-        // Display movies from localStorage when the page loads
-        displayMoviesFromLocalStorage();
     </script>
 </body>
 </html>
