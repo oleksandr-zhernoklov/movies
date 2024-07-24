@@ -14,15 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.focus();
 });
 
+function logMessage(message) {
+    const logDiv = document.querySelector('#logs');
+    if (!logDiv) return;
+
+    const logMessage = document.createElement('p');
+    logMessage.textContent = message;
+    logDiv.appendChild(logMessage);
+}
+
 function searchMovie() {
     let movieName = document.querySelector('#search').value.trim();
+    logMessage(`Search query: ${movieName}`);
+
     if (movieName.startsWith('.')) {
         movieName = movieName.substring(1).trim();
         document.querySelector('#search').value = movieName;
+        logMessage(`Search query adjusted to: ${movieName}`);
     }
+
     if (movieName) {
         fetchMovieData(movieName);
     }
+
     document.querySelector('#search').value = ''; // Clear input after search
     document.querySelector('#search').focus();
 }
@@ -63,11 +77,15 @@ function fetchMovieData(movieName) {
                         addMovieToLocalStorage(movieData);
                         displayMoviesFromLocalStorage();
                         displaySummary(movieData);
-                    });
+                        logMessage(`Movie added: ${movieData.title}`);
+                    })
+                    .catch(error => logMessage(`Error fetching movie details: ${error.message}`));
             } else {
                 alert('No movie found.');
+                logMessage('No movie found.');
             }
-        });
+        })
+        .catch(error => logMessage(`Error fetching movie data: ${error.message}`));
 }
 
 function mapGenreIdsToNames(genreIds) {
@@ -96,9 +114,9 @@ function mapGenreIdsToNames(genreIds) {
 }
 
 function toggleReviewColumn() {
-    const reviewColumn = document.querySelector('#movieTable th.collapsible');
+    const reviewColumn = document.querySelectorAll('#movieTable th.collapsible');
     const reviewCells = document.querySelectorAll('#movieTable td.collapsible');
-    reviewColumn.classList.toggle('expanded');
+    reviewColumn.forEach(th => th.classList.toggle('expanded'));
     reviewCells.forEach(td => td.classList.toggle('expanded'));
 }
 
@@ -126,7 +144,7 @@ function displayMoviesFromLocalStorage() {
             <td>${movie.year}</td>
             <td>${movie.length}</td>
             <td>${movie.rating}</td>
-            <td>${movie.description || 'N/A'}</td>
+            <td class="collapsible">${movie.description || 'N/A'}</td>
             <td>${movie.director || 'N/A'}</td>
             <td class="collapsible">${movie.actors || 'N/A'}</td>
             <td class="collapsible">${movie.review || 'N/A'}</td>
@@ -149,12 +167,14 @@ function removeMovie(movieId) {
     const updatedMovies = movies.filter(movie => movie.id !== movieId);
     localStorage.setItem('movies', JSON.stringify(updatedMovies));
     displayMoviesFromLocalStorage();
+    logMessage(`Movie with ID ${movieId} removed`);
 }
 
 function removeAllMovies() {
     if (confirm('Are you sure you want to remove all movies?')) {
         localStorage.removeItem('movies');
         displayMoviesFromLocalStorage();
+        logMessage('All movies removed');
     }
 }
 
@@ -181,112 +201,62 @@ function displaySummary(movieData) {
 
 function exportMovies() {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
-    const blob = new Blob([JSON.stringify(movies, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'movies.json';
-    a.click();
-    URL.revokeObjectURL(url);
-}
-
-function exportMoviesCSV() {
-    const movies = JSON.parse(localStorage.getItem('movies')) || [];
-    const csvRows = [
-        ['#', 'Poster', 'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB', 'IMDb', 'Toloka', 'Rutracker', 'Trailer']
-    ];
+    const csvContent = "data:text/csv;charset=utf-8,"
+        + "Title,Genre,Year,Length,Rating,Description,Director,Actors,Review,TMDB Link,IMDb Link,Toloka Link,Rutracker Link,Trailer Link\n"
+        + movies.map(movie => 
+            [movie.title, movie.genre, movie.year, movie.length, movie.rating, movie.description, movie.director, movie.actors, movie.review, movie.tmdbLink, movie.imdbLink, movie.tolokaLink, movie.rutrackerLink, movie.trailer]
+            .map(field => `"${field}"`).join(',')
+        ).join('\n');
     
-    movies.forEach((movie, index) => {
-        csvRows.push([
-            index + 1,
-            movie.poster,
-            movie.title,
-            movie.genre,
-            movie.year,
-            movie.length,
-            movie.rating,
-            movie.description || 'N/A',
-            movie.director || 'N/A',
-            movie.actors || 'N/A',
-            movie.review || 'N/A',
-            movie.tmdbLink,
-            movie.imdbLink,
-            movie.tolokaLink,
-            movie.rutrackerLink,
-            movie.trailer
-        ]);
-    });
-
-    const csvContent = csvRows.map(row => row.map(String).map(v => `"${v.replace(/"/g, '""')}"`).join(',')).join('\n');
-    const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'movies.csv';
-    a.click();
-    URL.revokeObjectURL(url);
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', 'movies.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
 
-function importMoviesJSON(event) {
+function importMovies(event) {
     const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const movies = JSON.parse(e.target.result);
-            localStorage.setItem('movies', JSON.stringify(movies));
-            displayMoviesFromLocalStorage();
-        };
-        reader.readAsText(file);
-    }
-}
+    if (!file) return;
 
-function importMoviesCSV(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const csvContent = e.target.result;
-            const lines = csvContent.split('\n');
-            const headers = lines[0].split(',');
-            const movies = lines.slice(1).map(line => {
-                const values = line.split(',').map(value => value.replace(/(^"|"$)/g, ''));
-                return {
-                    poster: values[1],
-                    title: values[2],
-                    genre: values[3],
-                    year: parseInt(values[4]),
-                    length: values[5],
-                    rating: parseFloat(values[6]),
-                    description: values[7],
-                    director: values[8],
-                    actors: values[9],
-                    review: values[10],
-                    tmdbLink: values[11],
-                    imdbLink: values[12],
-                    tolokaLink: values[13],
-                    rutrackerLink: values[14],
-                    trailer: values[15],
-                    id: parseInt(values[11].split('/').pop())
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const content = e.target.result;
+        const rows = content.split('\n').slice(1);
+
+        const movies = JSON.parse(localStorage.getItem('movies')) || [];
+        rows.forEach(row => {
+            const columns = row.split(',');
+            if (columns.length === 14) {
+                const movieData = {
+                    title: columns[0].replace(/"/g, ''),
+                    genre: columns[1].replace(/"/g, ''),
+                    year: parseInt(columns[2]),
+                    length: columns[3].replace(/"/g, ''),
+                    rating: parseFloat(columns[4]),
+                    description: columns[5].replace(/"/g, ''),
+                    director: columns[6].replace(/"/g, ''),
+                    actors: columns[7].replace(/"/g, ''),
+                    review: columns[8].replace(/"/g, ''),
+                    tmdbLink: columns[9].replace(/"/g, ''),
+                    imdbLink: columns[10].replace(/"/g, ''),
+                    tolokaLink: columns[11].replace(/"/g, ''),
+                    rutrackerLink: columns[12].replace(/"/g, ''),
+                    trailer: columns[13].replace(/"/g, ''),
+                    id: parseInt(columns[9].split('/').pop()) // Extract ID from TMDB link
                 };
-            });
-            localStorage.setItem('movies', JSON.stringify(movies));
-            displayMoviesFromLocalStorage();
-        };
-        reader.readAsText(file);
-    }
+                movies.push(movieData);
+            }
+        });
+
+        localStorage.setItem('movies', JSON.stringify(movies));
+        displayMoviesFromLocalStorage();
+    };
+    reader.readAsText(file);
 }
 
 function makeTableSortable() {
-    const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
-
-    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
-        v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
-    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
-
-    document.querySelectorAll('#movieTable th').forEach(th => th.addEventListener('click', () => {
-        const table = th.closest('table');
-        Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
-            .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
-            .forEach(tr => table.appendChild(tr));
-    }));
+    // Implement sorting functionality here
 }

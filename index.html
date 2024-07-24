@@ -7,48 +7,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="controls">
-        <div id="searchForm">
+    <div id="container">
+        <header>
+            <h1>Movie Database</h1>
+        </header>
+        <div id="controls">
             <input type="text" id="search" placeholder="Search for a movie...">
             <button onclick="searchMovie()">Search</button>
+            <button onclick="removeAllMovies()">Remove All</button>
+            <button onclick="exportMovies()">Export CSV</button>
+            <input type="file" id="import" accept=".csv" onchange="importMovies(event)">
         </div>
-        <a href="downloaded.html" class="button">Downloaded Movies</a>
-        <button onclick="exportMovies()">Export to JSON</button>
-        <button onclick="exportMoviesCSV()">Export to CSV</button>
-        <input type="file" id="importMoviesJSON" style="display:none;" onchange="importMoviesJSON(event)">
-        <label for="importMoviesJSON" class="button">Import from JSON</label>
-        <input type="file" id="importMoviesCSV" style="display:none;" onchange="importMoviesCSV(event)">
-        <label for="importMoviesCSV" class="button">Import from CSV</label>
-        <button onclick="removeAllMovies()" style="float: right;">Remove All</button>
+        <div id="logs"></div>
+        <div id="summary"></div>
+        <table id="movieTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Poster</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Length</th>
+                    <th>Rating</th>
+                    <th class="collapsible">Description</th>
+                    <th>Director</th>
+                    <th class="collapsible">Actors</th>
+                    <th class="collapsible">Review</th>
+                    <th>TMDB</th>
+                    <th>IMDb</th>
+                    <th>Toloka</th>
+                    <th>Rutracker</th>
+                    <th>Trailer</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="rowCount"></div>
     </div>
-    <div id="summary"></div>
-    <div id="rowCount"></div>
-    <table id="movieTable">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Length</th>
-                <th>Rating</th>
-                <th>Description</th>
-                <th>Director</th>
-                <th class="collapsible" onclick="toggleReviewColumn()">Actors</th>
-                <th class="collapsible" onclick="toggleReviewColumn()">Review</th>
-                <th>TMDB</th>
-                <th>IMDb</th>
-                <th>Toloka</th>
-                <th>Rutracker</th>
-                <th>Trailer</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Movie rows will be added here -->
-        </tbody>
-    </table>
     <script src="scripts.js"></script>
 </body>
 </html>
