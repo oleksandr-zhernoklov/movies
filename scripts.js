@@ -3,16 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const searchInput = document.querySelector('#search');
 
-    // Handle paste event
-    searchInput.addEventListener('paste', (event) => {
-        event.preventDefault();
-        const pastedText = (event.clipboardData || window.clipboardData).getData('text');
-        searchInput.value = pastedText;
-        setTimeout(() => {
-            searchMovie();
-        }, 100);
-    });
-
     // Handle enter key press
     searchInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
@@ -229,10 +219,10 @@ function makeTableSortable() {
         v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
     )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
 
-    document.querySelectorAll('#movieTable th').forEach(th => th.addEventListener('click', (() => {
+    document.querySelectorAll('#movieTable th').forEach(th => th.addEventListener('click', () => {
         const table = th.closest('table');
         Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
             .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
-            .forEach(tr => table.appendChild(tr) );
-    })));
+            .forEach(tr => table.appendChild(tr));
+    }));
 }
