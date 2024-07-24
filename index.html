@@ -13,10 +13,10 @@
         </header>
         <div id="controls">
             <input type="text" id="search" placeholder="Search for a movie...">
-            <button onclick="searchMovie()">Search</button>
-            <button onclick="removeAllMovies()">Remove All</button>
-            <button onclick="exportMovies()">Export CSV</button>
-            <input type="file" id="import" accept=".csv" onchange="importMovies(event)">
+            <button class="button" onclick="searchMovie()">Search</button>
+            <button class="button" onclick="removeAllMovies()">Remove All</button>
+            <button class="button" onclick="exportMovies()">Export JSON</button>
+            <input type="file" id="import" accept=".json" onchange="importMovies(event)">
         </div>
         <div id="logs"></div>
         <div id="summary"></div>

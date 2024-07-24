@@ -45,15 +45,20 @@ header {
 #movieTable {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 #movieTable th, #movieTable td {
     border: 1px solid #ddd;
     padding: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #movieTable th {
     background-color: #f4f4f4;
+    cursor: pointer;
 }
 
 #movieTable td img.poster {
@@ -64,8 +69,8 @@ header {
     cursor: pointer;
 }
 
-.collapsible.expanded {
-    display: table-cell;
+.collapsible.collapsed {
+    display: none;
 }
 
 #rowCount {
@@ -80,6 +85,7 @@ header {
     background-color: #007bff;
     color: white;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .button:hover {

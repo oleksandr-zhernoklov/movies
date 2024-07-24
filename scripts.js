@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     displayMoviesFromLocalStorage();
-    
+
     const searchInput = document.querySelector('#search');
 
     // Handle enter key press
@@ -44,14 +44,14 @@ function searchMovie() {
 function fetchMovieData(movieName) {
     const tmdbApiKey = 'fb70d4fb95572e0ddd9bc99f90734e46';
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&query=${movieName}`;
-    
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
             if (data.results && data.results.length > 0) {
                 const movie = data.results[0];
                 const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${tmdbApiKey}&append_to_response=credits,videos`;
-                
+
                 fetch(movieDetailsUrl)
                     .then(detailsResponse => detailsResponse.json())
                     .then(detailsData => {
@@ -73,11 +73,15 @@ function fetchMovieData(movieName) {
                             trailer: detailsData.videos.results.find(video => video.type === 'Trailer') ? `https://www.youtube.com/watch?v=${detailsData.videos.results.find(video => video.type === 'Trailer').key}` : 'N/A',
                             id: movie.id
                         };
-                        
-                        addMovieToLocalStorage(movieData);
-                        displayMoviesFromLocalStorage();
-                        displaySummary(movieData);
-                        logMessage(`Movie added: ${movieData.title}`);
+
+                        if (!isDuplicateMovie(movieData)) {
+                            addMovieToLocalStorage(movieData);
+                            displayMoviesFromLocalStorage();
+                            displaySummary(movieData);
+                            logMessage(`Movie added: ${movieData.title}`);
+                        } else {
+                            logMessage(`Duplicate movie not added: ${movieData.title}`);
+                        }
                     })
                     .catch(error => logMessage(`Error fetching movie details: ${error.message}`));
             } else {
@@ -113,20 +117,15 @@ function mapGenreIdsToNames(genreIds) {
     return genreIds.map(id => genreMapping[id]).join(', ');
 }
 
-function toggleReviewColumn() {
-    const reviewColumn = document.querySelectorAll('#movieTable th.collapsible');
-    const reviewCells = document.querySelectorAll('#movieTable td.collapsible');
-    reviewColumn.forEach(th => th.classList.toggle('expanded'));
-    reviewCells.forEach(td => td.classList.toggle('expanded'));
+function isDuplicateMovie(movieData) {
+    const movies = JSON.parse(localStorage.getItem('movies')) || [];
+    return movies.some(movie => movie.id === movieData.id);
 }
 
 function addMovieToLocalStorage(movieData) {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
-    const movieExists = movies.some(movie => movie.id === movieData.id);
-    if (!movieExists) {
-        movies.push(movieData);
-        localStorage.setItem('movies', JSON.stringify(movies));
-    }
+    movies.push(movieData);
+    localStorage.setItem('movies', JSON.stringify(movies));
 }
 
 function displayMoviesFromLocalStorage() {
@@ -201,17 +200,12 @@ function displaySummary(movieData) {
 
 function exportMovies() {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
-    const csvContent = "data:text/csv;charset=utf-8,"
-        + "Title,Genre,Year,Length,Rating,Description,Director,Actors,Review,TMDB Link,IMDb Link,Toloka Link,Rutracker Link,Trailer Link\n"
-        + movies.map(movie => 
-            [movie.title, movie.genre, movie.year, movie.length, movie.rating, movie.description, movie.director, movie.actors, movie.review, movie.tmdbLink, movie.imdbLink, movie.tolokaLink, movie.rutrackerLink, movie.trailer]
-            .map(field => `"${field}"`).join(',')
-        ).join('\n');
-    
-    const encodedUri = encodeURI(csvContent);
+    const jsonContent = JSON.stringify(movies, null, 2);
+    const blob = new Blob([jsonContent], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.setAttribute('href', encodedUri);
-    link.setAttribute('download', 'movies.csv');
+    link.href = url;
+    link.download = 'movies.json';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -224,39 +218,47 @@ function importMovies(event) {
     const reader = new FileReader();
     reader.onload = function(e) {
         const content = e.target.result;
-        const rows = content.split('\n').slice(1);
+        try {
+            const importedMovies = JSON.parse(content);
+            const movies = JSON.parse(localStorage.getItem('movies')) || [];
 
-        const movies = JSON.parse(localStorage.getItem('movies')) || [];
-        rows.forEach(row => {
-            const columns = row.split(',');
-            if (columns.length === 14) {
-                const movieData = {
-                    title: columns[0].replace(/"/g, ''),
-                    genre: columns[1].replace(/"/g, ''),
-                    year: parseInt(columns[2]),
-                    length: columns[3].replace(/"/g, ''),
-                    rating: parseFloat(columns[4]),
-                    description: columns[5].replace(/"/g, ''),
-                    director: columns[6].replace(/"/g, ''),
-                    actors: columns[7].replace(/"/g, ''),
-                    review: columns[8].replace(/"/g, ''),
-                    tmdbLink: columns[9].replace(/"/g, ''),
-                    imdbLink: columns[10].replace(/"/g, ''),
-                    tolokaLink: columns[11].replace(/"/g, ''),
-                    rutrackerLink: columns[12].replace(/"/g, ''),
-                    trailer: columns[13].replace(/"/g, ''),
-                    id: parseInt(columns[9].split('/').pop()) // Extract ID from TMDB link
-                };
-                movies.push(movieData);
-            }
-        });
+            importedMovies.forEach(movie => {
+                if (!isDuplicateMovie(movie)) {
+                    movies.push(movie);
+                } else {
+                    logMessage(`Duplicate movie not imported: ${movie.title}`);
+                }
+            });
 
-        localStorage.setItem('movies', JSON.stringify(movies));
-        displayMoviesFromLocalStorage();
+            localStorage.setItem('movies', JSON.stringify(movies));
+            displayMoviesFromLocalStorage();
+        } catch (error) {
+            logMessage(`Error importing movies: ${error.message}`);
+        }
     };
     reader.readAsText(file);
 }
 
 function makeTableSortable() {
-    // Implement sorting functionality here
+    // Simple table sorting logic
+    const table = document.querySelector('#movieTable');
+    const headers = table.querySelectorAll('th');
+
+    headers.forEach((header, index) => {
+        header.addEventListener('click', () => {
+            const rows = Array.from(table.querySelectorAll('tbody tr'));
+            const isAscending = header.classList.toggle('asc');
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.children[index].textContent.trim();
+                const cellB = rowB.children[index].textContent.trim();
+                
+                const valueA = isNaN(cellA) ? cellA : parseFloat(cellA);
+                const valueB = isNaN(cellB) ? cellB : parseFloat(cellB);
+
+                return isAscending ? valueA > valueB : valueA < valueB ? 1 : -1;
+            });
+
+            rows.forEach(row => table.querySelector('tbody').appendChild(row));
+        });
+    });
 }
