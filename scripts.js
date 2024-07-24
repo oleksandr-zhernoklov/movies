@@ -36,7 +36,7 @@ function fetchMovieData(movieName) {
         .then(data => {
             if (data.results && data.results.length > 0) {
                 const movie = data.results[0];
-                const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${tmdbApiKey}`;
+                const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${tmdbApiKey}&append_to_response=credits,videos`;
                 
                 fetch(movieDetailsUrl)
                     .then(detailsResponse => detailsResponse.json())
