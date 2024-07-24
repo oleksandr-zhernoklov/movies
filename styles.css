@@ -45,7 +45,7 @@ header {
 #movieTable {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 #movieTable th, #movieTable td {

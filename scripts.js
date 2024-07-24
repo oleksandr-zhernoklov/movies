@@ -82,7 +82,7 @@ function fetchMovieData(movieName) {
         .then(data => {
             if (data.results && data.results.length > 0) {
                 const movie = data.results[0];
-                const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${tmdbApiKey}`;
+                const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${tmdbApiKey}&append_to_response=credits,videos,reviews`;
 
                 fetch(movieDetailsUrl)
                     .then(detailsResponse => detailsResponse.json())
@@ -128,7 +128,7 @@ function getGenreValues(genreIds) {
         18: 'Drama',
         10751: 'Family',
         14: 'Fantasy',
-         36: 'History',
+        36: 'History',
         27: 'Horror',
         10402: 'Music',
         9648: 'Mystery',
@@ -139,7 +139,7 @@ function getGenreValues(genreIds) {
         10752: 'War',
         37: 'Western'
     };
-    return genreIds.map(id => genreMapping[id]).join(', ');
+    return genreIds.map(id => genreMapping[id] || 'Unknown').join(', ');
 }
 
 function getDirector(crew) {
@@ -152,22 +152,26 @@ function getActors(cast) {
 }
 
 function getReviews(reviews) {
-    return reviews.length > 0 ? reviews[0].content : 'No reviews available.';
+    if (reviews.length > 0) {
+        return reviews[0].content;
+    } else {
+        return 'No reviews available.';
+    }
 }
 
 function getTrailerLink(videos) {
-    const trailer = videos.find(video => video.type === 'Trailer' && video.site === 'YouTube');
-    return trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : '';
+    const trailer = videos.find(video => video.type === 'Trailer');
+    return trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : 'No trailer available.';
 }
 
 function saveMovieData(movieData) {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
-    if (!movies.find(movie => movie.id === movieData.id)) {
+    if (!movies.some(movie => movie.id === movieData.id)) {
         movies.push(movieData);
         localStorage.setItem('movies', JSON.stringify(movies));
         logMessage(`Movie "${movieData.title}" has been added.`);
     } else {
-        logMessage(`Movie "${movieData.title}" is already in the list.`);
+        logMessage(`Movie "${movieData.title}" is already in the database.`);
     }
 }
 
@@ -179,55 +183,59 @@ function exportMovies() {
     const a = document.createElement('a');
     a.href = url;
     a.download = 'movies.json';
-    document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 }
 
 function importMovies(event) {
     const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const content = e.target.result;
-            const importedMovies = JSON.parse(content);
-            const existingMovies = JSON.parse(localStorage.getItem('movies')) || [];
-
-            const updatedMovies = [...existingMovies, ...importedMovies];
-            localStorage.setItem('movies', JSON.stringify(updatedMovies));
-            displayMoviesFromLocalStorage();
-            logMessage('Movies have been imported.');
-        };
-        reader.readAsText(file);
-    }
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        const json = e.target.result;
+        try {
+            const importedMovies = JSON.parse(json);
+            const movies = JSON.parse(localStorage.getItem('movies')) || [];
+            const newMovies = importedMovies.filter(
+                importedMovie => !movies.some(movie => movie.id === importedMovie.id)
+            );
+            if (newMovies.length > 0) {
+                const updatedMovies = [...movies, ...newMovies];
+                localStorage.setItem('movies', JSON.stringify(updatedMovies));
+                displayMoviesFromLocalStorage();
+                logMessage(`${newMovies.length} new movie(s) have been imported.`);
+            } else {
+                logMessage('No new movies to import.');
+            }
+        } catch (error) {
+            logMessage(`Error importing movies: ${error.message}`);
+        }
+    };
+    reader.readAsText(file);
 }
 
 function makeTableSortable() {
     const table = document.getElementById('movieTable');
     const headers = table.querySelectorAll('th');
-    headers.forEach(header => {
-        header.addEventListener('click', () => {
-            const index = Array.prototype.indexOf.call(headers, header);
-            sortTableByColumn(table, index);
-        });
+    headers.forEach((header, index) => {
+        header.addEventListener('click', () => sortTableByColumn(table, index));
     });
 }
 
-function sortTableByColumn(table, column) {
-    const tbody = table.querySelector('tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
-
-    const isAsc = table.getAttribute('data-sort') === 'asc';
-    table.setAttribute('data-sort', isAsc ? 'desc' : 'asc');
-
+function sortTableByColumn(table, columnIndex) {
+    const rows = Array.from(table.querySelectorAll('tbody > tr'));
+    const isAsc = table.getAttribute('data-sort-asc') === 'true';
     rows.sort((a, b) => {
-        const aText = a.children[column].textContent.trim();
-        const bText = b.children[column].textContent.trim();
-
-        return isAsc
-            ? aText.localeCompare(bText, undefined, { numeric: true })
-            : bText.localeCompare(aText, undefined, { numeric: true });
+        const aText = a.children[columnIndex].innerText;
+        const bText = b.children[columnIndex].innerText;
+        return isAsc ? aText.localeCompare(bText) : bText.localeCompare(aText);
     });
-
-    rows.forEach(row => tbody.appendChild(row));
+    table.querySelector('tbody').append(...rows);
+    table.setAttribute('data-sort-asc', !isAsc);
 }
+
+document.getElementById('search').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        searchMovie();
+    }
+});
