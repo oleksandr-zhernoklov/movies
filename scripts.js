@@ -2,15 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
     displayMoviesFromLocalStorage();
     
     const searchInput = document.querySelector('#search');
-    
+
+    // Handle paste event
     searchInput.addEventListener('paste', (event) => {
+        event.preventDefault();
+        const pastedText = (event.clipboardData || window.clipboardData).getData('text');
+        searchInput.value = pastedText;
         setTimeout(() => {
             searchMovie();
         }, 100);
     });
-    
+
+    // Handle enter key press
     searchInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
+            event.preventDefault();
             searchMovie();
         }
     });
@@ -218,11 +224,10 @@ function importMoviesCSV(event) {
 }
 
 function makeTableSortable() {
-    const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
-
+    const getCellValue = (tr, idx) => tr.children[idx].textContent || tr.children[idx].innerText;
     const comparer = (idx, asc) => (a, b) => ((v1, v2) => 
         v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
-        )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
 
     document.querySelectorAll('#movieTable th').forEach(th => th.addEventListener('click', (() => {
         const table = th.closest('table');
