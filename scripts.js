@@ -53,7 +53,7 @@ function displayMoviesFromLocalStorage() {
             <td>${movie.rating}</td>
             <td>${movie.description || 'N/A'}</td>
             <td>${movie.director || 'N/A'}</td>
-            <td class="collapsible">${movie.actors || 'N/A'}</td>
+            <td>${movie.actors || 'N/A'}</td>
             <td class="collapsible">${movie.review || 'N/A'}</td>
             <td><a href="${movie.tmdbLink}" target="_blank">TMDB</a></td>
             <td><a href="${movie.imdbLink}" target="_blank">IMDb</a></td>
