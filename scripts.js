@@ -37,12 +37,12 @@ async function searchMovie() {
                 title: movie.title,
                 genre: movie.genre_ids.map(id => tmdbGenres[id] || 'Unknown').join(', '),
                 year: movie.release_date.split('-')[0],
-                length: 'N/A', // TMDB does not provide movie length in the search API
+                length: 'N/A', // To be updated
                 rating: movie.vote_average,
                 description: movie.overview,
-                director: 'N/A', // Need to fetch additional details for this
-                actors: 'N/A', // Need to fetch additional details for this
-                review: 'N/A', // Review data is not available in the search response
+                director: 'N/A', // To be updated
+                actors: 'N/A', // To be updated
+                review: 'N/A', // To be updated
                 tmdbLink: `https://www.themoviedb.org/movie/${movie.id}`,
                 imdbLink: `https://www.imdb.com/title/tt${movie.id}`,
                 tolokaLink: `https://toloka.to/tracker.php?nm=${encodeURIComponent(movie.title)}`,
@@ -157,28 +157,53 @@ function displaySummary(movieData) {
     `;
 }
 
-// Function to export movies to JSON
-function exportMovies() {
+// Function to backfill missing movie attributes
+async function backfillMissingAttributes() {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
-    const blob = new Blob([JSON.stringify(movies, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'movies.json';
-    a.click();
-    URL.revokeObjectURL(url);
+    for (let movie of movies) {
+        if (movie.length === 'N/A' || movie.director === 'N/A' || movie.actors === 'N/A' || movie.review === 'N/A') {
+            const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${tmdbApiKey}&append_to_response=credits`;
+            try {
+                const detailsResponse = await fetch(movieDetailsUrl);
+                if (!detailsResponse.ok) {
+                    throw new Error('Failed to fetch movie details');
+                }
+
+                const detailsData = await detailsResponse.json();
+                if (movie.length === 'N/A') {
+                    movie.length = detailsData.runtime ? `${detailsData.runtime} min` : 'N/A';
+                }
+                if (movie.director === 'N/A') {
+                    const director = detailsData.credits.crew.find(person => person.job === 'Director');
+                    movie.director = director ? director.name : 'N/A';
+                }
+                if (movie.actors === 'N/A') {
+                    movie.actors = detailsData.credits.cast.slice(0, 5).map(actor => actor.name).join(', ') || 'N/A';
+                }
+                if (movie.review === 'N/A') {
+                    // If you have a separate reviews endpoint, use it here
+                    movie.review = 'N/A'; // Placeholder, TMDB API doesn't have reviews in this endpoint
+                }
+
+                saveMovieToLocalStorage(movie);
+            } catch (error) {
+                displayLog(`Error fetching details for ${movie.title}: ${error.message}`);
+            }
+        }
+    }
+    displayMoviesFromLocalStorage();
 }
 
-// Function to export movies to CSV
-function exportMoviesCSV() {
+// Function to handle CSV export
+function exportMovies() {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     const csvRows = [
-        ['#', 'Poster', 'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB', 'IMDb', 'Toloka', 'Rutracker', 'Trailer']
+        ['ID', 'Poster', 'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB', 'IMDb', 'Toloka', 'Rutracker', 'Trailer']
     ];
 
-    movies.forEach((movie, index) => {
+    movies.forEach(movie => {
         csvRows.push([
-            index + 1,
+            movie.id,
             movie.poster,
             movie.title,
             movie.genre,
@@ -245,3 +270,6 @@ function toggleReview() {
 
 // Event listener for the toggle review button
 document.querySelector('#toggleReview').addEventListener('click', toggleReview);
+
+// Event listener for the backfill button
+document.querySelector('#backfillButton').addEventListener('click', backfillMissingAttributes);
