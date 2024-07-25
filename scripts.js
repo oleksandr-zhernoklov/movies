@@ -40,12 +40,13 @@ async function searchMovie() {
                 saveMovieToLocalStorage(movieData);
                 displayMoviesFromLocalStorage();
                 displaySummary(movieData);
+                alert('Movie added successfully.');
             } else {
                 alert('Movie already exists in the list.');
             }
         }
     } catch (error) {
-        console.error('Error fetching movie data:', error);
+        alert('Error fetching movie data: ' + error);
     }
 }
 
@@ -56,7 +57,7 @@ async function fetchMovieDetails(movieId) {
         const movie = await response.json();
         return movie;
     } catch (error) {
-        console.error('Error fetching movie details:', error);
+        alert('Error fetching movie details: ' + error);
         return {};
     }
 }
@@ -69,7 +70,7 @@ async function fetchTrailer(movieId) {
         const trailer = data.results.find(video => video.type === 'Trailer');
         return trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : 'N/A';
     } catch (error) {
-        console.error('Error fetching movie trailers:', error);
+        alert('Error fetching movie trailers: ' + error);
         return 'N/A';
     }
 }
@@ -167,13 +168,11 @@ function exportMovies() {
 function exportMoviesCSV() {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     const csvRows = [
-        ['#', 'Poster', 'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB', 'IMDb', 'Toloka', 'Rutracker', 'Trailer']
+        ['Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB Link', 'IMDb Link', 'Toloka Link', 'Rutracker Link', 'Trailer']
     ];
 
-    movies.forEach((movie, index) => {
+    movies.forEach(movie => {
         csvRows.push([
-            index + 1,
-            movie.poster,
             movie.title,
             movie.genre,
             movie.year,
@@ -211,7 +210,7 @@ function importMovies(event) {
                 localStorage.setItem('movies', JSON.stringify(movies));
                 displayMoviesFromLocalStorage();
             } catch (error) {
-                console.error('Error importing movies:', error);
+                alert('Error importing movies: ' + error);
             }
         };
         reader.readAsText(file);
@@ -234,12 +233,11 @@ async function backfillMissingAttributes() {
                 movie.director = director ? director.name : 'N/A';
             }
             if (movie.actors === 'N/A') {
-                const actors = movieDetails.cast.slice(0, 5).map(actor => actor.name).join(', ');
+                const actors = movieDetails.credits.cast.slice(0, 5).map(actor => actor.name).join(', ');
                 movie.actors = actors || 'N/A';
             }
             if (movie.review === 'N/A') {
-                // Placeholder for review fetching logic, if available
-                movie.review = 'N/A';
+                movie.review = 'N/A'; // No review data source provided, keeping as 'N/A'
             }
             saveMovieToLocalStorage(movie);
         }
