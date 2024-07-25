@@ -3,55 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie List</title>
+    <title>Movie Database</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Movie List</h1>
-    </header>
-    <div id="controls">
-        <button class="button" id="backfillButton">Backfill Missing Attributes</button>
-        <input type="text" id="search" placeholder="Search for movies...">
-        <button onclick="searchMovie()">Search</button>
-        <button onclick="removeAllMovies()">Remove All</button>
-        <a href="downloaded.html" target="_self" class="button">View Downloaded Movies</a>
-        <button onclick="exportMovies()">Export JSON</button>
-        <button onclick="exportMoviesCSV()">Export CSV</button>
-        <input type="file" id="importJSON" accept=".json" onchange="importMoviesJSON(event)" style="display:none;">
-        <input type="file" id="importCSV" accept=".csv" onchange="importMoviesCSV(event)" style="display:none;">
-        <label for="importJSON" class="button">Import JSON</label>
-        <label for="importCSV" class="button">Import CSV</label>
-        <button onclick="toggleReviewColumn()">Toggle Review Column</button>
+    <div id="container">
+        <header>
+            <h1>Movie Database</h1>
+        </header>
+        <div id="controls">
+            <input type="text" id="search" placeholder="Search for a movie...">
+            <button class="button" onclick="searchMovie()">Search</button>
+            <button class="button" onclick="removeAllMovies()">Remove All</button>
+            <button class="button" onclick="exportMovies()">Export JSON</button>
+            <button class="button" onclick="exportMoviesCSV()">Export CSV</button>
+            <input type="file" id="import" accept=".json" onchange="importMovies(event)">
+            <input type="file" id="importCSV" accept=".csv" onchange="importMoviesCSV(event)">
+            <button class="button" onclick="backfillMovies()">Backfill Data</button>
+            <button class="button" onclick="toggleReviewColumn()">Toggle Review Column</button>
+        </div>
+        <div id="logs"></div>
+        <div id="summary"></div>
+        <table id="movieTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">#</th>
+                    <th>Poster</th>
+                    <th onclick="sortTable(2)">Title</th>
+                    <th onclick="sortTable(3)">Genre</th>
+                    <th onclick="sortTable(4)">Year</th>
+                    <th onclick="sortTable(5)">Length</th>
+                    <th onclick="sortTable(6)">Rating</th>
+                    <th class="collapsible" onclick="sortTable(7)">Description</th>
+                    <th onclick="sortTable(8)">Director</th>
+                    <th class="collapsible" onclick="sortTable(9)">Actors</th>
+                    <th class="collapsible" onclick="sortTable(10)">Review</th>
+                    <th>TMDB</th>
+                    <th>IMDb</th>
+                    <th>Toloka</th>
+                    <th>Rutracker</th>
+                    <th>Trailer</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="rowCount"></div>
     </div>
-    <div id="summary"></div>
-    <table id="movieTable">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Length</th>
-                <th>Rating</th>
-                <th>Description</th>
-                <th>Director</th>
-                <th>Actors</th>
-                <th class="collapsible">Review</th>
-                <th>TMDB</th>
-                <th>IMDb</th>
-                <th>Toloka</th>
-                <th>Rutracker</th>
-                <th>Trailer</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Movie rows will be inserted here -->
-        </tbody>
-    </table>
-    <div id="rowCount">Total Movies: 0</div>
     <script src="scripts.js"></script>
 </body>
 </html>

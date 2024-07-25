@@ -1,116 +1,97 @@
-/* Reset some default browser styles */
-body, h1, p, input, button, table, td, th {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    width: 90%;
+    margin: auto;
 }
 
-header h1 {
+header {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
 #controls {
+    margin: 20px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #controls input[type="text"] {
-    width: calc(100% - 300px);
-    padding: 10px;
-    font-size: 16px;
+    width: 200px;
+    padding: 5px;
+}
+
+#controls button {
+    padding: 5px 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#controls .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
+    background-color: #f4f4f4;
     cursor: pointer;
-    margin-left: 10px;
 }
 
-#controls .button:hover {
-    background-color: #0056b3;
+#controls button:hover {
+    background-color: #ddd;
 }
 
-#summary {
-    margin: 20px 0;
+#movieTable {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-#summary h2 {
-    margin-bottom: 10px;
+#movieTable th, #movieTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
-#summary p {
-    margin-bottom: 5px;
+#movieTable th {
+    background-color: #f4f4f4;
+    cursor: pointer;
 }
 
-.poster {
+#movieTable th.sortable::after {
+    content: ' ⬍';
+    font-size: 0.8em;
+}
+
+#movieTable th.sortable.asc::after {
+    content: ' ⬆';
+}
+
+#movieTable th.sortable.desc::after {
+    content: ' ⬇';
+}
+
+#movieTable td img.poster {
     width: 100px;
     height: auto;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+#movieTable td.collapsible {
+    display: none;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
+#movieTable td.collapsible.expanded {
+    display: table-cell;
 }
 
-th {
-    background-color: #f4f4f4;
+#summary {
+    margin-top: 20px;
 }
 
-.collapsible {
-    max-width: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+#summary img.poster {
+    width: 150px;
+    height: auto;
+}
+
+#logs {
+    margin: 20px 0;
 }
 
 #rowCount {
-    text-align: right;
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    #controls {
-        flex-direction: column;
-    }
-
-    #controls input[type="text"] {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .collapsible {
-        max-width: 100px;
-    }
+    margin: 10px 0;
 }
