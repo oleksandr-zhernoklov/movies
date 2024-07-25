@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Database</title>
+    <title>Movie List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Movie List</h1>
+    </header>
     <div id="controls">
-        <div id="searchForm">
-            <input type="text" id="search" placeholder="Search for a movie...">
-            <button onclick="searchMovie()">Search</button>
-        </div>
-        <a href="downloaded.html" class="button">Downloaded Movies</a>
-        <button onclick="exportMovies()">Export to JSON</button>
-        <button onclick="exportMoviesCSV()">Export to CSV</button>
-        <input type="file" id="importMoviesJSON" style="display:none;" onchange="importMoviesJSON(event)">
-        <label for="importMoviesJSON" class="button">Import from JSON</label>
-        <input type="file" id="importMoviesCSV" style="display:none;" onchange="importMoviesCSV(event)">
-        <label for="importMoviesCSV" class="button">Import from CSV</label>
-        <button onclick="removeAllMovies()" style="float: right;">Remove All</button>
+        <button onclick="document.querySelector('#search').focus()">Focus Search</button>
+        <input type="text" id="search" placeholder="Search for movies...">
+        <button onclick="searchMovie()">Search</button>
+        <button onclick="removeAllMovies()">Remove All</button>
+        <a href="downloaded.html" target="_self">View Downloaded Movies</a>
+        <button onclick="exportMovies()">Export JSON</button>
+        <button onclick="exportMoviesCSV()">Export CSV</button>
+        <input type="file" id="importJSON" accept=".json" onchange="importMoviesJSON(event)" style="display:none;">
+        <input type="file" id="importCSV" accept=".csv" onchange="importMoviesCSV(event)" style="display:none;">
+        <label for="importJSON" class="button">Import JSON</label>
+        <label for="importCSV" class="button">Import CSV</label>
+        <button onclick="toggleReviewColumn()">Toggle Review Column</button>
     </div>
     <div id="summary"></div>
-    <div id="rowCount"></div>
     <table id="movieTable">
         <thead>
             <tr>
@@ -35,20 +37,21 @@
                 <th>Rating</th>
                 <th>Description</th>
                 <th>Director</th>
-                <th class="collapsible" onclick="toggleReviewColumn()">Actors</th>
-                <th class="collapsible" onclick="toggleReviewColumn()">Review</th>
+                <th>Actors</th>
+                <th class="collapsible">Review</th>
                 <th>TMDB</th>
                 <th>IMDb</th>
                 <th>Toloka</th>
                 <th>Rutracker</th>
                 <th>Trailer</th>
-                <th>Action</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Movie rows will be added here -->
+            <!-- Movie rows will be inserted here -->
         </tbody>
     </table>
+    <div id="rowCount">Total Movies: 0</div>
     <script src="scripts.js"></script>
 </body>
 </html>
