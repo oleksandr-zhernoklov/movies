@@ -4,74 +4,88 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const tmdbApiKey = 'fb70d4fb95572e0ddd9bc99f90734e46';
+const tmdbGenres = { /* Populate this with your genre mappings */ };
 
+// Function to handle movie search
 async function searchMovie() {
-    let movieName = document.querySelector('#search').value.trim();
-    if (movieName.startsWith('.')) {
-        movieName = movieName.substring(1).trim();
-        document.querySelector('#search').value = movieName;
+    let movieTitle = document.querySelector('#search').value.trim();
+    if (movieTitle.startsWith('.')) {
+        movieTitle = movieTitle.substring(1).trim();
+        document.querySelector('#search').value = movieTitle;
     }
 
-    if (movieName === '') {
-        console.log('Search query is empty.');
+    if (!movieTitle) {
+        displayLog('Please enter a movie title.');
         return;
     }
 
-    try {
-        console.log(`Searching for movie: ${movieName}`);
-        const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&query=${encodeURIComponent(movieName)}`);
-        const data = await response.json();
-        console.log(`Search results received: ${JSON.stringify(data)}`);
+    const tmdbSearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&query=${encodeURIComponent(movieTitle)}`;
 
-        if (data.results.length > 0) {
-            const movie = data.results[0]; // Assuming we are interested in the first result
+    try {
+        const searchResponse = await fetch(tmdbSearchUrl);
+        if (!searchResponse.ok) {
+            throw new Error('Failed to fetch data from TMDB');
+        }
+
+        const searchData = await searchResponse.json();
+        if (searchData.results.length > 0) {
+            const movie = searchData.results[0]; // Use the first result for simplicity
+            const movieId = movie.id;
             const movieData = {
                 id: movie.id,
-                poster: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
+                poster: `https://image.tmdb.org/t/p/w200${movie.poster_path}`, // Correct poster URL
                 title: movie.title,
-                genre: movie.genre_ids.join(', '), // Assuming genre IDs will be mapped to names
-                year: new Date(movie.release_date).getFullYear(),
-                length: 'N/A', // Length is not available in search results
+                genre: movie.genre_ids.map(id => tmdbGenres[id] || 'Unknown').join(', '),
+                year: movie.release_date.split('-')[0],
+                length: 'N/A', // TMDB does not provide movie length in the search API
                 rating: movie.vote_average,
                 description: movie.overview,
-                director: 'N/A', // Director info is not available in search results
-                actors: 'N/A', // Actors info is not available in search results
-                review: 'N/A', // Review info is not available in search results
+                director: 'N/A', // Need to fetch additional details for this
+                actors: 'N/A', // Need to fetch additional details for this
+                review: 'N/A', // Review data is not available in the search response
                 tmdbLink: `https://www.themoviedb.org/movie/${movie.id}`,
-                imdbLink: `https://www.imdb.com/title/${movie.imdb_id}`,
-                tolokaLink: 'N/A', // Assuming Toloka info is not available
-                rutrackerLink: 'N/A', // Assuming Rutracker info is not available
-                trailer: 'N/A' // Trailer info is not available in search results
+                imdbLink: `https://www.imdb.com/title/tt${movie.id}`,
+                tolokaLink: `https://toloka.to/tracker.php?nm=${encodeURIComponent(movie.title)}`,
+                rutrackerLink: `https://rutracker.org/forum/tracker.php?nm=${encodeURIComponent(movie.title)}`,
+                trailer: 'N/A' // Initialize trailer link
             };
 
+            // Fetching the movie videos to get the trailer
+            const videosUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${tmdbApiKey}`;
+            const videosResponse = await fetch(videosUrl);
+            const videosData = await videosResponse.json();
+            const trailer = videosData.results.find(video => video.type === 'Trailer');
+            movieData.trailer = trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : 'N/A';
+
             if (!isDuplicateMovie(movieData.id)) {
-                addMovieToLocalStorage(movieData);
+                saveMovieToLocalStorage(movieData);
                 displayMoviesFromLocalStorage();
                 displaySummary(movieData);
             } else {
-                alert('Movie already exists in the list.');
-                console.log('Attempted to add duplicate movie with ID:', movieData.id);
+                displayLog('Movie already exists in the list.');
             }
         } else {
-            console.log('No movies found.');
+            displayLog('No results found.');
         }
     } catch (error) {
-        console.error('Error fetching movie data from TMDB:', error);
+        displayLog(`Error: ${error.message}`);
     }
 }
 
+// Function to check for duplicate movies
 function isDuplicateMovie(movieId) {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     return movies.some(movie => movie.id === parseInt(movieId));
 }
 
-function addMovieToLocalStorage(movieData) {
+// Function to save a movie to local storage
+function saveMovieToLocalStorage(movieData) {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     movies.push(movieData);
     localStorage.setItem('movies', JSON.stringify(movies));
-    console.log('Movie added to local storage:', movieData);
 }
 
+// Function to display movies from local storage in the table
 function displayMoviesFromLocalStorage() {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     const tbody = document.querySelector('#movieTable tbody');
@@ -93,38 +107,39 @@ function displayMoviesFromLocalStorage() {
             <td class="collapsible">${movie.review || 'N/A'}</td>
             <td><a href="${movie.tmdbLink}" target="_blank">TMDB</a></td>
             <td><a href="${movie.imdbLink}" target="_blank">IMDb</a></td>
-            <td>${movie.tolokaLink || 'N/A'}</td>
-            <td>${movie.rutrackerLink || 'N/A'}</td>
-            <td><a href="${movie.trailer}" target="_blank">Trailer</a></td>
+            <td><a href="${movie.tolokaLink}" target="_blank">Toloka</a></td>
+            <td><a href="${movie.rutrackerLink}" target="_blank">Rutracker</a></td>
+            <td><a href="${movie.trailer}" target="_blank">${movie.trailer === 'N/A' ? 'N/A' : 'Watch Trailer'}</a></td>
             <td><button class="button" onclick="removeMovie(${movie.id})">Remove</button></td>
         `;
         tbody.appendChild(row);
     });
 
     document.querySelector('#rowCount').textContent = `Total Movies: ${movies.length}`;
-    console.log(`Total movies displayed: ${movies.length}`);
 }
 
+// Function to remove a movie from local storage
 function removeMovie(movieId) {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     const updatedMovies = movies.filter(movie => movie.id !== movieId);
     localStorage.setItem('movies', JSON.stringify(updatedMovies));
     displayMoviesFromLocalStorage();
-    console.log(`Removed movie with ID: ${movieId}`);
 }
 
+// Function to remove all movies from local storage
 function removeAllMovies() {
     if (confirm('Are you sure you want to remove all movies?')) {
         localStorage.removeItem('movies');
         displayMoviesFromLocalStorage();
-        console.log('All movies removed from local storage.');
     }
 }
 
+// Function to display the summary of a movie
 function displaySummary(movieData) {
     const summaryDiv = document.querySelector('#summary');
     summaryDiv.innerHTML = `
         <h2>Added Movie</h2>
+        <img src="${movieData.poster}" class="poster" alt="${movieData.title} poster">
         <p><strong>Title:</strong> ${movieData.title}</p>
         <p><strong>Genre:</strong> ${movieData.genre}</p>
         <p><strong>Year:</strong> ${movieData.year}</p>
@@ -138,11 +153,11 @@ function displaySummary(movieData) {
         <p><strong>IMDb Link:</strong> <a href="${movieData.imdbLink}" target="_blank">${movieData.imdbLink}</a></p>
         <p><strong>Toloka Link:</strong> <a href="${movieData.tolokaLink}" target="_blank">${movieData.tolokaLink}</a></p>
         <p><strong>Rutracker Link:</strong> <a href="${movieData.rutrackerLink}" target="_blank">${movieData.rutrackerLink}</a></p>
-        <p><strong>Trailer Link:</strong> <a href="${movieData.trailer}" target="_blank">${movieData.trailer}</a></p>
+        <p><strong>Trailer Link:</strong> <a href="${movieData.trailer}" target="_blank">${movieData.trailer === 'N/A' ? 'N/A' : 'Watch Trailer'}</a></p>
     `;
-    console.log('Summary displayed for movie:', movieData.title);
 }
 
+// Function to export movies to JSON
 function exportMovies() {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     const blob = new Blob([JSON.stringify(movies, null, 2)], { type: 'application/json' });
@@ -152,62 +167,81 @@ function exportMovies() {
     a.download = 'movies.json';
     a.click();
     URL.revokeObjectURL(url);
-    console.log('Movies exported to JSON.');
 }
 
-function importMoviesJSON(event) {
+// Function to export movies to CSV
+function exportMoviesCSV() {
+    const movies = JSON.parse(localStorage.getItem('movies')) || [];
+    const csvRows = [
+        ['#', 'Poster', 'Title', 'Genre', 'Year', 'Length', 'Rating', 'Description', 'Director', 'Actors', 'Review', 'TMDB', 'IMDb', 'Toloka', 'Rutracker', 'Trailer']
+    ];
+
+    movies.forEach((movie, index) => {
+        csvRows.push([
+            index + 1,
+            movie.poster,
+            movie.title,
+            movie.genre,
+            movie.year,
+            movie.length,
+            movie.rating,
+            movie.description,
+            movie.director,
+            movie.actors,
+            movie.review,
+            movie.tmdbLink,
+            movie.imdbLink,
+            movie.tolokaLink,
+            movie.rutrackerLink,
+            movie.trailer
+        ]);
+    });
+
+    const csvContent = csvRows.map(e => e.join(',')).join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'movies.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+// Function to import movies from JSON
+function importMovies(event) {
     const file = event.target.files[0];
-    if (file) {
+    if (file && file.type === 'application/json') {
         const reader = new FileReader();
-        reader.onload = () => {
+        reader.onload = (e) => {
             try {
-                const movies = JSON.parse(reader.result);
-                localStorage.setItem('movies', JSON.stringify(movies));
-                displayMoviesFromLocalStorage();
-                console.log('Movies imported from JSON file.');
-            } catch (e) {
-                alert('Invalid JSON file.');
-                console.error('Error parsing JSON file:', e);
+                const movies = JSON.parse(e.target.result);
+                if (Array.isArray(movies)) {
+                    localStorage.setItem('movies', JSON.stringify(movies));
+                    displayMoviesFromLocalStorage();
+                } else {
+                    displayLog('Invalid JSON format.');
+                }
+            } catch (error) {
+                displayLog('Error reading file: ' + error.message);
             }
         };
         reader.readAsText(file);
+    } else {
+        displayLog('Please upload a valid JSON file.');
     }
 }
 
-function importMoviesCSV(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = () => {
-            const lines = reader.result.split('\n');
-            const movies = [];
-            lines.slice(1).forEach(line => {
-                const cols = line.split(',');
-                if (cols.length > 1) {
-                    movies.push({
-                        id: parseInt(cols[0], 10),
-                        poster: cols[1],
-                        title: cols[2],
-                        genre: cols[3],
-                        year: cols[4],
-                        length: cols[5],
-                        rating: cols[6],
-                        description: cols[7],
-                        director: cols[8],
-                        actors: cols[9],
-                        review: cols[10],
-                        tmdbLink: cols[11],
-                        imdbLink: cols[12],
-                        tolokaLink: cols[13],
-                        rutrackerLink: cols[14],
-                        trailer: cols[15]
-                    });
-                }
-            });
-            localStorage.setItem('movies', JSON.stringify(movies));
-            displayMoviesFromLocalStorage();
-            console.log('Movies imported from CSV file.');
-        };
-        reader.readAsText(file);
-    }
+// Function to display log messages
+function displayLog(message) {
+    const logDiv = document.querySelector('#logs');
+    logDiv.innerHTML += `<p>${message}</p>`;
 }
+
+// Toggle review functionality
+function toggleReview() {
+    const collapsibleElements = document.querySelectorAll('.collapsible');
+    collapsibleElements.forEach(el => el.classList.toggle('hidden'));
+}
+
+// Event listener for the toggle review button
+document.querySelector('#toggleReview').addEventListener('click', toggleReview);
