@@ -3,97 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie and Series Watchlist</title>
+    <title>Movie and Series Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Movie and Series Watchlist</h1>
-    <div>
-        <input type="text" id="search" placeholder="Search for movies or series">
-        <button onclick="searchMovie()">Search Movies</button>
-        <button onclick="searchSeries()">Search Series</button>
+    <div class="container">
+        <h1>Movie and Series Tracker</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a movie or series...">
+            <button id="searchMovie" class="button">Search Movie</button>
+            <button id="searchSeries" class="button">Search Series</button>
+        </div>
+        <div id="summary"></div>
+        <button id="toggleReviewColumn" class="button">Toggle Reviews</button>
+        <table id="movieTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Poster</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Length</th>
+                    <th>Rating</th>
+                    <th class="collapsible">Description</th>
+                    <th>Director</th>
+                    <th class="collapsible">Actors</th>
+                    <th class="collapsible">Review</th>
+                    <th>TMDB</th>
+                    <th>IMDb</th>
+                    <th>Toloka</th>
+                    <th>Rutracker</th>
+                    <th>Trailer</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Movies will be dynamically added here -->
+            </tbody>
+        </table>
+        <p id="rowCount"></p>
+
+        <table id="seriesTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Poster</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Seasons</th>
+                    <th>Episodes</th>
+                    <th>Rating</th>
+                    <th class="collapsible">Description</th>
+                    <th>TMDB</th>
+                    <th>IMDb</th>
+                    <th>Toloka</th>
+                    <th>Rutracker</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Series will be dynamically added here -->
+            </tbody>
+        </table>
+        <p id="rowCountSeries"></p>
+
+        <div class="import-export-container">
+            <button id="export" class="button">Export Data</button>
+            <input type="file" id="import" class="button" accept=".json">
+        </div>
     </div>
-    <h2>Movies</h2>
-    <p id="movieCount">Total Movies: 0</p>
-    <table id="movieTable">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Length</th>
-                <th>Rating</th>
-                <th>Description</th>
-                <th>Director</th>
-                <th>Actors</th>
-                <th>Review</th>
-                <th>TMDB</th>
-                <th>IMDb</th>
-                <th>Toloka</th>
-                <th>Rutracker</th>
-                <th>Trailer</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <h2>Series</h2>
-    <p id="seriesCount">Total Series: 0</p>
-    <table id="seriesTable">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Seasons & Episodes</th>
-                <th>Rating</th>
-                <th>Description</th>
-                <th>Director</th>
-                <th>Actors</th>
-                <th>Review</th>
-                <th>TMDB</th>
-                <th>IMDb</th>
-                <th>Toloka</th>
-                <th>Rutracker</th>
-                <th>Trailer</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <h2>Watchlist</h2>
-    <p id="watchlistCount">Total Watchlist Items: 0</p>
-    <table id="watchlistTable">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Length</th>
-                <th>Rating</th>
-                <th>Description</th>
-                <th>Director</th>
-                <th>Actors</th>
-                <th>Review</th>
-                <th>TMDB</th>
-                <th>IMDb</th>
-                <th>Toloka</th>
-                <th>Rutracker</th>
-                <th>Trailer</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
