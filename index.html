@@ -18,7 +18,12 @@
             <button class="button" onclick="exportMovies()">Export JSON</button>
             <button class="button" onclick="backfillMovies()">Backfill</button>
             <input type="file" id="import" accept=".json" onchange="importMovies(event)">
-            <a href="sub/series.html" class="button">Series</a> <!-- Added link to series.html -->
+            <a href="sub/series.html" class="button">Series</a>
+            <select id="typeFilter" onchange="filterByType()">
+                <option value="all">All</option>
+                <option value="movie">Movies</option>
+                <option value="series">Series</option>
+            </select>
         </div>
         <div id="logs"></div>
         <div id="summary"></div>
@@ -36,6 +41,7 @@
                     <th onclick="sortTable(8)">Director</th>
                     <th class="collapsible" onclick="sortTable(9)">Actors</th>
                     <th class="collapsible" onclick="sortTable(10)">Review</th>
+                    <th>Type</th> <!-- New column for type -->
                     <th>TMDB</th>
                     <th>IMDb</th>
                     <th>Toloka</th>

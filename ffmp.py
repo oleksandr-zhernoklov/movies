@@ -1,50 +1,46 @@
-import subprocess
-import json
+from moviepy.editor import VideoFileClip
 import os
 
-def get_video_duration(file_path, ffprobe_path):
-    """Get the duration of the video file using ffprobe."""
+def check_video_duration(file_path):
+    """Check the duration of the video file using moviepy."""
     try:
-        command = [ffprobe_path, '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=duration', '-of', 'json', file_path]
-        print(f"Running command: {' '.join(command)}")  # Print the command for debugging
-
-        result = subprocess.run(
-            command,
-            stderr=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            text=True
-        )
-        
-        print(f"FFprobe output for {file_path}: {result.stdout}")
-
-        info = json.loads(result.stdout)
-        
-        if 'streams' in info and len(info['streams']) > 0 and 'duration' in info['streams'][0]:
-            duration = info['streams'][0]['duration']
-            return float(duration)
-        else:
-            print(f"'duration' not found in the output for {file_path}")
-            return None
-    
-    except json.JSONDecodeError as e:
-        print(f"JSON decoding error for {file_path}: {e}")
+        with VideoFileClip(file_path) as video:
+            duration = video.duration
+            return duration
+    except OSError as e:
+        # Handle specific file errors (e.g., file not found, invalid format)
+        print(f"File error for {file_path}: {e}")
         return None
     except Exception as e:
-        print(f"An error occurred while checking duration for {file_path}: {e}")
+        # Handle other potential errors
+        print(f"Error with file {file_path}: {e}")
         return None
 
+def check_directory(directory):
+    """Check all video files in the given directory and its subdirectories."""
+    non_valid_files = []
+    
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.lower().endswith(('.mp4', '.avi', '.mkv', '.mov', '.wmv')):
+                file_path = os.path.join(root, file)
+                print(f"Checking file: {file_path}")  # Log the file being checked
+                duration = check_video_duration(file_path)
+                if duration is None:
+                    non_valid_files.append(file_path)
+    
+    return non_valid_files
+
 if __name__ == "__main__":
-    file_path = r"G:\Movies\1900x\Baraka (1992).mkv"  # Update this path if needed
-    ffprobe_path = r"C:\Users\zhern\OneDrive\Documents\CCE\Repos\movies\ffprobe.exe"  # Update this path to the location of ffprobe on your system
-
-    print(f"File path: {file_path}")
-    print(f"FFprobe path: {ffprobe_path}")
-
-    if os.path.exists(file_path):
-        duration = get_video_duration(file_path, ffprobe_path)
-        if duration is not None:
-            print(f"{file_path} duration: {duration:.2f} seconds")
+    directory = r"G:\Movies"  # Update this path to your directory
+    if os.path.isdir(directory):
+        non_valid_files = check_directory(directory)
+        
+        if non_valid_files:
+            print("Non-valid video files:")
+            for file in non_valid_files:
+                print(file)
         else:
-            print(f"Could not determine duration for {file_path}")
+            print("All video files are valid.")
     else:
-        print("The provided file path does not exist.")
+        print("The provided path is not a directory.")
