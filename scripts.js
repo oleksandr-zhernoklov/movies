@@ -21,7 +21,7 @@ function searchMovie() {
                 description: movie.overview,
                 director: getMovieCredits(movie.id).director || "N/A",
                 actors: getMovieCredits(movie.id).actors.join(", ") || "N/A",
-                review: "N/A", // Reviews to be fetched separately if needed
+                review: getMovieReviews(movie.id).review || "N/A",
                 trailer: getMovieVideos(movie.id).trailer || "N/A", // Trailer URL
                 tmdbLink: `https://www.themoviedb.org/movie/${movie.id}`,
                 imdbLink: `https://www.imdb.com/title/${movie.id}`, // Adjust according to your handling
@@ -47,12 +47,12 @@ function searchSeries() {
                 title: seriesItem.name,
                 genre: seriesItem.genre_ids.join(", "), // Adjust according to your genre handling
                 year: seriesItem.first_air_date.split('-')[0],
-                length: "N/A", // Series length handling can be more complex
+                length: `${seriesItem.number_of_seasons} seasons, ${seriesItem.number_of_episodes} episodes`,
                 rating: seriesItem.vote_average ? `${seriesItem.vote_average}/10` : "N/A",
                 description: seriesItem.overview,
                 director: getSeriesCredits(seriesItem.id).director || "N/A",
                 actors: getSeriesCredits(seriesItem.id).actors.join(", ") || "N/A",
-                review: "N/A", // Reviews to be fetched separately if needed
+                review: getSeriesReviews(seriesItem.id).review || "N/A",
                 trailer: getSeriesVideos(seriesItem.id).trailer || "N/A", // Trailer URL
                 tmdbLink: `https://www.themoviedb.org/tv/${seriesItem.id}`,
                 imdbLink: `https://www.imdb.com/title/${seriesItem.id}`, // Adjust according to your handling
@@ -102,6 +102,24 @@ function getSeriesVideos(seriesId) {
             trailer: data.results.find(video => video.type === 'Trailer') ? `https://www.youtube.com/watch?v=${data.results.find(video => video.type === 'Trailer').key}` : "N/A"
         }))
         .catch(error => console.error('Error fetching series videos:', error));
+}
+
+function getMovieReviews(movieId) {
+    return fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=fb70d4fb95572e0ddd9bc99f90734e46`)
+        .then(response => response.json())
+        .then(data => ({
+            review: data.results.length > 0 ? data.results[0].content : "N/A"
+        }))
+        .catch(error => console.error('Error fetching movie reviews:', error));
+}
+
+function getSeriesReviews(seriesId) {
+    return fetch(`https://api.themoviedb.org/3/tv/${seriesId}/reviews?api_key=fb70d4fb95572e0ddd9bc99f90734e46`)
+        .then(response => response.json())
+        .then(data => ({
+            review: data.results.length > 0 ? data.results[0].content : "N/A"
+        }))
+        .catch(error => console.error('Error fetching series reviews:', error));
 }
 
 function displayMoviesFromLocalStorage() {
