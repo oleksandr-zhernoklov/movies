@@ -6,35 +6,37 @@ body {
 
 #container {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header {
     text-align: center;
-    padding: 20px;
+    margin-bottom: 20px;
 }
 
 #controls {
-    margin: 20px 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 #controls input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+#controls .button {
+    margin-right: 10px;
+}
+
+#logs {
+    margin-bottom: 20px;
+}
+
+#summary img.poster {
     width: 200px;
-    padding: 5px;
-}
-
-#controls button {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    background-color: #f4f4f4;
-    cursor: pointer;
-}
-
-#controls button:hover {
-    background-color: #ddd;
+    height: auto;
 }
 
 #movieTable {
@@ -42,56 +44,35 @@ header {
     border-collapse: collapse;
 }
 
-#movieTable th, #movieTable td {
-    padding: 10px;
+#movieTable th,
+#movieTable td {
     border: 1px solid #ddd;
-    text-align: left;
+    padding: 8px;
 }
 
 #movieTable th {
-    background-color: #f4f4f4;
     cursor: pointer;
 }
 
-#movieTable th.sortable::after {
-    content: ' ⬍';
-    font-size: 0.8em;
+#movieTable th.asc::after {
+    content: ' ▲';
 }
 
-#movieTable th.sortable.asc::after {
-    content: ' ⬆';
+#movieTable th.desc::after {
+    content: ' ▼';
 }
 
-#movieTable th.sortable.desc::after {
-    content: ' ⬇';
-}
-
-#movieTable td img.poster {
-    width: 100px;
-    height: auto;
-}
-
+#movieTable th.collapsible,
 #movieTable td.collapsible {
     display: none;
 }
 
+#movieTable th.collapsible.expanded,
 #movieTable td.collapsible.expanded {
     display: table-cell;
 }
 
-#summary {
-    margin-top: 20px;
-}
-
-#summary img.poster {
-    width: 150px;
+#movieTable img.poster {
+    width: 100px;
     height: auto;
-}
-
-#logs {
-    margin: 20px 0;
-}
-
-#rowCount {
-    margin: 10px 0;
 }

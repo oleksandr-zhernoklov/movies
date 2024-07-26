@@ -16,11 +16,9 @@
             <button class="button" onclick="searchMovie()">Search</button>
             <button class="button" onclick="removeAllMovies()">Remove All</button>
             <button class="button" onclick="exportMovies()">Export JSON</button>
-            <button class="button" onclick="exportMoviesCSV()">Export CSV</button>
+            <button class="button" onclick="backfillMovies()">Backfill</button>
             <input type="file" id="import" accept=".json" onchange="importMovies(event)">
-            <input type="file" id="importCSV" accept=".csv" onchange="importMoviesCSV(event)">
-            <button class="button" onclick="backfillMovies()">Backfill Data</button>
-            <button class="button" onclick="toggleReviewColumn()">Toggle Review Column</button>
+            <a href="sub/series.html" class="button">Series</a> <!-- Added link to series.html -->
         </div>
         <div id="logs"></div>
         <div id="summary"></div>

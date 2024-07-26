@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Define the path to the base movie folder
-base_path = '/path/to/your/Movie/folder'
+base_path = 'G:\Movies'
 
 # Regular expression pattern to extract the year from file names
 year_pattern = re.compile(r'\((\d{4})\)')
@@ -35,7 +35,7 @@ def organize_movies_by_year(base_path):
                 os.makedirs(year_folder)
             
             # Move the file to the year folder
-            #shutil.move(file_path, os.path.join(year_folder, filename))
+            shutil.move(file_path, os.path.join(year_folder, filename))
             print(f"Moved {filename} to {year_folder}")
         else:
             print(f"No year found in {filename}")
