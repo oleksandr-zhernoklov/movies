@@ -7,73 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Movie and Series Tracker</h1>
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Search for a movie or series...">
-            <button id="searchMovie" class="button">Search Movie</button>
-            <button id="searchSeries" class="button">Search Series</button>
-        </div>
-        <div id="summary"></div>
-        <button id="toggleReviewColumn" class="button">Toggle Reviews</button>
-        <table id="movieTable">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Poster</th>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Year</th>
-                    <th>Length</th>
-                    <th>Rating</th>
-                    <th class="collapsible">Description</th>
-                    <th>Director</th>
-                    <th class="collapsible">Actors</th>
-                    <th class="collapsible">Review</th>
-                    <th>TMDB</th>
-                    <th>IMDb</th>
-                    <th>Toloka</th>
-                    <th>Rutracker</th>
-                    <th>Trailer</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Movies will be dynamically added here -->
-            </tbody>
-        </table>
-        <p id="rowCount"></p>
-
-        <table id="seriesTable">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Poster</th>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Year</th>
-                    <th>Seasons</th>
-                    <th>Episodes</th>
-                    <th>Rating</th>
-                    <th class="collapsible">Description</th>
-                    <th>TMDB</th>
-                    <th>IMDb</th>
-                    <th>Toloka</th>
-                    <th>Rutracker</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Series will be dynamically added here -->
-            </tbody>
-        </table>
-        <p id="rowCountSeries"></p>
-
-        <div class="import-export-container">
-            <button id="export" class="button">Export Data</button>
-            <input type="file" id="import" class="button" accept=".json">
-        </div>
-    </div>
+        <input type="text" id="search" placeholder="Search for a movie or series...">
+        <button onclick="searchMedia()">Search</button>
+    </header>
+    <main>
+        <section>
+            <h2>Movies and Series</h2>
+            <button onclick="toggleReviewColumn()">Toggle Review Column</button>
+            <table id="mediaTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Poster</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Year</th>
+                        <th>Length</th>
+                        <th>Rating</th>
+                        <th>Description</th>
+                        <th>Director</th>
+                        <th>Actors</th>
+                        <th>Review</th>
+                        <th>TMDB</th>
+                        <th>IMDb</th>
+                        <th>Toloka</th>
+                        <th>Rutracker</th>
+                        <th>Trailer</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="mediaTableBody">
+                    <!-- Rows will be added dynamically here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="summary">
+            <h2>Summary</h2>
+            <!-- Summary content will be added dynamically here -->
+        </section>
+    </main>
+    <footer>
+        <button onclick="exportMedia()">Export Data</button>
+        <button onclick="importMedia()">Import Data</button>
+        <input type="file" id="fileInput" style="display:none;" onchange="handleFileSelect(event)">
+    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>
