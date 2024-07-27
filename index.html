@@ -3,56 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie and Series Tracker</title>
+    <title>Media Library</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Movie and Series Tracker</h1>
-        <input type="text" id="search" placeholder="Search for a movie or series...">
+    <h1>Media Library</h1>
+    <div id="search-container">
+        <input type="text" id="search" placeholder="Search for movies or series">
         <button onclick="searchMedia()">Search</button>
-    </header>
-    <main>
-        <section>
-            <h2>Movies and Series</h2>
-            <button onclick="toggleReviewColumn()">Toggle Review Column</button>
-            <table id="mediaTable">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Poster</th>
-                        <th>Title</th>
-                        <th>Genre</th>
-                        <th>Year</th>
-                        <th>Length</th>
-                        <th>Rating</th>
-                        <th>Description</th>
-                        <th>Director</th>
-                        <th>Actors</th>
-                        <th>Review</th>
-                        <th>TMDB</th>
-                        <th>IMDb</th>
-                        <th>Toloka</th>
-                        <th>Rutracker</th>
-                        <th>Trailer</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody id="mediaTableBody">
-                    <!-- Rows will be added dynamically here -->
-                </tbody>
-            </table>
-        </section>
-        <section id="summary">
-            <h2>Summary</h2>
-            <!-- Summary content will be added dynamically here -->
-        </section>
-    </main>
-    <footer>
-        <button onclick="exportMedia()">Export Data</button>
-        <button onclick="importMedia()">Import Data</button>
-        <input type="file" id="fileInput" style="display:none;" onchange="handleFileSelect(event)">
-    </footer>
+    </div>
+    <div id="summary"></div>
+    <table id="mediaTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Length</th>
+                <th>Rating</th>
+                <th>Description</th>
+                <th>Director</th>
+                <th>Actors</th>
+                <th class="collapsible" onclick="toggleReviewColumn()">Review</th>
+                <th>TMDB</th>
+                <th>IMDb</th>
+                <th>Toloka</th>
+                <th>Rutracker</th>
+                <th>Trailer</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="mediaTableBody"></tbody>
+    </table>
+    <button onclick="exportMedia()">Export</button>
+    <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelect(event)">
+    <button onclick="importMedia()">Import</button>
     <script src="scripts.js"></script>
 </body>
 </html>

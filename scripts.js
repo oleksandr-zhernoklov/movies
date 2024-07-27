@@ -135,19 +135,19 @@ function toggleReviewColumn() {
 }
 
 function isDuplicateMedia(id) {
-    const storedMedia = JSON.parse(localStorage.getItem('mediaList')) || [];
+    const storedMedia = JSON.parse(localStorage.getItem('movies/')) || [];
     return storedMedia.some(media => media.id === id);
 }
 
 function saveMediaToLocalStorage(mediaData, type) {
-    const storedMedia = JSON.parse(localStorage.getItem('mediaList')) || [];
+    const storedMedia = JSON.parse(localStorage.getItem('movies/')) || [];
     mediaData.type = type;
     storedMedia.push(mediaData);
-    localStorage.setItem('mediaList', JSON.stringify(storedMedia));
+    localStorage.setItem('movies/', JSON.stringify(storedMedia));
 }
 
 function displayMediaFromLocalStorage() {
-    const storedMedia = JSON.parse(localStorage.getItem('mediaList')) || [];
+    const storedMedia = JSON.parse(localStorage.getItem('movies/')) || [];
     const mediaTableBody = document.querySelector('#mediaTableBody');
     if (!mediaTableBody) {
         console.error('Error: #mediaTableBody element not found.');
@@ -181,14 +181,14 @@ function displayMediaFromLocalStorage() {
 }
 
 function removeMedia(id) {
-    let storedMedia = JSON.parse(localStorage.getItem('mediaList')) || [];
+    let storedMedia = JSON.parse(localStorage.getItem('movies/')) || [];
     storedMedia = storedMedia.filter(media => media.id !== id);
-    localStorage.setItem('mediaList', JSON.stringify(storedMedia));
+    localStorage.setItem('movies/', JSON.stringify(storedMedia));
     displayMediaFromLocalStorage();
 }
 
 function exportMedia() {
-    const storedMedia = localStorage.getItem('mediaList');
+    const storedMedia = localStorage.getItem('movies/');
     if (!storedMedia) {
         alert('No data to export.');
         return;
@@ -215,7 +215,7 @@ function handleFileSelect(event) {
     reader.onload = function(e) {
         const importedMedia = JSON.parse(e.target.result);
         if (Array.isArray(importedMedia)) {
-            localStorage.setItem('mediaList', JSON.stringify(importedMedia));
+            localStorage.setItem('movies/', JSON.stringify(importedMedia));
             displayMediaFromLocalStorage();
         } else {
             alert('Invalid data format.');
