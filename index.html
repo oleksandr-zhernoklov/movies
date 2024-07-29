@@ -7,42 +7,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Media Library</h1>
-    <div id="search-container">
-        <input type="text" id="search" placeholder="Search...">
-        <button onclick="searchMedia()">Search</button>
-        <button onclick="clearSearch()">Clear</button>
-        <button onclick="importData()">Import</button>
-        <button onclick="exportData()">Export</button>
+    <input type="text" id="search" placeholder="Enter movie or series name">
+    <button onclick="searchMedia()">Search</button>
+    <button onclick="importData()">Import</button>
+    <button onclick="exportData()">Export</button>
+    <button onclick="toggleReviewColumn()">Toggle Review</button>
+    <input type="file" id="fileInput" style="display: none;" onchange="handleFile(event)">
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Poster</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Length</th>
+                    <th>Rating</th>
+                    <th>Description</th>
+                    <th>Director</th>
+                    <th>Actors</th>
+                    <th class="review-column">Review</th>
+                    <th>TMDb Link</th>
+                    <th>IMDb Link</th>
+                    <th>Toloka Link</th>
+                    <th>Rutracker Link</th>
+                    <th>Trailer</th>
+                </tr>
+            </thead>
+            <tbody id="mediaTableBody">
+                <!-- Media data will be dynamically inserted here -->
+            </tbody>
+        </table>
     </div>
-    <div id="summary"></div>
-    <table id="media-table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Poster</th>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Year</th>
-                <th>Length</th>
-                <th>Rating</th>
-                <th>Description</th>
-                <th>Director</th>
-                <th>Actors</th>
-                <th class="collapsible">Review</th>
-                <th>Type</th>
-                <th>TMDB</th>
-                <th>Toloka</th>
-                <th>Rutracker</th>
-                <th>Trailer</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+
     <script src="scripts/display.js"></script>
-    <script src="scripts/main.js"></script>
     <script src="scripts/search.js"></script>
     <script src="scripts/storage.js"></script>
     <script src="scripts/importExport.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -8,3 +8,15 @@ function deleteMedia(index) {
     localStorage.setItem('movies/', JSON.stringify(movies));
     displayMediaFromLocalStorage();
 }
+
+function isDuplicateMedia(id) {
+    const movies = JSON.parse(localStorage.getItem('movies/')) || [];
+    return movies.some(movie => movie.id === id);
+}
+
+function saveMediaToLocalStorage(media, type) {
+    const movies = JSON.parse(localStorage.getItem('movies/')) || [];
+    media.type = type;
+    movies.push(media);
+    localStorage.setItem('movies/', JSON.stringify(movies));
+}

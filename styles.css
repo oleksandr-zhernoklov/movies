@@ -1,105 +1,74 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f0f0f0;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#search-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#search {
-    padding: 10px;
-    font-size: 16px;
-    width: 300px;
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 200px;
+    box-sizing: border-box;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 5px;
+    padding: 8px 12px;
+    margin-right: 10px;
     cursor: pointer;
     background-color: #007BFF;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    table-layout: auto; /* Ensure dynamic layout */
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
-    overflow: hidden; /* Prevent overflow */
-    text-overflow: ellipsis;
-    white-space: nowrap; /* Prevent wrapping */
+    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    position: relative; /* For resizable handles */
-}
-
-th.resizable::after {
-    content: '';
-    position: absolute;
-    right: 0;
+    background-color: #f2f2f2;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
     top: 0;
-    bottom: 0;
-    width: 5px;
-    cursor: col-resize;
-    background-color: transparent;
+    z-index: 1;
 }
 
-td img {
-    max-width: 50px;
-    border-radius: 5px;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.collapsible {
-    cursor: pointer;
+tr:hover {
+    background-color: #f1f1f1;
 }
 
-.collapsible.expanded {
-    white-space: normal;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-#summary {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
+a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-#summary h2 {
-    margin-top: 0;
-}
-
-#fileInput {
-    display: none;
+a:hover {
+    text-decoration: underline;
 }

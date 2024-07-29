@@ -1,21 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     try {
         displayMediaFromLocalStorage();
-        const collapsibleHeader = document.querySelector('.collapsible');
-        if (collapsibleHeader) {
-            collapsibleHeader.addEventListener('click', toggleReviewColumn);
-        }
     } catch (error) {
         console.error("Error loading media from local storage:", error);
     }
 });
-
-function toggleReviewColumn() {
-    const reviewCells = document.querySelectorAll('.collapsible');
-    reviewCells.forEach(cell => {
-        cell.classList.toggle('expanded');
-    });
-}
 
 async function handleMovieData(movie) {
     const movieId = movie.id;
@@ -30,6 +19,7 @@ async function handleMovieData(movie) {
     const trailerLink = trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : 'N/A';
 
     const movieData = {
+        type: 'Movie',
         id: movieId,
         poster: `https://image.tmdb.org/t/p/w200${movie.poster_path}`,
         title: movie.title,
@@ -51,7 +41,6 @@ async function handleMovieData(movie) {
     if (!isDuplicateMedia(movieId)) {
         saveMediaToLocalStorage(movieData, 'movie');
         displayMediaFromLocalStorage();
-        displaySummary(movieData);
     } else {
         alert('Movie already exists in the list.');
     }
@@ -70,6 +59,7 @@ async function handleSeriesData(series) {
     const trailerLink = trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : 'N/A';
 
     const seriesData = {
+        type: 'Series',
         id: seriesId,
         poster: `https://image.tmdb.org/t/p/w200${series.poster_path}`,
         title: series.name,
@@ -91,10 +81,7 @@ async function handleSeriesData(series) {
     if (!isDuplicateMedia(seriesId)) {
         saveMediaToLocalStorage(seriesData, 'series');
         displayMediaFromLocalStorage();
-        displaySummary(seriesData);
     } else {
         alert('Series already exists in the list.');
     }
 }
-
-
