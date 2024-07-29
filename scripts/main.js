@@ -17,8 +17,6 @@ function toggleReviewColumn() {
     });
 }
 
-
-
 async function handleMovieData(movie) {
     const movieId = movie.id;
     const detailsUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${tmdbApiKey}&append_to_response=credits,reviews`;

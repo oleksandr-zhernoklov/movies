@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Manager</title>
+    <title>Media Library</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Media Manager</h1>
+    <h1>Media Library</h1>
     <div id="search-container">
-        <input type="text" id="search" placeholder="Search movies or series...">
-        <button onclick="searchMovie()">Search Movies</button>
-        <button onclick="searchSeries()">Search Series</button>
+        <input type="text" id="search" placeholder="Search...">
+        <button onclick="searchMedia()">Search</button>
+        <button onclick="clearSearch()">Clear</button>
         <button onclick="importData()">Import</button>
         <button onclick="exportData()">Export</button>
-        <input type="file" id="fileInput" accept=".json" onchange="handleFile(event)">
     </div>
-    <div id="summary">
-        <h2>Media Summary</h2>
-        <div id="media-summary"></div>
-    </div>
+    <div id="summary"></div>
     <table id="media-table">
         <thead>
             <tr>
@@ -33,7 +29,7 @@
                 <th>Description</th>
                 <th>Director</th>
                 <th>Actors</th>
-                <th class="collapsible" onclick="toggleReviewColumn()">Review</th>
+                <th class="collapsible">Review</th>
                 <th>Type</th>
                 <th>TMDB</th>
                 <th>IMDb</th>
@@ -46,9 +42,9 @@
         <tbody></tbody>
     </table>
     <script src="scripts/display.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/search.js"></script>
     <script src="scripts/storage.js"></script>
     <script src="scripts/importExport.js"></script>
-    <script src="scripts/main.js"></script>
 </body>
 </html>

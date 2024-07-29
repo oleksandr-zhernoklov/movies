@@ -34,3 +34,22 @@ function displayMediaFromLocalStorage() {
         mediaTableBody.appendChild(row);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        displayMediaFromLocalStorage();
+        const collapsibleHeader = document.querySelector('th.collapsible');
+        if (collapsibleHeader) {
+            collapsibleHeader.addEventListener('click', toggleReviewColumn);
+        }
+    } catch (error) {
+        console.error("Error loading media from local storage:", error);
+    }
+});
+
+function toggleReviewColumn() {
+    const reviewCells = document.querySelectorAll('td.collapsible');
+    reviewCells.forEach(cell => {
+        cell.classList.toggle('expanded');
+    });
+}
