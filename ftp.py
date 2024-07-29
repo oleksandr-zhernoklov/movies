@@ -1,12 +1,25 @@
-import pysftp
+import ftplib
 
-def get_ftp_listing(host, username, password, working_dir=''):
+def get_ftp_listing(host, user, password, working_dir=''):
+    """Retrieves a list of files and folders from an FTP server using plain FTP.
+
+    Args:
+        host (str): The hostname or IP address of the FTP server.
+        user (str): The username for logging in to the FTP server.
+        password (str): The password for logging in to the FTP server.
+        working_dir (str, optional): The initial working directory on the FTP server. Defaults to ''.
+
+    Returns:
+        list: A list of filenames and folder names.
+    """
+
     try:
-        with pysftp.Connection(host, username=username, password=password) as sftp:
-            if working_dir:
-                sftp.chdir(working_dir)
-            file_listing = sftp.listdir()
-            return file_listing
+        ftp = ftplib.FTP(host, user, password)
+        if working_dir:
+            ftp.cwd(working_dir)
+        file_listing = ftp.nlst()
+        ftp.quit()
+        return file_listing
     except Exception as e:
         print(f"An error occurred: {type(e).__name__}, {str(e)}")
         return []

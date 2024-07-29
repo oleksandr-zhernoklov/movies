@@ -45,7 +45,7 @@ table {
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    table-layout: fixed; /* Ensure fixed layout */
+    table-layout: auto; /* Ensure dynamic layout */
 }
 
 th, td {
@@ -61,6 +61,18 @@ th {
     background-color: #007BFF;
     color: #fff;
     cursor: pointer;
+    position: relative; /* For resizable handles */
+}
+
+th.resizable::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: col-resize;
+    background-color: transparent;
 }
 
 td img {

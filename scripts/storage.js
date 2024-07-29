@@ -8,10 +8,3 @@ function deleteMedia(index) {
     localStorage.setItem('movies/', JSON.stringify(movies));
     displayMediaFromLocalStorage();
 }
-
-function removeMedia(id) {
-    let storedMedia = JSON.parse(localStorage.getItem('movies/')) || [];
-    storedMedia = storedMedia.filter(media => media.id !== id);
-    localStorage.setItem('movies/', JSON.stringify(storedMedia));
-    displayMediaFromLocalStorage();
-}
