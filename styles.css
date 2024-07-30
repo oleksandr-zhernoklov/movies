@@ -30,32 +30,30 @@ button:hover {
     max-width: 100%;
     overflow-x: auto;
 }
-
+/* Add border to the entire table */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Ensures borders are merged together */
+    border: 1px solid #ddd; /* Border color for the entire table */
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
+/* Add border to table headers */
 th {
-    background-color: #f2f2f2;
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    border: 1px solid #ddd; /* Border color for table headers */
+    padding: 8px; /* Add some padding */
+    text-align: left; /* Align text to the left */
+    background-color: #f4f4f4; /* Optional: Add a background color to headers */
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+/* Add border to table cells */
+td {
+    border: 1px solid #ddd; /* Border color for table cells */
+    padding: 8px; /* Add some padding */
 }
 
+/* Optional: Add a hover effect for rows */
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #f5f5f5; /* Change background color on hover */
 }
 
 img {
@@ -71,4 +69,8 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.review-column.hidden {
+    display: none;
 }

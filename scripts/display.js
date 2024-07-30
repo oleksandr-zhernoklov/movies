@@ -1,29 +1,65 @@
 function displayMediaFromLocalStorage() {
-    const mediaTableBody = document.getElementById('mediaTableBody');
-    const movies = JSON.parse(localStorage.getItem('movies/')) || [];
-    
-    mediaTableBody.innerHTML = ''; // Clear the table body first
+    const mediaTableBody = document.querySelector('#mediaTable tbody');
+    mediaTableBody.innerHTML = '';
 
-    movies.forEach((movie, index) => {
-        const row = mediaTableBody.insertRow();
-        
-        row.insertCell(0).innerText = movie.type || 'N/A';
-        row.insertCell(1).innerHTML = movie.poster ? `<img src="${movie.poster}" alt="Poster">` : 'N/A';
-        row.insertCell(2).innerText = movie.title;
-        row.insertCell(3).innerText = movie.genre;
-        row.insertCell(4).innerText = movie.year;
-        row.insertCell(5).innerText = movie.length;
-        row.insertCell(6).innerText = movie.rating;
-        row.insertCell(7).innerText = movie.description;
-        row.insertCell(8).innerText = movie.director;
-        row.insertCell(9).innerText = movie.actors;
-        row.insertCell(10).innerText = movie.review;
-        row.insertCell(11).innerHTML = movie.tmdbLink ? `<a href="${movie.tmdbLink}" target="_blank">TMDb</a>` : 'N/A';
-        row.insertCell(12).innerHTML = movie.imdbLink ? `<a href="${movie.imdbLink}" target="_blank">IMDb</a>` : 'N/A';
-        row.insertCell(13).innerHTML = movie.tolokaLink ? `<a href="${movie.tolokaLink}" target="_blank">Toloka</a>` : 'N/A';
-        row.insertCell(14).innerHTML = movie.rutrackerLink ? `<a href="${movie.rutrackerLink}" target="_blank">Rutracker</a>` : 'N/A';
-        row.insertCell(15).innerHTML = movie.trailer ? `<a href="${movie.trailer}" target="_blank">Trailer</a>` : 'N/A';
+    const movies = JSON.parse(localStorage.getItem('movies/')) || [];
+
+    movies.forEach((media, index) => {
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+            <td><img src="${media.poster}" alt="${media.title}"></td>
+            <td>${media.title}</td>
+            <td>${media.originalTitle || 'N/A'}</td> <!-- Add this line -->
+            <td>${media.genre}</td>
+            <td>${media.year}</td>
+            <td>${media.length}</td>
+            <td>${media.rating}</td>
+            <td>${media.description}</td>
+            <td>${media.director}</td>
+            <td>${media.actors}</td>
+            <td class="review-cell">${media.review}</td>
+            <td><a href="${media.tmdbLink}" target="_blank">TMDb</a></td>
+            <td>${media.imdbLink !== 'N/A' ? `<a href="${media.imdbLink}" target="_blank">IMDb</a>` : 'N/A'}</td>
+            <td><a href="${media.tolokaLink}" target="_blank">Toloka</a></td>
+            <td><a href="${media.rutrackerLink}" target="_blank">Rutracker</a></td>
+            <td>${media.trailer !== 'N/A' ? `<a href="${media.trailer}" target="_blank">Watch</a>` : 'N/A'}</td>
+            <td>${media.type}</td>
+            <td><button onclick="editMedia(${index})">Edit</button></td>
+            <td><button onclick="updateMedia(${index}, '${media.title}', '${media.type}')">Update</button></td>
+            <td><button onclick="deleteMedia(${index})">Remove</button></td>
+        `;
+
+        mediaTableBody.appendChild(row);
+    });
+
+    const reviewCells = document.querySelectorAll('.review-cell');
+    reviewCells.forEach(cell => {
+        if (!reviewColumnIsVisible) {
+            cell.style.display = 'none';
+        } else {
+            cell.style.display = 'table-cell';
+        }
     });
 }
 
-document.addEventListener('DOMContentLoaded', displayMediaFromLocalStorage);
+
+
+function displaySummary(mediaData) {
+    const summarySection = document.querySelector('#summary');
+    summarySection.innerHTML = `
+        <h2>Summary</h2>
+        <p>Title: ${mediaData.title}</p>
+        <p>Original Title: ${mediaData.originalTitle || 'N/A'}</p> <!-- Add this line -->
+        <p>Year: ${mediaData.year}</p>
+        <p>Length: ${mediaData.length}</p>
+        <p>Rating: ${mediaData.rating}</p>
+        <p>Director: ${mediaData.director}</p>
+        <p>Actors: ${mediaData.actors}</p>
+        <p>Description: ${mediaData.description}</p>
+        <p>Review: ${mediaData.review}</p>
+        <p>Toloka Link: <a href="${mediaData.tolokaLink}" target="_blank">Toloka</a></p>
+        <p>Rutracker Link: <a href="${mediaData.rutrackerLink}" target="_blank">Rutracker</a></p>
+        <p>Trailer: <a href="${mediaData.trailer}" target="_blank">Watch</a></p>
+    `;
+}
