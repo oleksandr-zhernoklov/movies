@@ -1,9 +1,16 @@
 let reviewColumnIsVisible = true;
 
 function toggleReviewColumn() {
+    const reviewCells = document.querySelectorAll('.collapsible');
+    reviewCells.forEach(cell => {
+      if (reviewColumnIsVisible) {
+        cell.classList.add('hidden');
+      } else {
+        cell.classList.remove('hidden');
+      }
+    });
     reviewColumnIsVisible = !reviewColumnIsVisible;
-    displayMediaFromLocalStorage();
-}
+  }
 
 document.addEventListener('DOMContentLoaded', () => {
     try {

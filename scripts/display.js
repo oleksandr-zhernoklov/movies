@@ -6,9 +6,10 @@ function displayMediaFromLocalStorage() {
 
     movies.forEach((media, index) => {
         const row = document.createElement('tr');
-
+//             <td class="review-cell">${media.review}</td>
         row.innerHTML = `
             <td><img src="${media.poster}" alt="${media.title}"></td>
+            <td>${media.type}</td>
             <td>${media.title}</td>
             <td>${media.originalTitle || 'N/A'}</td> <!-- Add this line -->
             <td>${media.genre}</td>
@@ -18,29 +19,25 @@ function displayMediaFromLocalStorage() {
             <td>${media.description}</td>
             <td>${media.director}</td>
             <td>${media.actors}</td>
-            <td class="review-cell">${media.review}</td>
+            <td class="review-cell collapsible">${media.review}</td>
             <td><a href="${media.tmdbLink}" target="_blank">TMDb</a></td>
-            <td>${media.imdbLink !== 'N/A' ? `<a href="${media.imdbLink}" target="_blank">IMDb</a>` : 'N/A'}</td>
             <td><a href="${media.tolokaLink}" target="_blank">Toloka</a></td>
             <td><a href="${media.rutrackerLink}" target="_blank">Rutracker</a></td>
             <td>${media.trailer !== 'N/A' ? `<a href="${media.trailer}" target="_blank">Watch</a>` : 'N/A'}</td>
-            <td>${media.type}</td>
-            <td><button onclick="editMedia(${index})">Edit</button></td>
+
             <td><button onclick="updateMedia(${index}, '${media.title}', '${media.type}')">Update</button></td>
             <td><button onclick="deleteMedia(${index})">Remove</button></td>
         `;
 
         mediaTableBody.appendChild(row);
     });
+    const reviewCell = document.createElement('td');
+    reviewCell.classList.add('review-cell', 'collapsible');
+    reviewCell.textContent = media.review;
+    if (!reviewColumnIsVisible) {
+      reviewCell.classList.add('hidden');
+    }
 
-    const reviewCells = document.querySelectorAll('.review-cell');
-    reviewCells.forEach(cell => {
-        if (!reviewColumnIsVisible) {
-            cell.style.display = 'none';
-        } else {
-            cell.style.display = 'table-cell';
-        }
-    });
 }
 
 
@@ -49,6 +46,7 @@ function displaySummary(mediaData) {
     const summarySection = document.querySelector('#summary');
     summarySection.innerHTML = `
         <h2>Summary</h2>
+        <img src="${mediaData.poster}" alt="Poster of ${mediaData.title}" style="width: 200px;">
         <p>Title: ${mediaData.title}</p>
         <p>Original Title: ${mediaData.originalTitle || 'N/A'}</p> <!-- Add this line -->
         <p>Year: ${mediaData.year}</p>

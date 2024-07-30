@@ -14,9 +14,16 @@ function isDuplicateMedia(id) {
     return movies.some(movie => movie.id === id);
 }
 
+
 function saveMediaToLocalStorage(mediaData, type) {
     const movies = JSON.parse(localStorage.getItem('movies/')) || [];
-    const mediaWithType = { ...mediaData, type: type || 'Unknown' }; // Add default type if missing
-    movies.push(mediaWithType);
+    const index = movies.findIndex(item => item.id === mediaData.id && item.type === type);
+
+    if (index !== -1) {
+        movies[index] = mediaData;
+    } else {
+        movies.push(mediaData);
+    }
+
     localStorage.setItem('movies/', JSON.stringify(movies));
 }

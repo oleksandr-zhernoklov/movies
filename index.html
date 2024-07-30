@@ -11,13 +11,19 @@
     <div id="summary"></div>
     <input type="text" id="search" placeholder="Search for a movie or series...">
     <button onclick="searchMedia()">Search</button>
+    <div id="choicePrompt" style="display: none;">
+        <p id="choiceText"></p>
+        <button id="chooseMovie" onclick="chooseOption('movie')">Choose Movie</button>
+        <button id="chooseSeries" onclick="chooseOption('series')">Choose Series</button>
+    </div>
     <button onclick="importData()">Import</button>
     <button onclick="exportData()">Export</button>
-    <button class="toggle-review">Toggle Review Column</button>
+    <button id="toggleReviewColumn" class="toggle-review">Toggle Review Column</button>
     <table id="mediaTable" border="1">
         <thead>
             <tr>
                 <th>Poster</th>
+                <th>Type</th>
                 <th>Title</th>
                 <th>Original Title</th> <!-- Add this line -->
                 <th>Genre</th>
@@ -27,14 +33,12 @@
                 <th>Description</th>
                 <th>Director</th>
                 <th>Actors</th>
-                <th>Review</th>
-                <th>TMDb Link</th>
-                <th>IMDb Link</th>
+                 <th class="collapsible">Review</th>
+                <th>TMDB Link</th>
                 <th>Toloka Link</th>
                 <th>Rutracker Link</th>
                 <th>Trailer</th>
-                <th>Type</th>
-                <th>Edit</th>
+
                 <th>Update</th>
                 <th>Remove</th>
             </tr>
