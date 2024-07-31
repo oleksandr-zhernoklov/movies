@@ -32,10 +32,5 @@ const ftp_pass = 'iMV9vDHFM@9Drvb';
     await conn.end();
   } catch (error) {
     console.error('Error:', error.message || error);
-    if (error.code === 'ECONNREFUSED') {
-      console.error('Connection refused. Check network connectivity or firewall settings.');
-    } else if (error.code === 'ETIMEDOUT') {
-      console.error('Connection timed out. Check network or server availability.');
-    }
   }
 })();

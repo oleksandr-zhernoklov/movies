@@ -30,15 +30,15 @@ function displayMediaFromLocalStorage() {
 
         // Adding the hidden class to the review cell if reviews are toggled off
         const reviewCell = row.querySelector('.review-cell');
-        console.log(`Processing row ${index + 1}, reviewCell:`, reviewCell);
-        console.log(`reviewColumnIsVisible: ${reviewColumnIsVisible}`);
+        //console.log(`Processing row ${index + 1}, reviewCell:`, reviewCell);
+        //console.log(`reviewColumnIsVisible: ${reviewColumnIsVisible}`);
 
         if (!reviewColumnIsVisible) {
             reviewCell.classList.add('hidden');
-            console.log(`Row ${index + 1} review cell is hidden`);
+            //console.log(`Row ${index + 1} review cell is hidden`);
         } else {
             reviewCell.classList.remove('hidden');
-            console.log(`Row ${index + 1} review cell is visible`);
+            //console.log(`Row ${index + 1} review cell is visible`);
         }
 
         mediaTableBody.appendChild(row);
