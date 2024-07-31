@@ -9,6 +9,14 @@ function deleteMedia(index) {
     displayMediaFromLocalStorage();
 }
 
+
+function deleteMedia(index) {
+    const movies = JSON.parse(localStorage.getItem('movies/')) || [];
+    movies.splice(index, 1);
+    localStorage.setItem('movies/', JSON.stringify(movies));
+    displayMediaFromLocalStorage();
+}
+
 function isDuplicateMedia(id) {
     const movies = JSON.parse(localStorage.getItem('movies/')) || [];
     return movies.some(movie => movie.id === id);

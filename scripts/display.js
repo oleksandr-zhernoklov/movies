@@ -3,15 +3,15 @@ function displayMediaFromLocalStorage() {
     mediaTableBody.innerHTML = '';
 
     const movies = JSON.parse(localStorage.getItem('movies/')) || [];
+    console.log('Loaded movies from local storage:', movies);
 
     movies.forEach((media, index) => {
         const row = document.createElement('tr');
-//             <td class="review-cell">${media.review}</td>
         row.innerHTML = `
             <td><img src="${media.poster}" alt="${media.title}"></td>
             <td>${media.type}</td>
             <td>${media.title}</td>
-            <td>${media.originalTitle || 'N/A'}</td> <!-- Add this line -->
+            <td>${media.originalTitle || 'N/A'}</td>
             <td>${media.genre}</td>
             <td>${media.year}</td>
             <td>${media.length}</td>
@@ -24,21 +24,27 @@ function displayMediaFromLocalStorage() {
             <td><a href="${media.tolokaLink}" target="_blank">Toloka</a></td>
             <td><a href="${media.rutrackerLink}" target="_blank">Rutracker</a></td>
             <td>${media.trailer !== 'N/A' ? `<a href="${media.trailer}" target="_blank">Watch</a>` : 'N/A'}</td>
-
             <td><button onclick="updateMedia(${index}, '${media.title}', '${media.type}')">Update</button></td>
             <td><button onclick="deleteMedia(${index})">Remove</button></td>
         `;
 
+        // Adding the hidden class to the review cell if reviews are toggled off
+        const reviewCell = row.querySelector('.review-cell');
+        console.log(`Processing row ${index + 1}, reviewCell:`, reviewCell);
+        console.log(`reviewColumnIsVisible: ${reviewColumnIsVisible}`);
+
+        if (!reviewColumnIsVisible) {
+            reviewCell.classList.add('hidden');
+            console.log(`Row ${index + 1} review cell is hidden`);
+        } else {
+            reviewCell.classList.remove('hidden');
+            console.log(`Row ${index + 1} review cell is visible`);
+        }
+
         mediaTableBody.appendChild(row);
     });
-    const reviewCell = document.createElement('td');
-    reviewCell.classList.add('review-cell', 'collapsible');
-    reviewCell.textContent = media.review;
-    if (!reviewColumnIsVisible) {
-      reviewCell.classList.add('hidden');
-    }
-
 }
+
 
 
 

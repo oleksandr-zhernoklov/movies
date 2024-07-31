@@ -2,7 +2,7 @@ const ftp = require('ftp');
 
 const ftp_host = 'zhernoklov.asuscomm.com';
 const ftp_user = 'saf';
-const ftp_pass = 'iMV9vDHFM@9Drvb'; // Please avoid storing sensitive information like passwords in plain text.
+const ftp_pass = 'iMV9vDHFM@9Drvb';
 
 (async () => {
   try {
@@ -31,6 +31,11 @@ const ftp_pass = 'iMV9vDHFM@9Drvb'; // Please avoid storing sensitive informatio
 
     await conn.end();
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error:', error.message || error);
+    if (error.code === 'ECONNREFUSED') {
+      console.error('Connection refused. Check network connectivity or firewall settings.');
+    } else if (error.code === 'ETIMEDOUT') {
+      console.error('Connection timed out. Check network or server availability.');
+    }
   }
 })();
