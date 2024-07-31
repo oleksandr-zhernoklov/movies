@@ -28,6 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function removeAllMovies() {
   if (confirm('Are you sure you want to remove all movies?')) {
       localStorage.removeItem('movies');
-      displayMoviesFromLocalStorage();
+      displayMediaFromLocalStorage();
   }
 }
