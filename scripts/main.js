@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function removeAllMovies() {
   if (confirm('Are you sure you want to remove all movies?')) {
+      console.log("remove all");
       localStorage.removeItem('movies');
+      console.log("remove all - success");
       displayMediaFromLocalStorage();
   }
 }
