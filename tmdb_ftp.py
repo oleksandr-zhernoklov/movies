@@ -1,4 +1,3 @@
-
 import os
 import re
 import csv
@@ -50,11 +49,19 @@ def generate_html_table(successful_results):
             .checkbox-column {
                 text-align: center;
             }
+            .poster-column img {
+                width: 100px;
+                height: auto;
+            }
         </style>
     </head>
     <body>
     
     <h2>Successful Results</h2>
+    
+    <div class="links">
+        <a href="downloaded.html" target="_self">View Downloaded Page</a>
+    </div>
     
     <table id="movieTable" class="tablesorter">
         <thead>
@@ -73,6 +80,8 @@ def generate_html_table(successful_results):
                 <th class="checkbox-column">Heavy</th>
                 <th>Toloka Link</th>
                 <th>Rutracker Link</th>
+                <th>Poster</th>
+                <th>Trailer</th>
             </tr>
         </thead>
         <tbody>
@@ -92,6 +101,8 @@ def generate_html_table(successful_results):
                     <td class="checkbox-column"><input type="checkbox" class="heavy-checkbox" data-file="{{ result['File'] }}"></td>
                     <td><a href="https://toloka.to/tracker.php?nm={{ result['Title'] }}" target="_blank">Toloka</a></td>
                     <td><a href="https://rutracker.org/forum/tracker.php?nm={{ result['Title'] }}" target="_blank">Rutracker</a></td>
+                    <td class="poster-column"><img src="{{ result['Poster'] }}" alt="Poster"></td>
+                    <td><a href="{{ result['Trailer'] }}" target="_blank">Trailer</a></td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -154,7 +165,7 @@ def generate_html_table(successful_results):
     rendered_html = template.render(successful_results=successful_results)
 
     # Save the rendered HTML to a file
-    with open('downloaded.html', 'w', encoding='utf-8') as html_file:
+    with open('movie_results.html', 'w', encoding='utf-8') as html_file:
         html_file.write(rendered_html)
 
     print('HTML file generated successfully: movie_results.html')
@@ -193,51 +204,47 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
         match = re.match(pattern, filename)
         if match:
             movie_name = match.group(1)
-            print(match.group(1)+ " correct")
+            print(match.group(1))
         else:
             # No movie found
-            
-            print(filename+ " regexp")
             failed_results.append({'File': file, 'Result': 'No regexp'})
             continue
 
         # Make a request to TMDB API to search for the movie
         url = f"https://api.themoviedb.org/3/search/movie?api_key={tmdb_api_key}&query={movie_name}"
         response = requests.get(url)
-     
+
         if response.status_code == 200:
             # Request successful
             data = response.json()
-            #print(data['results'][0])
             if data['results']:
                 # Get the first movie result
                 movie = data['results'][0]
-                print(movie['release_date'])
+
                 # Extract relevant information from the response
                 movie_title = movie['title']
                 movie_genre_ids = movie['genre_ids']
                 movie_id = movie['id']
-                movie_year = 1900 #datetime.strptime(movie['release_date'], '%Y-%m-%d').year
+                movie_year = datetime.strptime(movie['release_date'], '%Y-%m-%d').year
 
                 # Map genre ids to corresponding values
                 genre_values = [get_genre_value(genre_id) for genre_id in movie_genre_ids]
 
                 # Get movie details
-                details_url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={tmdb_api_key}"
+                details_url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={tmdb_api_key}&append_to_response=videos"
                 details_response = requests.get(details_url)
+                details_data = details_response.json()
 
-                if details_response.status_code == 200:
-                    details_data = details_response.json()
-                    movie_description = details_data['overview']
-                    movie_rating = details_data['vote_average']
-                    movie_length = details_data['runtime'] if details_data['runtime'] else 'N/A'
-                else:
-                    movie_description = 'N/A'
-                    movie_rating = 'N/A'
-                    movie_length = 'N/A'
-
-                # Generate TMDB link
+                movie_length = details_data.get('runtime', 'N/A')
+                movie_rating = details_data.get('vote_average', 'N/A')
+                movie_description = details_data.get('overview', 'N/A')
+                movie_poster = f"https://image.tmdb.org/t/p/w200{details_data.get('poster_path', '')}"
                 tmdb_link = f"https://www.themoviedb.org/movie/{movie_id}"
+                
+                # Extract trailer information
+                videos_data = details_data.get('videos', {})
+                trailer = next((video for video in videos_data.get('results', []) if video['type'] == 'Trailer'), None)
+                trailer_link = f"https://www.youtube.com/watch?v={trailer['key']}" if trailer else 'N/A'
 
                 # Store successful result
                 successful_results.append({
@@ -252,11 +259,12 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
                     'Description': movie_description,
                     'Rating': movie_rating,
                     'Toloka Link': f"https://toloka.to/tracker.php?nm={movie_title}",
-                    'Rutracker Link': f"https://rutracker.org/forum/tracker.php?nm={movie_title}"
+                    'Rutracker Link': f"https://rutracker.org/forum/tracker.php?nm={movie_title}",
+                    'Poster': movie_poster,
+                    'Trailer': trailer_link
                 })
             else:
                 # No movie found
-                print(filename+ " no found")
                 failed_results.append({'File': file, 'Result': 'No movie found'})
         else:
             # Request failed
@@ -280,7 +288,7 @@ def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
 def save_results_to_csv_and_excel(successful_results, failed_results):
     # Save successful results to CSV file
     successful_csv_path = 'successful_results.csv'
-    successful_fields = ['File', 'File_gb', 'Title', 'Genre', 'TMDB ID', 'Year', 'Length', 'TMDB Link', 'Description', 'Rating', 'Toloka Link', 'Rutracker Link']
+    successful_fields = ['File', 'File_gb', 'Title', 'Genre', 'TMDB ID', 'Year', 'Length', 'TMDB Link', 'Description', 'Rating', 'Toloka Link', 'Rutracker Link', 'Poster', 'Trailer']
 
     with open(successful_csv_path, 'w', newline='', encoding='utf-8') as successful_file:
         writer = csv.DictWriter(successful_file, fieldnames=successful_fields)
@@ -312,8 +320,7 @@ def save_results_to_csv_and_excel(successful_results, failed_results):
 def main():
     # List of directories to process
     directories = [
-        r'D:/Movies',
-        r'Z:/Another/Directory',
+        r'G:/Movies'
         # Add more directories as needed
     ]
 
@@ -332,7 +339,7 @@ def main():
     successful_results, failed_results = process_video_files(directories, tmdb_api_key, ftp_details)
 
     # Save results to CSV and Excel files
-    save_results_to_csv_and_excel(successful_results, failed_results)
+    #save_results_to_csv_and_excel(successful_results, failed_results)
 
     # Generate HTML table
     generate_html_table(successful_results)
