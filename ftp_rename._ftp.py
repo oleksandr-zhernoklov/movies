@@ -28,6 +28,11 @@ def process_file(root, filename, processed_files):
             new_filename = f"{camel_case_name} ({year}){os.path.splitext(filename)[1]}"
             new_filepath = os.path.join(root, new_filename)
 
+            # Skip if the filename is already in the desired format
+            if filename == new_filename:
+                print(f"Skipped (already correct): {filename}")
+                return
+
             if new_filename in processed_files:
                 handle_duplicate_files(new_filename, processed_files[new_filename], filepath)
             else:
