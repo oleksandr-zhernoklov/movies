@@ -60,7 +60,7 @@ def generate_html_table(successful_results):
     <h2>Successful Results</h2>
     
     <div class="links">
-        <a href="downloaded.html" target="_self">View Downloaded Page</a>
+        <a href="Index.html" target="_self">View Downloaded Page</a>
     </div>
     
     <table id="movieTable" class="tablesorter">
@@ -170,35 +170,35 @@ def generate_html_table(successful_results):
 
     print('HTML file generated successfully: movie_results.html')
 
-# Function to get file size from FTP server
-def get_ftp_file_size(ftp, filename):
-    try:
-        # Use the FTP 'size' command to get the file size
-        size = ftp.size(filename)
-        return size
-    except ftplib.error_perm as e:
-        print(f"Could not get size for file {filename}: {e}")
-        return None
-
-# Function to get FTP file listing and sizes
+# Function to get FTP file listing
 def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
     try:
         ftp = ftplib.FTP(host, user, password)
         if working_dir:
             ftp.cwd(working_dir)
-        file_listing = ftp.nlst()
-        file_sizes = {}
-
-        for filename in file_listing:
-            size = get_ftp_file_size(ftp, filename)
-            if size is not None:
-                file_sizes[filename] = round(size / (1024 * 1024 * 1024), 2)  # Convert bytes to GB
-
+        file_listing = []
+        ftp.retrlines('LIST', file_listing.append)
         ftp.quit()
-        return file_listing, file_sizes
+        return file_listing
     except Exception as e:
         print(f"An error occurred: {type(e).__name__}, {str(e)}")
-        return [], {}
+        return []
+
+# Function to parse FTP file listing
+def parse_ftp_listing(listing):
+    parsed_files = []
+    for line in listing:
+        parts = line.split()
+        if len(parts) >= 9:
+            size = parts[4]
+            name = ' '.join(parts[8:])
+            if re.match(r'^\d+$', size):  # Ensure size is a number
+                parsed_files.append((name, int(size)))
+    return parsed_files
+
+# Function to convert size in bytes to gigabytes
+def size_in_gb(size_bytes):
+    return size_bytes / (1024 ** 3)  # Convert bytes to gigabytes
 
 # Function to process video files from multiple directories
 def process_video_files(directories, tmdb_api_key, ftp_details=None):
@@ -214,10 +214,13 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
     
     # Process FTP directory if details are provided
     if ftp_details:
-        ftp_files, ftp_file_sizes = get_ftp_listing(ftp_details['host'], ftp_details['user'], ftp_details['pass'], ftp_details['path'])
-        for file in ftp_files:
-            if file.lower().endswith(('.mp4', '.avi', '.mkv')):
-                video_files.append(file)
+        ftp_listing = get_ftp_listing(ftp_details['host'], ftp_details['user'], ftp_details['pass'], ftp_details['path'])
+        if ftp_listing:
+            parsed_files = parse_ftp_listing(ftp_listing)
+            for name, size in parsed_files:
+                if name.lower().endswith(('.mp4', '.avi', '.mkv')):
+                    video_files.append(name)
+                    ftp_file_sizes[name] = size_in_gb(size)
 
     # Lists to store successful and failed results
     successful_results = []
@@ -234,8 +237,9 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
             file_gb = ftp_file_sizes[file]
 
         # Remove year from filename (inside brackets or after dot)
-        filename_without_year = re.sub(r"\(\d{4}\)|\.\d{4}(?=\D|$)", "", filename).strip()
-        # Extract only the movie name
+        filename_without_year = re.sub(r"\(\d{4}\)|\.\d{4}", "", filename).strip()
+
+        # Extract the movie name
         pattern = r"^(.*?)\s\(\d{4}\)"
         match = re.match(pattern, filename)
         if match:
@@ -261,14 +265,7 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
                 movie_title = movie['title']
                 movie_genre_ids = movie['genre_ids']
                 movie_id = movie['id']
-                if movie['release_date'] and movie['release_date'] != 'N/A':
-                    try:
-                        movie_year = datetime.strptime(movie['release_date'], '%Y-%m-%d').year
-                    except ValueError:
-                        # Handle the case where the date format is incorrect
-                        movie_year = None
-                    else:
-                        movie_year = None
+                movie_year = movie['release_date'][:4] if movie['release_date'] else 'N/A'
 
                 # Map genre ids to corresponding values
                 genre_values = [get_genre_value(genre_id) for genre_id in movie_genre_ids]
@@ -370,7 +367,7 @@ def main():
     successful_results, failed_results = process_video_files(directories, tmdb_api_key, ftp_details)
 
     # Save results to CSV and Excel files
-    #save_results_to_csv_and_excel(successful_results, failed_results)
+    save_results_to_csv_and_excel(successful_results, failed_results)
 
     # Generate HTML table
     generate_html_table(successful_results)
