@@ -170,9 +170,40 @@ def generate_html_table(successful_results):
 
     print('HTML file generated successfully: movie_results.html')
 
+# Function to get file size from FTP server
+def get_ftp_file_size(ftp, filename):
+    try:
+        # Use the FTP 'size' command to get the file size
+        size = ftp.size(filename)
+        return size
+    except ftplib.error_perm as e:
+        print(f"Could not get size for file {filename}: {e}")
+        return None
+
+# Function to get FTP file listing and sizes
+def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
+    try:
+        ftp = ftplib.FTP(host, user, password)
+        if working_dir:
+            ftp.cwd(working_dir)
+        file_listing = ftp.nlst()
+        file_sizes = {}
+
+        for filename in file_listing:
+            size = get_ftp_file_size(ftp, filename)
+            if size is not None:
+                file_sizes[filename] = round(size / (1024 * 1024 * 1024), 2)  # Convert bytes to GB
+
+        ftp.quit()
+        return file_listing, file_sizes
+    except Exception as e:
+        print(f"An error occurred: {type(e).__name__}, {str(e)}")
+        return [], {}
+
 # Function to process video files from multiple directories
 def process_video_files(directories, tmdb_api_key, ftp_details=None):
     video_files = []
+    ftp_file_sizes = {}
 
     # Process local directories
     for directory in directories:
@@ -183,7 +214,7 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
     
     # Process FTP directory if details are provided
     if ftp_details:
-        ftp_files = get_ftp_listing(ftp_details['host'], ftp_details['user'], ftp_details['pass'], ftp_details['path'])
+        ftp_files, ftp_file_sizes = get_ftp_listing(ftp_details['host'], ftp_details['user'], ftp_details['pass'], ftp_details['path'])
         for file in ftp_files:
             if file.lower().endswith(('.mp4', '.avi', '.mkv')):
                 video_files.append(file)
@@ -197,6 +228,11 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
         # Extract the filename without extension
         filename = os.path.splitext(os.path.basename(file))[0]
         file_gb = round(os.path.getsize(file) / (1024 * 1024 * 1024), 2) if os.path.exists(file) else 'N/A'
+
+        # If file is from FTP, use the FTP file size
+        if file in ftp_file_sizes:
+            file_gb = ftp_file_sizes[file]
+
         # Remove year from filename (inside brackets or after dot)
         filename_without_year = re.sub(r"\(\d{4}\)|\.\d{4}(?=\D|$)", "", filename).strip()
         # Extract only the movie name
@@ -225,7 +261,14 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
                 movie_title = movie['title']
                 movie_genre_ids = movie['genre_ids']
                 movie_id = movie['id']
-                movie_year = datetime.strptime(movie['release_date'], '%Y-%m-%d').year
+                if movie['release_date'] and movie['release_date'] != 'N/A':
+                    try:
+                        movie_year = datetime.strptime(movie['release_date'], '%Y-%m-%d').year
+                    except ValueError:
+                        # Handle the case where the date format is incorrect
+                        movie_year = None
+                    else:
+                        movie_year = None
 
                 # Map genre ids to corresponding values
                 genre_values = [get_genre_value(genre_id) for genre_id in movie_genre_ids]
@@ -270,20 +313,8 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
             # Request failed
             failed_results.append({'File': file, 'Result': 'Failed to retrieve movie information'})
 
-    successful_results = sorted(successful_results, key=lambda x: x['Year'])
+    successful_results = sorted(successful_results, key=lambda x: x.get('Year') or '')
     return successful_results, failed_results
-
-def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
-    try:
-        ftp = ftplib.FTP(host, user, password)
-        if working_dir:
-            ftp.cwd(working_dir)
-        file_listing = ftp.nlst()
-        ftp.quit()
-        return file_listing
-    except Exception as e:
-        print(f"An error occurred: {type(e).__name__}, {str(e)}")
-        return []
 
 def save_results_to_csv_and_excel(successful_results, failed_results):
     # Save successful results to CSV file
@@ -326,7 +357,7 @@ def main():
 
     # FTP details
     ftp_details = {
-        'host': 'zhernoklov.asuscomm.com',
+        'host': '45.152.75.187',
         'user': 'saf',
         'pass': 'iMV9vDHFM@9Drvb',
         'path': '2tb/Download2/Movies'

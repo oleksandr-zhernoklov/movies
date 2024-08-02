@@ -6,14 +6,14 @@ def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
         ftp = ftplib.FTP(host, user, password)
         if working_dir:
             ftp.cwd(working_dir)
-        file_listing = ftp.nlst()
+        file_listing = ftp.dir()
         ftp.quit()
         return file_listing
     except Exception as e:
         print(f"An error occurred: {type(e).__name__}, {str(e)}")
         return []
 
-ftp_host = 'zhernoklov.asuscomm.com'
+ftp_host = '45.152.75.187'
 ftp_user = 'saf'
 ftp_pass = 'iMV9vDHFM@9Drvb'
 

@@ -1,0 +1,2 @@
+Total local storage size: 0 GB
+Total FTP storage size: 0 GB
