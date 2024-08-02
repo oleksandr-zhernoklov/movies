@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Inception",
+      "type": "Movie",
+      "originalTitle": "Inception",
+      "genre": "Sci-Fi",
+      "year": "2010",
+      "length": "148 minutes",
+      "rating": "8.8",
+      "description": "A thief who enters the dreams of others to steal secrets.",
+      "director": "Christopher Nolan",
+      "actors": "Leonardo DiCaprio, Joseph Gordon-Levitt",
+      "review": "Great film!",
+      "tmdbLink": "https://www.themoviedb.org/movie/27205-inception",
+      "tolokaLink": "https://toloka.to/tracker.php?nm=Inception",
+      "rutrackerLink": "https://rutracker.org/forum/tracker.php?nm=Inception",
+      "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+      "poster": "https://image.tmdb.org/t/p/original/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg"
+    }
+  ]
+  
