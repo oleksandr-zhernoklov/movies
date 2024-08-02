@@ -7,7 +7,8 @@ from datetime import datetime
 from jinja2 import Template
 import ftplib
 
-# Function to map genre id to value
+
+# Function to generate HTML table
 def get_genre_value(genre_id):
     genre_mapping = {
         28: 'Action',
@@ -53,6 +54,20 @@ def generate_html_table(successful_results):
                 width: 100px;
                 height: auto;
             }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            th, td {
+                text-align: left;
+            }
         </style>
     </head>
     <body>
@@ -60,7 +75,7 @@ def generate_html_table(successful_results):
     <h2>Successful Results</h2>
     
     <div class="links">
-        <a href="Index.html" target="_self">View Downloaded Page</a>
+        <a href="index.html" target="_self">View Downloaded Page</a>
     </div>
     
     <table id="movieTable" class="tablesorter">
@@ -220,7 +235,7 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
             for name, size in parsed_files:
                 if name.lower().endswith(('.mp4', '.avi', '.mkv')):
                     video_files.append(name)
-                    ftp_file_sizes[name] = size_in_gb(size)
+                    ftp_file_sizes[name] = round(size_in_gb(size),2)
 
     # Lists to store successful and failed results
     successful_results = []
