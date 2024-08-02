@@ -19,7 +19,7 @@ function displayMediaFromLocalStorage() {
             <td>${media.description}</td>
             <td>${media.director}</td>
             <td>${media.actors}</td>
-            <td class="review-cell collapsible">${media.review}</td>
+
             <td><a href="${media.tmdbLink}" target="_blank">TMDb</a></td>
             <td><a href="${media.tolokaLink}" target="_blank">Toloka</a></td>
             <td><a href="${media.rutrackerLink}" target="_blank">Rutracker</a></td>
@@ -27,7 +27,7 @@ function displayMediaFromLocalStorage() {
             <td><button onclick="updateMedia(${index}, '${media.title}', '${media.type}')">Update</button></td>
             <td><button onclick="deleteMedia(${index})">Remove</button></td>
         `;
-
+//            <td class="review-cell collapsible">${media.review}</td>
         // Adding the hidden class to the review cell if reviews are toggled off
         const reviewCell = row.querySelector('.review-cell');
         //console.log(`Processing row ${index + 1}, reviewCell:`, reviewCell);
