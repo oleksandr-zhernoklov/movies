@@ -1,5 +1,6 @@
 import ftplib
 import re
+import os
 
 # Regular expression to find movie name and year for correction
 pattern = re.compile(r'^(.*?)[\.\s]\(?(\d{4})\)?')
@@ -18,12 +19,13 @@ def to_proper_case(filename):
             The cleansed filename in CamelCase.
         """
 
-        # Remove unnecessary dots and underscores
+
+    # Remove unnecessary dots and underscores
     cleaned_name = re.sub(r'[._]+', ' ', filename)
 
-    # Convert to CamelCase
+    # Convert to CamelCase with spaces
     words = cleaned_name.split()
-    camel_case_name = ''.join(word.capitalize() for word in words)
+    camel_case_name = ' '.join(word.capitalize() for word in words)
 
     return camel_case_name
 
@@ -40,7 +42,7 @@ def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
         print(f"An error occurred: {type(e).__name__}, {str(e)}")
         return []
 
-def rename_ftp_files(host, user, password, working_dir='2tb/Download2/Movies/Starter_for_10'):
+def rename_ftp_files(host, user, password, working_dir='2tb/Download2/Movies/'):
     file_listing = get_ftp_listing(host, user, password, working_dir)
     if file_listing:
         processed_files = {}
@@ -50,13 +52,14 @@ def rename_ftp_files(host, user, password, working_dir='2tb/Download2/Movies/Sta
                 ftp.cwd(working_dir)
             for filename in file_listing:
                 if any(filename.lower().endswith(ext) for ext in allowed_extensions):
+                    filename = os.path.basename(filename)  # Extract filename from path
                     match = pattern.search(filename)
                     if match:
                         name, year = match.groups()
                         name = name.replace('.', ' ').strip()
                         proper_case_name = to_proper_case(name)
                         new_filename = f"{proper_case_name} ({year}){filename[-4:]}"
-                        
+                        print ('proper_case_name',proper_case_name)
                         try:
                             # Check for duplicate files
                             if new_filename in processed_files:
@@ -78,7 +81,7 @@ def rename_ftp_files(host, user, password, working_dir='2tb/Download2/Movies/Sta
                                     smaller_new_filename = new_filename.replace(filename[-4:], f"_1{filename[-4:]}")
                                     print(f"Corrected duplicate: {smaller_filename} -> {smaller_new_filename}")
                                     print(f"Retaining larger file: {larger_filename}")
-                                    #ftp.rename(smaller_filename, smaller_new_filename)  # Rename the smaller file
+                                    ftp.rename(smaller_filename, smaller_new_filename)  # Rename the smaller file
                                     ftp.delete(smaller_filename)  # Remove the smaller file
                                 else:  # Files are the same size
                                     print(f"Duplicate with same size: {filename} (removed)")
@@ -88,7 +91,7 @@ def rename_ftp_files(host, user, password, working_dir='2tb/Download2/Movies/Sta
                                 print(f"Corrected: {filename} -> {new_filename}")
                                 try:
                                    print(f"Corrected: {filename} -> {new_filename}")
-                                   #ftp.rename(filename, new_filename)  # Rename the file
+                                   ftp.rename(filename, new_filename)  # Rename the file
                                 except ftplib.error_perm as e:
                                     print(f"Permission error while renaming {filename}: {type(e).__name__}, {str(e)}")
                         except ftplib.error_perm as e:
