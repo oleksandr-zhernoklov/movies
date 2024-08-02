@@ -1,25 +1,18 @@
-import paramiko
 
-def get_ftp_listing(host, username, password, working_dir=''):
+import ftplib
+
+def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
     try:
-        transport = paramiko.Transport((host, 22))
-        transport.connect(username=username, password=password)
-        sftp = paramiko.SFTPClient.from_transport(transport)
-
+        ftp = ftplib.FTP(host, user, password)
         if working_dir:
-            sftp.chdir(working_dir)
-
-        file_listing = sftp.listdir('.')
-        sftp.close()
-        transport.close()
-
+            ftp.cwd(working_dir)
+        file_listing = ftp.nlst()
+        ftp.quit()
         return file_listing
     except Exception as e:
         print(f"An error occurred: {type(e).__name__}, {str(e)}")
         return []
 
-
-# Replace with your actual credentials
 ftp_host = 'zhernoklov.asuscomm.com'
 ftp_user = 'saf'
 ftp_pass = 'iMV9vDHFM@9Drvb'
