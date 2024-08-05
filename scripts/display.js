@@ -52,3 +52,19 @@ function displaySummary(mediaData) {
         <p>Trailer: <a href="${mediaData.trailer}" target="_blank">Watch</a></p>
     `;
 }
+// Fetch data from data.json and render it
+async function displayMediaFromJSON() {
+    try {
+        const response = await fetch('data.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        renderMedia(data);
+    } catch (error) {
+        console.error('Error displaying media:', error);
+    }
+}
+
+// Initialize display
+document.addEventListener('DOMContentLoaded', displayMediaFromJSON);

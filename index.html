@@ -17,6 +17,8 @@
         <button id="chooseSeries" onclick="chooseOption('series')">Choose Series</button>
     </div>
     <button onclick="importData()">Import</button>
+    <input type="file" id="fileInput" accept="application/json" style="display:none;" onchange="handleFile(event)">
+
     <button onclick="exportData()">Export</button>
     <button id="toggleReviewColumn" class="toggle-review">Toggle Review Column</button>
     <button class="remove-all" onclick="removeAllMovies()">Remove All</button>

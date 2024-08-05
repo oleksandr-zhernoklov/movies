@@ -35,3 +35,24 @@ function removeAllMovies() {
       displayMediaFromLocalStorage();
   }
 }
+
+
+// Function to save media to JSON file instead of localStorage
+function saveMediaToFile(mediaData) {
+  fetch('data.json')
+      .then(response => response.json())
+      .then(existingData => {
+          existingData.push(mediaData);
+          return fetch('saveData.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(existingData)
+          });
+      })
+      .then(response => {
+          if (!response.ok) throw new Error('Failed to save data');
+          console.log('Media saved successfully');
+          displayMediaFromJSON();
+      })
+      .catch(error => console.error('Error saving media:', error));
+}
