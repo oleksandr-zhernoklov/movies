@@ -1,5 +1,6 @@
 import os
 import re
+from difflib import get_close_matches
 import csv
 import requests
 import pandas as pd
@@ -215,7 +216,16 @@ def parse_ftp_listing(listing):
 def size_in_gb(size_bytes):
     return size_bytes / (1024 ** 3)  # Convert bytes to gigabytes
 
+
+def extract_year(filename):
+    year_pattern = re.compile(r'\((\d{4})\)')
+    match = year_pattern.search(filename)
+    if match:
+        return match.group(1)
+    return None
+
 # Function to process video files from multiple directories
+
 def process_video_files(directories, tmdb_api_key, ftp_details=None):
     video_files = []
     ftp_file_sizes = {}
@@ -259,11 +269,12 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
         match = re.match(pattern, filename)
         if match:
             movie_name = match.group(1)
-            print(match.group(1))
+            print(match.group(1),'---- ',file)
         else:
-            # No movie found
+            # No regexp found
             failed_results.append({'File': file, 'Result': 'No regexp'})
             continue
+        file_year = extract_year(filename)
 
         # Make a request to TMDB API to search for the movie
         url = f"https://api.themoviedb.org/3/search/movie?api_key={tmdb_api_key}&query={movie_name}"
@@ -281,6 +292,16 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
                 movie_genre_ids = movie['genre_ids']
                 movie_id = movie['id']
                 movie_year = movie['release_date'][:4] if movie['release_date'] else 'N/A'
+
+                # Check if file_year matches movie_year
+                if file_year != movie_year:
+                    # Try to find the correct movie year
+                    correct_year = find_movie_year(movie_title, file_year)
+                    if correct_year:
+                        movie_year = correct_year
+                    else:
+                        failed_results.append({'File': file, 'Result': f'Unable to find corresponding movie year for {filename}'})
+                        continue
 
                 # Map genre ids to corresponding values
                 genre_values = [get_genre_value(genre_id) for genre_id in movie_genre_ids]
@@ -327,6 +348,20 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
 
     successful_results = sorted(successful_results, key=lambda x: x.get('Year') or '')
     return successful_results, failed_results
+
+def find_movie_year(movie_title, file_year):
+    # Implement your logic to find the correct movie year
+    # based on the movie title and file year
+    # This could involve querying a database, API, or using fuzzy string matching
+
+    # Example using fuzzy string matching
+    years = [str(year) for year in range(1900, 2024)]
+    closest_match = get_close_matches(file_year, years, n=1, cutoff=0.6)
+    if closest_match:
+        return closest_match[0]
+    else:
+        return None
+
 
 def save_results_to_csv_and_excel(successful_results, failed_results):
     # Save successful results to CSV file
