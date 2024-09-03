@@ -1,0 +1,618 @@
+2024-09-02 14:08:31,931:INFO:Processing hero: Gillian (ID: 20000)
+2024-09-02 14:08:31,940:INFO:Extracted data: {'Hero Name': 'Gillian', 'Health': '3318', 'Defense': '132', 'Attack': '111', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:34,802:INFO:Processing hero: Beags (ID: 20010)
+2024-09-02 14:08:34,804:INFO:Extracted data: {'Hero Name': 'Beags', 'Health': '2180', 'Defense': '103', 'Attack': '121', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:37,536:INFO:Processing hero: Zraacs (ID: 20020)
+2024-09-02 14:08:37,538:INFO:Extracted data: {'Hero Name': 'Zraacs', 'Health': '2442', 'Defense': '116', 'Attack': '131', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:40,362:INFO:Processing hero: Shagrol (ID: 20030)
+2024-09-02 14:08:40,363:INFO:Extracted data: {'Hero Name': 'Shagrol', 'Health': '3447', 'Defense': '95', 'Attack': '142', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:43,134:INFO:Processing hero: Schaltar (ID: 20040)
+2024-09-02 14:08:43,136:INFO:Extracted data: {'Hero Name': 'Schaltar', 'Health': '3397', 'Defense': '99', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:45,804:INFO:Processing hero: Forbrit (ID: 20050)
+2024-09-02 14:08:45,805:INFO:Extracted data: {'Hero Name': 'Forbrit', 'Health': '3406', 'Defense': '119', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:48,865:INFO:Processing hero: Eurion (ID: 20060)
+2024-09-02 14:08:48,867:INFO:Extracted data: {'Hero Name': 'Eurion', 'Health': '3876', 'Defense': '134', 'Attack': '131', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:51,617:INFO:Processing hero: Hegio (ID: 20070)
+2024-09-02 14:08:51,619:INFO:Extracted data: {'Hero Name': 'Hegio', 'Health': '3360', 'Defense': '100', 'Attack': '133', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:54,386:INFO:Processing hero: Vani (ID: 20080)
+2024-09-02 14:08:54,388:INFO:Extracted data: {'Hero Name': 'Vani', 'Health': '2284', 'Defense': '102', 'Attack': '141', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:08:57,295:INFO:Processing hero: Lorarii (ID: 20090)
+2024-09-02 14:08:57,296:INFO:Extracted data: {'Hero Name': 'Lorarii', 'Health': '3090', 'Defense': '92', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:00,030:INFO:Processing hero: Herkert (ID: 20100)
+2024-09-02 14:09:00,031:INFO:Extracted data: {'Hero Name': 'Herkert', 'Health': '2939', 'Defense': '83', 'Attack': '114', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:02,843:INFO:Processing hero: Philto (ID: 20110)
+2024-09-02 14:09:02,844:INFO:Extracted data: {'Hero Name': 'Philto', 'Health': '2531', 'Defense': '111', 'Attack': '167', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:06,479:INFO:Processing hero: Hvitar (ID: 20120)
+2024-09-02 14:09:06,481:INFO:Extracted data: {'Hero Name': 'Hvitar', 'Health': '2541', 'Defense': '126', 'Attack': '166', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:09,447:INFO:Processing hero: Horace (ID: 20130)
+2024-09-02 14:09:09,448:INFO:Extracted data: {'Hero Name': 'Horace', 'Health': '2521', 'Defense': '116', 'Attack': '139', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:12,395:INFO:Processing hero: Horrus (ID: 20140)
+2024-09-02 14:09:12,398:INFO:Extracted data: {'Hero Name': 'Horrus', 'Health': '3598', 'Defense': '130', 'Attack': '115', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:15,717:INFO:Processing hero: Araces (ID: 20150)
+2024-09-02 14:09:15,719:INFO:Extracted data: {'Hero Name': 'Araces', 'Health': '3074', 'Defense': '83', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:20,695:INFO:Processing hero: Ivellios (ID: 20160)
+2024-09-02 14:09:20,696:INFO:Extracted data: {'Hero Name': 'Ivellios', 'Health': '2677', 'Defense': '123', 'Attack': '153', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:26,078:INFO:Processing hero: Martina (ID: 20170)
+2024-09-02 14:09:26,079:INFO:Extracted data: {'Hero Name': 'Martina', 'Health': '3275', 'Defense': '92', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:30,256:INFO:Processing hero: Usha (ID: 20180)
+2024-09-02 14:09:30,258:INFO:Extracted data: {'Hero Name': 'Usha', 'Health': '2955', 'Defense': '93', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:37,560:INFO:Processing hero: Garrika (ID: 20190)
+2024-09-02 14:09:37,561:INFO:Extracted data: {'Hero Name': 'Garrika', 'Health': '4058', 'Defense': '116', 'Attack': '138', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:41,940:INFO:Processing hero: Lothair (ID: 20200)
+2024-09-02 14:09:41,941:INFO:Extracted data: {'Hero Name': 'Lothair', 'Health': '3767', 'Defense': '108', 'Attack': '159', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:46,700:INFO:Processing hero: Garius (ID: 20210)
+2024-09-02 14:09:46,701:INFO:Extracted data: {'Hero Name': 'Garius', 'Health': '3483', 'Defense': '118', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:51,041:INFO:Processing hero: Zadok (ID: 20220)
+2024-09-02 14:09:51,043:INFO:Extracted data: {'Hero Name': 'Zadok', 'Health': '2252', 'Defense': '104', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:55,460:INFO:Processing hero: Karf (ID: 20230)
+2024-09-02 14:09:55,462:INFO:Extracted data: {'Hero Name': 'Karf', 'Health': '2651', 'Defense': '123', 'Attack': '142', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:09:59,661:INFO:Processing hero: Dorkuraz (ID: 20240)
+2024-09-02 14:09:59,663:INFO:Extracted data: {'Hero Name': 'Dorkuraz', 'Health': '2293', 'Defense': '110', 'Attack': '147', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:03,486:INFO:Processing hero: Vidimir (ID: 20250)
+2024-09-02 14:10:03,487:INFO:Extracted data: {'Hero Name': 'Vidimir', 'Health': '2392', 'Defense': '101', 'Attack': '134', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:07,341:INFO:Processing hero: Enna (ID: 20260)
+2024-09-02 14:10:07,343:INFO:Extracted data: {'Hero Name': 'Enna', 'Health': '2323', 'Defense': '109', 'Attack': '101', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:11,045:INFO:Processing hero: Dench (ID: 20270)
+2024-09-02 14:10:11,046:INFO:Extracted data: {'Hero Name': 'Dench', 'Health': '2265', 'Defense': '103', 'Attack': '116', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:14,756:INFO:Processing hero: Eli (ID: 20280)
+2024-09-02 14:10:14,758:INFO:Extracted data: {'Hero Name': 'Eli', 'Health': '2249', 'Defense': '101', 'Attack': '132', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:18,621:INFO:Processing hero: Jatjalea (ID: 20290)
+2024-09-02 14:10:18,622:INFO:Extracted data: {'Hero Name': 'Jatjalea', 'Health': '2704', 'Defense': '124', 'Attack': '150', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:22,498:INFO:Processing hero: Lorentheel (ID: 20300)
+2024-09-02 14:10:22,500:INFO:Extracted data: {'Hero Name': 'Lorentheel', 'Health': '2543', 'Defense': '130', 'Attack': '160', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:26,264:INFO:Processing hero: Wellby (ID: 20310)
+2024-09-02 14:10:26,266:INFO:Extracted data: {'Hero Name': 'Wellby', 'Health': '2147', 'Defense': '106', 'Attack': '138', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:30,437:INFO:Processing hero: Huberg (ID: 20320)
+2024-09-02 14:10:30,439:INFO:Extracted data: {'Hero Name': 'Huberg', 'Health': '2585', 'Defense': '125', 'Attack': '153', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:34,229:INFO:Processing hero: Scharlach (ID: 20330)
+2024-09-02 14:10:34,231:INFO:Extracted data: {'Hero Name': 'Scharlach', 'Health': '2818', 'Defense': '121', 'Attack': '151', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:37,967:INFO:Processing hero: Korth (ID: 20340)
+2024-09-02 14:10:37,968:INFO:Extracted data: {'Hero Name': 'Korth', 'Health': '2244', 'Defense': '100', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:41,863:INFO:Processing hero: Gaiolere (ID: 20350)
+2024-09-02 14:10:41,865:INFO:Extracted data: {'Hero Name': 'Gaiolere', 'Health': '2741', 'Defense': '117', 'Attack': '144', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:45,853:INFO:Processing hero: Brody (ID: 20360)
+2024-09-02 14:10:45,854:INFO:Extracted data: {'Hero Name': 'Brody', 'Health': '3774', 'Defense': '107', 'Attack': '125', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:49,606:INFO:Processing hero: Awstin (ID: 20370)
+2024-09-02 14:10:49,608:INFO:Extracted data: {'Hero Name': 'Awstin', 'Health': '2331', 'Defense': '105', 'Attack': '121', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:53,438:INFO:Processing hero: Dillon (ID: 20380)
+2024-09-02 14:10:53,440:INFO:Extracted data: {'Hero Name': 'Dillon', 'Health': '2279', 'Defense': '98', 'Attack': '111', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:10:57,215:INFO:Processing hero: Nedda (ID: 20390)
+2024-09-02 14:10:57,217:INFO:Extracted data: {'Hero Name': 'Nedda', 'Health': '2180', 'Defense': '103', 'Attack': '136', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:01,228:INFO:Processing hero: Errich (ID: 20400)
+2024-09-02 14:11:01,230:INFO:Extracted data: {'Hero Name': 'Errich', 'Health': '2626', 'Defense': '121', 'Attack': '153', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:05,180:INFO:Processing hero: Flora (ID: 20410)
+2024-09-02 14:11:05,183:INFO:Extracted data: {'Hero Name': 'Flora', 'Health': '2527', 'Defense': '128', 'Attack': '178', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:09,042:INFO:Processing hero: Acilia (ID: 20420)
+2024-09-02 14:11:09,044:INFO:Extracted data: {'Hero Name': 'Acilia', 'Health': '4184', 'Defense': '120', 'Attack': '123', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:13,089:INFO:Processing hero: Grishnaar (ID: 20430)
+2024-09-02 14:11:13,092:INFO:Extracted data: {'Hero Name': 'Grishnaar', 'Health': '3867', 'Defense': '141', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:16,929:INFO:Processing hero: Lydia (ID: 20440)
+2024-09-02 14:11:16,931:INFO:Extracted data: {'Hero Name': 'Lydia', 'Health': '4038', 'Defense': '127', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:20,830:INFO:Processing hero: Khrysos (ID: 20450)
+2024-09-02 14:11:20,833:INFO:Extracted data: {'Hero Name': 'Khrysos', 'Health': '4048', 'Defense': '129', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:24,536:INFO:Processing hero: Jijel (ID: 20460)
+2024-09-02 14:11:24,538:INFO:Extracted data: {'Hero Name': 'Jijel', 'Health': '2429', 'Defense': '107', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:28,652:INFO:Processing hero: Kamari (ID: 20470)
+2024-09-02 14:11:28,654:INFO:Extracted data: {'Hero Name': 'Kamari', 'Health': '3721', 'Defense': '116', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:32,475:INFO:Processing hero: Irina (ID: 20480)
+2024-09-02 14:11:32,476:INFO:Extracted data: {'Hero Name': 'Irina', 'Health': '2336', 'Defense': '97', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:36,282:INFO:Processing hero: Sailla (ID: 20490)
+2024-09-02 14:11:36,284:INFO:Extracted data: {'Hero Name': 'Sailla', 'Health': '3208', 'Defense': '87', 'Attack': '105', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:40,082:INFO:Processing hero: Immeral (ID: 20500)
+2024-09-02 14:11:40,085:INFO:Extracted data: {'Hero Name': 'Immeral', 'Health': '3141', 'Defense': '89', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:43,931:INFO:Processing hero: Whitacre (ID: 20510)
+2024-09-02 14:11:43,933:INFO:Extracted data: {'Hero Name': 'Whitacre', 'Health': '2961', 'Defense': '82', 'Attack': '109', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:47,727:INFO:Processing hero: Vicuz (ID: 20520)
+2024-09-02 14:11:47,729:INFO:Extracted data: {'Hero Name': 'Vicuz', 'Health': '3206', 'Defense': '86', 'Attack': '106', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:51,812:INFO:Processing hero: Doraud (ID: 20530)
+2024-09-02 14:11:51,814:INFO:Extracted data: {'Hero Name': 'Doraud', 'Health': '3175', 'Defense': '87', 'Attack': '104', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:11:56,052:INFO:Processing hero: Clovis (ID: 20540)
+2024-09-02 14:11:56,054:INFO:Extracted data: {'Hero Name': 'Clovis', 'Health': '3597', 'Defense': '120', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:00,038:INFO:Processing hero: Mulier (ID: 20550)
+2024-09-02 14:12:00,040:INFO:Extracted data: {'Hero Name': 'Mulier', 'Health': '3112', 'Defense': '92', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:03,889:INFO:Processing hero: Urzog (ID: 20560)
+2024-09-02 14:12:03,891:INFO:Extracted data: {'Hero Name': 'Urzog', 'Health': '2947', 'Defense': '81', 'Attack': '112', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:07,706:INFO:Processing hero: Aladiah (ID: 20570)
+2024-09-02 14:12:07,707:INFO:Extracted data: {'Hero Name': 'Aladiah', 'Health': '2642', 'Defense': '121', 'Attack': '125', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:11,775:INFO:Processing hero: Grover (ID: 20580)
+2024-09-02 14:12:11,777:INFO:Extracted data: {'Hero Name': 'Grover', 'Health': '3138', 'Defense': '96', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:15,576:INFO:Processing hero: Utior (ID: 20590)
+2024-09-02 14:12:15,577:INFO:Extracted data: {'Hero Name': 'Utior', 'Health': '3048', 'Defense': '125', 'Attack': '141', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:19,505:INFO:Processing hero: Questa (ID: 20600)
+2024-09-02 14:12:19,506:INFO:Extracted data: {'Hero Name': 'Questa', 'Health': '3464', 'Defense': '126', 'Attack': '143', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:23,586:INFO:Processing hero: Livia (ID: 20610)
+2024-09-02 14:12:23,589:INFO:Extracted data: {'Hero Name': 'Livia', 'Health': '3675', 'Defense': '91', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:27,537:INFO:Processing hero: Maashtur (ID: 20620)
+2024-09-02 14:12:27,539:INFO:Extracted data: {'Hero Name': 'Maashtur', 'Health': '4522', 'Defense': '99', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:31,238:INFO:Processing hero: Vicana (ID: 20630)
+2024-09-02 14:12:31,239:INFO:Extracted data: {'Hero Name': 'Vicana', 'Health': '3731', 'Defense': '117', 'Attack': '150', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:35,021:INFO:Processing hero: Iola (ID: 20640)
+2024-09-02 14:12:35,023:INFO:Extracted data: {'Hero Name': 'Iola', 'Health': '2422', 'Defense': '107', 'Attack': '138', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:38,868:INFO:Processing hero: Sigrid (ID: 20650)
+2024-09-02 14:12:38,870:INFO:Extracted data: {'Hero Name': 'Sigrid', 'Health': '2344', 'Defense': '107', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:42,675:INFO:Processing hero: Garett (ID: 20660)
+2024-09-02 14:12:42,677:INFO:Extracted data: {'Hero Name': 'Garett', 'Health': '3943', 'Defense': '117', 'Attack': '137', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:46,455:INFO:Processing hero: Durango (ID: 20670)
+2024-09-02 14:12:46,458:INFO:Extracted data: {'Hero Name': 'Durango', 'Health': '3668', 'Defense': '112', 'Attack': '148', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:50,283:INFO:Processing hero: Arlow (ID: 20680)
+2024-09-02 14:12:50,286:INFO:Extracted data: {'Hero Name': 'Arlow', 'Health': '3020', 'Defense': '94', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:54,280:INFO:Processing hero: Torrin (ID: 20690)
+2024-09-02 14:12:54,282:INFO:Extracted data: {'Hero Name': 'Torrin', 'Health': '3168', 'Defense': '139', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:12:58,093:INFO:Processing hero: Dane (ID: 20700)
+2024-09-02 14:12:58,095:INFO:Extracted data: {'Hero Name': 'Dane', 'Health': '2565', 'Defense': '103', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:01,942:INFO:Processing hero: Wilt (ID: 20710)
+2024-09-02 14:13:01,944:INFO:Extracted data: {'Hero Name': 'Wilt', 'Health': '2261', 'Defense': '102', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:05,745:INFO:Processing hero: Cato (ID: 20720)
+2024-09-02 14:13:05,747:INFO:Extracted data: {'Hero Name': 'Cato', 'Health': '2278', 'Defense': '95', 'Attack': '111', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:09,617:INFO:Processing hero: Alton (ID: 20730)
+2024-09-02 14:13:09,619:INFO:Extracted data: {'Hero Name': 'Alton', 'Health': '2689', 'Defense': '124', 'Attack': '152', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:13,447:INFO:Processing hero: Nastjenka (ID: 20740)
+2024-09-02 14:13:13,449:INFO:Extracted data: {'Hero Name': 'Nastjenka', 'Health': '3822', 'Defense': '113', 'Attack': '157', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:19,211:INFO:Processing hero: Eches (ID: 20750)
+2024-09-02 14:13:19,213:INFO:Extracted data: {'Hero Name': 'Eches', 'Health': '3610', 'Defense': '110', 'Attack': '131', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:23,295:INFO:Processing hero: Thea (ID: 20760)
+2024-09-02 14:13:23,297:INFO:Extracted data: {'Hero Name': 'Thea', 'Health': '3150', 'Defense': '91', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:27,361:INFO:Processing hero: Vinyara (ID: 20770)
+2024-09-02 14:13:27,362:INFO:Extracted data: {'Hero Name': 'Vinyara', 'Health': '2631', 'Defense': '125', 'Attack': '150', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:31,557:INFO:Processing hero: Heksandra (ID: 20780)
+2024-09-02 14:13:31,560:INFO:Extracted data: {'Hero Name': 'Heksandra', 'Health': '2578', 'Defense': '117', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:35,590:INFO:Processing hero: Meggan (ID: 20790)
+2024-09-02 14:13:35,592:INFO:Extracted data: {'Hero Name': 'Meggan', 'Health': '2438', 'Defense': '110', 'Attack': '115', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:39,757:INFO:Processing hero: Merideth (ID: 20800)
+2024-09-02 14:13:39,760:INFO:Extracted data: {'Hero Name': 'Merideth', 'Health': '2251', 'Defense': '98', 'Attack': '109', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:43,816:INFO:Processing hero: Felicity (ID: 20810)
+2024-09-02 14:13:43,817:INFO:Extracted data: {'Hero Name': 'Felicity', 'Health': '2714', 'Defense': '122', 'Attack': '151', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:47,834:INFO:Processing hero: Paixton (ID: 20820)
+2024-09-02 14:13:47,836:INFO:Extracted data: {'Hero Name': 'Paixton', 'Health': '3713', 'Defense': '110', 'Attack': '141', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:52,144:INFO:Processing hero: Tamar (ID: 20830)
+2024-09-02 14:13:52,146:INFO:Extracted data: {'Hero Name': 'Tamar', 'Health': '2825', 'Defense': '115', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:13:56,512:INFO:Processing hero: Thelendor (ID: 20840)
+2024-09-02 14:13:56,514:INFO:Extracted data: {'Hero Name': 'Thelendor', 'Health': '3430', 'Defense': '108', 'Attack': '170', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:00,516:INFO:Processing hero: Hirvolm (ID: 20850)
+2024-09-02 14:14:00,518:INFO:Extracted data: {'Hero Name': 'Hirvolm', 'Health': '3400', 'Defense': '100', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:04,653:INFO:Processing hero: Broll (ID: 20860)
+2024-09-02 14:14:04,655:INFO:Extracted data: {'Hero Name': 'Broll', 'Health': '3084', 'Defense': '90', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:08,718:INFO:Processing hero: Evania (ID: 20870)
+2024-09-02 14:14:08,721:INFO:Extracted data: {'Hero Name': 'Evania', 'Health': '3118', 'Defense': '100', 'Attack': '124', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:13,075:INFO:Processing hero: Narzilla (ID: 20880)
+2024-09-02 14:14:13,077:INFO:Extracted data: {'Hero Name': 'Narzilla', 'Health': '2439', 'Defense': '112', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:17,090:INFO:Processing hero: Tharivol (ID: 20890)
+2024-09-02 14:14:17,092:INFO:Extracted data: {'Hero Name': 'Tharivol', 'Health': '2709', 'Defense': '119', 'Attack': '138', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:21,062:INFO:Processing hero: Caledo (ID: 20900)
+2024-09-02 14:14:21,063:INFO:Extracted data: {'Hero Name': 'Caledo', 'Health': '3267', 'Defense': '110', 'Attack': '113', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:25,327:INFO:Processing hero: Nessa (ID: 20910)
+2024-09-02 14:14:25,329:INFO:Extracted data: {'Hero Name': 'Nessa', 'Health': '3408', 'Defense': '105', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:29,303:INFO:Processing hero: Lossenia (ID: 20920)
+2024-09-02 14:14:29,305:INFO:Extracted data: {'Hero Name': 'Lossenia', 'Health': '2722', 'Defense': '126', 'Attack': '155', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:33,359:INFO:Processing hero: Ardreth (ID: 20930)
+2024-09-02 14:14:33,360:INFO:Extracted data: {'Hero Name': 'Ardreth', 'Health': '3731', 'Defense': '137', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:37,332:INFO:Processing hero: Tathlyn (ID: 20940)
+2024-09-02 14:14:37,334:INFO:Extracted data: {'Hero Name': 'Tathlyn', 'Health': '2542', 'Defense': '113', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:41,406:INFO:Processing hero: Alvis (ID: 20950)
+2024-09-02 14:14:41,408:INFO:Extracted data: {'Hero Name': 'Alvis', 'Health': '2455', 'Defense': '118', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:45,416:INFO:Processing hero: Quarion (ID: 20960)
+2024-09-02 14:14:45,417:INFO:Extracted data: {'Hero Name': 'Quarion', 'Health': '2436', 'Defense': '105', 'Attack': '105', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:49,564:INFO:Processing hero: Mithrasea (ID: 20970)
+2024-09-02 14:14:49,567:INFO:Extracted data: {'Hero Name': 'Mithrasea', 'Health': '3127', 'Defense': '125', 'Attack': '136', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:53,681:INFO:Processing hero: Kailes (ID: 20980)
+2024-09-02 14:14:53,683:INFO:Extracted data: {'Hero Name': 'Kailes', 'Health': '2275', 'Defense': '105', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:14:57,826:INFO:Processing hero: Lucien (ID: 20990)
+2024-09-02 14:14:57,827:INFO:Extracted data: {'Hero Name': 'Lucien', 'Health': '3589', 'Defense': '109', 'Attack': '132', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:01,868:INFO:Processing hero: Soveliss (ID: 21000)
+2024-09-02 14:15:01,870:INFO:Extracted data: {'Hero Name': 'Soveliss', 'Health': '2636', 'Defense': '110', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:05,867:INFO:Processing hero: Ergander (ID: 21010)
+2024-09-02 14:15:05,869:INFO:Extracted data: {'Hero Name': 'Ergander', 'Health': '4150', 'Defense': '125', 'Attack': '137', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:09,973:INFO:Processing hero: Quaesitia (ID: 21020)
+2024-09-02 14:15:09,974:INFO:Extracted data: {'Hero Name': 'Quaesitia', 'Health': '3912', 'Defense': '122', 'Attack': '142', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:13,962:INFO:Processing hero: Auster (ID: 21030)
+2024-09-02 14:15:13,964:INFO:Extracted data: {'Hero Name': 'Auster', 'Health': '2515', 'Defense': '121', 'Attack': '160', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:18,025:INFO:Processing hero: Tioh (ID: 21040)
+2024-09-02 14:15:18,027:INFO:Extracted data: {'Hero Name': 'Tioh', 'Health': '2984', 'Defense': '89', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:22,315:INFO:Processing hero: Thia (ID: 21050)
+2024-09-02 14:15:22,317:INFO:Extracted data: {'Hero Name': 'Thia', 'Health': '2673', 'Defense': '115', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:26,350:INFO:Processing hero: Adrie (ID: 21060)
+2024-09-02 14:15:26,352:INFO:Extracted data: {'Hero Name': 'Adrie', 'Health': '2402', 'Defense': '104', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:30,427:INFO:Processing hero: Aspalta (ID: 21070)
+2024-09-02 14:15:30,428:INFO:Extracted data: {'Hero Name': 'Aspalta', 'Health': '3619', 'Defense': '109', 'Attack': '137', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:34,680:INFO:Processing hero: Lethander (ID: 21080)
+2024-09-02 14:15:34,682:INFO:Extracted data: {'Hero Name': 'Lethander', 'Health': '2368', 'Defense': '106', 'Attack': '131', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:38,618:INFO:Processing hero: Cifla (ID: 21090)
+2024-09-02 14:15:38,620:INFO:Extracted data: {'Hero Name': 'Cifla', 'Health': '2955', 'Defense': '92', 'Attack': '116', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:42,662:INFO:Processing hero: Sacredeia (ID: 21100)
+2024-09-02 14:15:42,663:INFO:Extracted data: {'Hero Name': 'Sacredeia', 'Health': '2675', 'Defense': '124', 'Attack': '166', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:46,671:INFO:Processing hero: Noteera (ID: 21110)
+2024-09-02 14:15:46,673:INFO:Extracted data: {'Hero Name': 'Noteera', 'Health': '3173', 'Defense': '102', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:50,898:INFO:Processing hero: Beldelle (ID: 21120)
+2024-09-02 14:15:50,899:INFO:Extracted data: {'Hero Name': 'Beldelle', 'Health': '3786', 'Defense': '112', 'Attack': '162', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:55,098:INFO:Processing hero: Thurnus (ID: 21130)
+2024-09-02 14:15:55,100:INFO:Extracted data: {'Hero Name': 'Thurnus', 'Health': '3456', 'Defense': '100', 'Attack': '132', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:15:59,520:INFO:Processing hero: Berrik (ID: 21140)
+2024-09-02 14:15:59,522:INFO:Extracted data: {'Hero Name': 'Berrik', 'Health': '3404', 'Defense': '126', 'Attack': '121', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:03,583:INFO:Processing hero: Huldork (ID: 21150)
+2024-09-02 14:16:03,586:INFO:Extracted data: {'Hero Name': 'Huldork', 'Health': '2816', 'Defense': '125', 'Attack': '150', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:07,872:INFO:Processing hero: Gardrus (ID: 21160)
+2024-09-02 14:16:07,874:INFO:Extracted data: {'Hero Name': 'Gardrus', 'Health': '2537', 'Defense': '113', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:11,968:INFO:Processing hero: Rhash (ID: 21170)
+2024-09-02 14:16:11,970:INFO:Extracted data: {'Hero Name': 'Rhash', 'Health': '2736', 'Defense': '123', 'Attack': '157', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:16,032:INFO:Processing hero: Gerthin (ID: 21180)
+2024-09-02 14:16:16,034:INFO:Extracted data: {'Hero Name': 'Gerthin', 'Health': '3433', 'Defense': '103', 'Attack': '137', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:20,129:INFO:Processing hero: Careth (ID: 21190)
+2024-09-02 14:16:20,131:INFO:Extracted data: {'Hero Name': 'Careth', 'Health': '2379', 'Defense': '106', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:24,243:INFO:Processing hero: Zhorak (ID: 21200)
+2024-09-02 14:16:24,244:INFO:Extracted data: {'Hero Name': 'Zhorak', 'Health': '2415', 'Defense': '111', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:28,713:INFO:Processing hero: Gitouna (ID: 21210)
+2024-09-02 14:16:28,715:INFO:Extracted data: {'Hero Name': 'Gitouna', 'Health': '3228', 'Defense': '97', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:33,084:INFO:Processing hero: Dora (ID: 21220)
+2024-09-02 14:16:33,090:INFO:Extracted data: {'Hero Name': 'Dora', 'Health': '2358', 'Defense': '106', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:34,143:WARNING:Failed to retrieve data for hero ID: 21230
+2024-09-02 14:16:38,454:INFO:Processing hero: Dain (ID: 21240)
+2024-09-02 14:16:38,456:INFO:Extracted data: {'Hero Name': 'Dain', 'Health': '3281', 'Defense': '118', 'Attack': '113', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:42,390:INFO:Processing hero: Malak (ID: 21250)
+2024-09-02 14:16:42,396:INFO:Extracted data: {'Hero Name': 'Malak', 'Health': '3812', 'Defense': '118', 'Attack': '139', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:16:46,660:INFO:Processing hero: Alfie (ID: 21260)
+2024-09-02 14:16:46,665:INFO:Extracted data: {'Hero Name': 'Alfie', 'Health': '2512', 'Defense': '105', 'Attack': '133', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:07,131:INFO:Processing hero: Rose (ID: 21270)
+2024-09-02 14:17:07,131:INFO:Extracted data: {'Hero Name': 'Rose', 'Health': '3052', 'Defense': '120', 'Attack': '148', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:12,626:INFO:Processing hero: Lyle (ID: 21280)
+2024-09-02 14:17:12,638:INFO:Extracted data: {'Hero Name': 'Lyle', 'Health': '2497', 'Defense': '113', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:17,227:INFO:Processing hero: Rowena (ID: 21290)
+2024-09-02 14:17:17,230:INFO:Extracted data: {'Hero Name': 'Rowena', 'Health': '2416', 'Defense': '111', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:21,631:INFO:Processing hero: Corrin (ID: 21300)
+2024-09-02 14:17:21,631:INFO:Extracted data: {'Hero Name': 'Corrin', 'Health': '2501', 'Defense': '115', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:26,565:INFO:Processing hero: Stanguem (ID: 21310)
+2024-09-02 14:17:26,565:INFO:Extracted data: {'Hero Name': 'Stanguem', 'Health': '3600', 'Defense': '131', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:31,663:INFO:Processing hero: Talwer (ID: 21320)
+2024-09-02 14:17:31,663:INFO:Extracted data: {'Hero Name': 'Talwer', 'Health': '3925', 'Defense': '114', 'Attack': '132', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:35,907:INFO:Processing hero: Fizzle (ID: 21330)
+2024-09-02 14:17:35,923:INFO:Extracted data: {'Hero Name': 'Fizzle', 'Health': '2316', 'Defense': '107', 'Attack': '121', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:47,032:INFO:Processing hero: Mera (ID: 21340)
+2024-09-02 14:17:47,032:INFO:Extracted data: {'Hero Name': 'Mera', 'Health': '3412', 'Defense': '104', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:51,242:INFO:Processing hero: Ghellid (ID: 21350)
+2024-09-02 14:17:51,242:INFO:Extracted data: {'Hero Name': 'Ghellid', 'Health': '3385', 'Defense': '111', 'Attack': '121', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:17:55,555:INFO:Processing hero: Tatoth (ID: 21360)
+2024-09-02 14:17:55,564:INFO:Extracted data: {'Hero Name': 'Tatoth', 'Health': '2286', 'Defense': '107', 'Attack': '145', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:00,079:INFO:Processing hero: Halramar (ID: 21370)
+2024-09-02 14:18:00,094:INFO:Extracted data: {'Hero Name': 'Halramar', 'Health': '2677', 'Defense': '122', 'Attack': '138', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:04,332:INFO:Processing hero: Bronwyn (ID: 21380)
+2024-09-02 14:18:04,338:INFO:Extracted data: {'Hero Name': 'Bronwyn', 'Health': '2415', 'Defense': '103', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:08,957:INFO:Processing hero: Felosia (ID: 21390)
+2024-09-02 14:18:08,957:INFO:Extracted data: {'Hero Name': 'Felosia', 'Health': '2608', 'Defense': '119', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:09,900:WARNING:Failed to retrieve data for hero ID: 21400
+2024-09-02 14:18:13,962:INFO:Processing hero: Victor (ID: 21410)
+2024-09-02 14:18:13,962:INFO:Extracted data: {'Hero Name': 'Victor', 'Health': '3713', 'Defense': '113', 'Attack': '139', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:18,284:INFO:Processing hero: Dallbam (ID: 21420)
+2024-09-02 14:18:18,284:INFO:Extracted data: {'Hero Name': 'Dallbam', 'Health': '3692', 'Defense': '108', 'Attack': '123', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:22,681:INFO:Processing hero: Haldy (ID: 21430)
+2024-09-02 14:18:22,681:INFO:Extracted data: {'Hero Name': 'Haldy', 'Health': '3200', 'Defense': '96', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:27,028:INFO:Processing hero: Seidic (ID: 21440)
+2024-09-02 14:18:27,028:INFO:Extracted data: {'Hero Name': 'Seidic', 'Health': '2478', 'Defense': '106', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:31,240:INFO:Processing hero: Journ (ID: 21450)
+2024-09-02 14:18:31,255:INFO:Extracted data: {'Hero Name': 'Journ', 'Health': '2539', 'Defense': '126', 'Attack': '143', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:35,764:INFO:Processing hero: Donella (ID: 21460)
+2024-09-02 14:18:35,780:INFO:Extracted data: {'Hero Name': 'Donella', 'Health': '3752', 'Defense': '120', 'Attack': '148', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:40,137:INFO:Processing hero: Rephe (ID: 21470)
+2024-09-02 14:18:40,138:INFO:Extracted data: {'Hero Name': 'Rephe', 'Health': '3593', 'Defense': '97', 'Attack': '118', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:45,083:INFO:Processing hero: Nissa (ID: 21480)
+2024-09-02 14:18:45,083:INFO:Extracted data: {'Hero Name': 'Nissa', 'Health': '2768', 'Defense': '128', 'Attack': '148', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:49,333:INFO:Processing hero: Follie (ID: 21490)
+2024-09-02 14:18:49,333:INFO:Extracted data: {'Hero Name': 'Follie', 'Health': '2469', 'Defense': '104', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:53,932:INFO:Processing hero: Diantha (ID: 21500)
+2024-09-02 14:18:53,946:INFO:Extracted data: {'Hero Name': 'Diantha', 'Health': '2668', 'Defense': '120', 'Attack': '139', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:18:58,248:INFO:Processing hero: Gegnu (ID: 21510)
+2024-09-02 14:18:58,248:INFO:Extracted data: {'Hero Name': 'Gegnu', 'Health': '3700', 'Defense': '99', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:02,819:INFO:Processing hero: Perkunte (ID: 21520)
+2024-09-02 14:19:02,834:INFO:Extracted data: {'Hero Name': 'Perkunte', 'Health': '2696', 'Defense': '118', 'Attack': '167', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:07,100:INFO:Processing hero: Deeno (ID: 21530)
+2024-09-02 14:19:07,100:INFO:Extracted data: {'Hero Name': 'Deeno', 'Health': '2413', 'Defense': '114', 'Attack': '136', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:11,377:INFO:Processing hero: Manda (ID: 21540)
+2024-09-02 14:19:11,377:INFO:Extracted data: {'Hero Name': 'Manda', 'Health': '2451', 'Defense': '125', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:15,830:INFO:Processing hero: Gerana (ID: 21550)
+2024-09-02 14:19:15,830:INFO:Extracted data: {'Hero Name': 'Gerana', 'Health': '2473', 'Defense': '103', 'Attack': '123', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:20,507:INFO:Processing hero: Sutha (ID: 21560)
+2024-09-02 14:19:20,507:INFO:Extracted data: {'Hero Name': 'Sutha', 'Health': '3924', 'Defense': '102', 'Attack': '152', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:25,216:INFO:Processing hero: Rasran (ID: 21570)
+2024-09-02 14:19:25,216:INFO:Extracted data: {'Hero Name': 'Rasran', 'Health': '3109', 'Defense': '87', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:29,856:INFO:Processing hero: Naguk (ID: 21580)
+2024-09-02 14:19:29,858:INFO:Extracted data: {'Hero Name': 'Naguk', 'Health': '3385', 'Defense': '102', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:34,006:INFO:Processing hero: Gragrir (ID: 21590)
+2024-09-02 14:19:34,006:INFO:Extracted data: {'Hero Name': 'Gragrir', 'Health': '3409', 'Defense': '99', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:38,620:INFO:Processing hero: Aryasso (ID: 21600)
+2024-09-02 14:19:38,620:INFO:Extracted data: {'Hero Name': 'Aryasso', 'Health': '3184', 'Defense': '88', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:42,878:INFO:Processing hero: Fihrah (ID: 21610)
+2024-09-02 14:19:42,878:INFO:Extracted data: {'Hero Name': 'Fihrah', 'Health': '2552', 'Defense': '113', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:47,966:INFO:Processing hero: Rava (ID: 21620)
+2024-09-02 14:19:47,966:INFO:Extracted data: {'Hero Name': 'Rava', 'Health': '2419', 'Defense': '111', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:52,712:INFO:Processing hero: Gusni (ID: 21630)
+2024-09-02 14:19:52,712:INFO:Extracted data: {'Hero Name': 'Gusni', 'Health': '2312', 'Defense': '108', 'Attack': '123', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:57,418:INFO:Processing hero: Stegamoffyn (ID: 21640)
+2024-09-02 14:19:57,418:INFO:Extracted data: {'Hero Name': 'Stegamoffyn', 'Health': '2662', 'Defense': '117', 'Attack': '147', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:19:58,393:WARNING:Failed to retrieve data for hero ID: 21650
+2024-09-02 14:20:02,840:INFO:Processing hero: Dubok (ID: 21660)
+2024-09-02 14:20:02,840:INFO:Extracted data: {'Hero Name': 'Dubok', 'Health': '2456', 'Defense': '119', 'Attack': '117', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:07,037:INFO:Processing hero: Frurbath (ID: 21670)
+2024-09-02 14:20:07,037:INFO:Extracted data: {'Hero Name': 'Frurbath', 'Health': '3718', 'Defense': '126', 'Attack': '115', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:11,625:INFO:Processing hero: Sifris (ID: 21680)
+2024-09-02 14:20:11,625:INFO:Extracted data: {'Hero Name': 'Sifris', 'Health': '2686', 'Defense': '118', 'Attack': '117', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:16,171:INFO:Processing hero: Isitarian (ID: 21690)
+2024-09-02 14:20:16,172:INFO:Extracted data: {'Hero Name': 'Isitarian', 'Health': '2455', 'Defense': '112', 'Attack': '141', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:20,159:INFO:Processing hero: Oggok (ID: 21700)
+2024-09-02 14:20:20,159:INFO:Extracted data: {'Hero Name': 'Oggok', 'Health': '2926', 'Defense': '123', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:24,077:INFO:Processing hero: Trolgar (ID: 21710)
+2024-09-02 14:20:24,077:INFO:Extracted data: {'Hero Name': 'Trolgar', 'Health': '3642', 'Defense': '118', 'Attack': '153', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:28,161:INFO:Processing hero: Gulal (ID: 21720)
+2024-09-02 14:20:28,161:INFO:Extracted data: {'Hero Name': 'Gulal', 'Health': '2269', 'Defense': '103', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:32,198:INFO:Processing hero: Dalk (ID: 21730)
+2024-09-02 14:20:32,212:INFO:Extracted data: {'Hero Name': 'Dalk', 'Health': '2587', 'Defense': '126', 'Attack': '143', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:36,416:INFO:Processing hero: Ripekas (ID: 21740)
+2024-09-02 14:20:36,416:INFO:Extracted data: {'Hero Name': 'Ripekas', 'Health': '3876', 'Defense': '136', 'Attack': '156', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:40,477:INFO:Processing hero: Loris (ID: 21750)
+2024-09-02 14:20:40,477:INFO:Extracted data: {'Hero Name': 'Loris', 'Health': '3290', 'Defense': '107', 'Attack': '108', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:45,620:INFO:Processing hero: Aschetius (ID: 21760)
+2024-09-02 14:20:45,636:INFO:Extracted data: {'Hero Name': 'Aschetius', 'Health': '3703', 'Defense': '107', 'Attack': '159', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:49,380:INFO:Processing hero: Lelwanis (ID: 21770)
+2024-09-02 14:20:49,380:INFO:Extracted data: {'Hero Name': 'Lelwanis', 'Health': '3709', 'Defense': '114', 'Attack': '150', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:52,993:INFO:Processing hero: Shai'nachtan (ID: 21780)
+2024-09-02 14:20:52,995:INFO:Extracted data: {'Hero Name': "Shai'nachtan", 'Health': '3769', 'Defense': '110', 'Attack': '141', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:20:54,003:WARNING:Failed to retrieve data for hero ID: 21790
+2024-09-02 14:20:57,784:INFO:Processing hero: Tonalnan (ID: 21800)
+2024-09-02 14:20:57,784:INFO:Extracted data: {'Hero Name': 'Tonalnan', 'Health': '3362', 'Defense': '99', 'Attack': '142', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:02,063:INFO:Processing hero: Eleuia (ID: 21810)
+2024-09-02 14:21:02,077:INFO:Extracted data: {'Hero Name': 'Eleuia', 'Health': '2299', 'Defense': '109', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:05,786:INFO:Processing hero: Ihuicatl (ID: 21820)
+2024-09-02 14:21:05,798:INFO:Extracted data: {'Hero Name': 'Ihuicatl', 'Health': '2530', 'Defense': '115', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:09,688:INFO:Processing hero: Dargo (ID: 21830)
+2024-09-02 14:21:09,688:INFO:Extracted data: {'Hero Name': 'Dargo', 'Health': '2446', 'Defense': '111', 'Attack': '137', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:13,239:INFO:Processing hero: Yagnatz (ID: 21840)
+2024-09-02 14:21:13,239:INFO:Extracted data: {'Hero Name': 'Yagnatz', 'Health': '2263', 'Defense': '103', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:16,795:INFO:Processing hero: Kyrza (ID: 21850)
+2024-09-02 14:21:16,795:INFO:Extracted data: {'Hero Name': 'Kyrza', 'Health': '3422', 'Defense': '105', 'Attack': '124', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:20,394:INFO:Processing hero: Sabrina (ID: 21860)
+2024-09-02 14:21:20,394:INFO:Extracted data: {'Hero Name': 'Sabrina', 'Health': '2249', 'Defense': '101', 'Attack': '117', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:24,049:INFO:Processing hero: Reytah (ID: 21870)
+2024-09-02 14:21:24,049:INFO:Extracted data: {'Hero Name': 'Reytah', 'Health': '2518', 'Defense': '125', 'Attack': '146', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:27,769:INFO:Processing hero: Bionphray (ID: 21880)
+2024-09-02 14:21:27,770:INFO:Extracted data: {'Hero Name': 'Bionphray', 'Health': '3938', 'Defense': '133', 'Attack': '142', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:31,710:INFO:Processing hero: Terez (ID: 21890)
+2024-09-02 14:21:31,724:INFO:Extracted data: {'Hero Name': 'Terez', 'Health': '2982', 'Defense': '87', 'Attack': '110', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:35,583:INFO:Processing hero: Pargu (ID: 21900)
+2024-09-02 14:21:35,583:INFO:Extracted data: {'Hero Name': 'Pargu', 'Health': '2648', 'Defense': '112', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:39,120:INFO:Processing hero: Olgan (ID: 21910)
+2024-09-02 14:21:39,120:INFO:Extracted data: {'Hero Name': 'Olgan', 'Health': '3505', 'Defense': '99', 'Attack': '125', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:43,101:INFO:Processing hero: Percival (ID: 21920)
+2024-09-02 14:21:43,101:INFO:Extracted data: {'Hero Name': 'Percival', 'Health': '2302', 'Defense': '104', 'Attack': '118', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:47,319:INFO:Processing hero: Joyce (ID: 21930)
+2024-09-02 14:21:47,319:INFO:Extracted data: {'Hero Name': 'Joyce', 'Health': '2448', 'Defense': '111', 'Attack': '139', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:51,094:INFO:Processing hero: Haug (ID: 21940)
+2024-09-02 14:21:51,094:INFO:Extracted data: {'Hero Name': 'Haug', 'Health': '2345', 'Defense': '104', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:54,671:INFO:Processing hero: Caraman (ID: 21950)
+2024-09-02 14:21:54,676:INFO:Extracted data: {'Hero Name': 'Caraman', 'Health': '3249', 'Defense': '107', 'Attack': '133', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:21:58,151:INFO:Processing hero: Phaessa (ID: 21960)
+2024-09-02 14:21:58,153:INFO:Extracted data: {'Hero Name': 'Phaessa', 'Health': '2810', 'Defense': '123', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:02,002:INFO:Processing hero: Caspar (ID: 21970)
+2024-09-02 14:22:02,015:INFO:Extracted data: {'Hero Name': 'Caspar', 'Health': '2544', 'Defense': '123', 'Attack': '147', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:06,037:INFO:Processing hero: Zethos (ID: 21980)
+2024-09-02 14:22:06,038:INFO:Extracted data: {'Hero Name': 'Zethos', 'Health': '2274', 'Defense': '102', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:10,039:INFO:Processing hero: Chitter (ID: 21990)
+2024-09-02 14:22:10,042:INFO:Extracted data: {'Hero Name': 'Chitter', 'Health': '3456', 'Defense': '100', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:13,630:INFO:Processing hero: Zadie (ID: 22000)
+2024-09-02 14:22:13,630:INFO:Extracted data: {'Hero Name': 'Zadie', 'Health': '3245', 'Defense': '90', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:17,249:INFO:Processing hero: Twitch (ID: 22010)
+2024-09-02 14:22:17,249:INFO:Extracted data: {'Hero Name': 'Twitch', 'Health': '2569', 'Defense': '125', 'Attack': '165', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:21,034:INFO:Processing hero: Shink (ID: 22020)
+2024-09-02 14:22:21,034:INFO:Extracted data: {'Hero Name': 'Shink', 'Health': '3345', 'Defense': '100', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:24,983:INFO:Processing hero: Whisk (ID: 22030)
+2024-09-02 14:22:24,983:INFO:Extracted data: {'Hero Name': 'Whisk', 'Health': '3176', 'Defense': '110', 'Attack': '151', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:28,601:INFO:Processing hero: Zeffi (ID: 22040)
+2024-09-02 14:22:28,601:INFO:Extracted data: {'Hero Name': 'Zeffi', 'Health': '2806', 'Defense': '128', 'Attack': '136', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:32,359:INFO:Processing hero: Rook (ID: 22050)
+2024-09-02 14:22:32,373:INFO:Extracted data: {'Hero Name': 'Rook', 'Health': '2898', 'Defense': '125', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:36,584:INFO:Processing hero: Sagomir (ID: 22060)
+2024-09-02 14:22:36,589:INFO:Extracted data: {'Hero Name': 'Sagomir', 'Health': '4174', 'Defense': '121', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:37,578:WARNING:Failed to retrieve data for hero ID: 22070
+2024-09-02 14:22:41,780:INFO:Processing hero: Nadja (ID: 22080)
+2024-09-02 14:22:41,780:INFO:Extracted data: {'Hero Name': 'Nadja', 'Health': '2502', 'Defense': '111', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:42,734:WARNING:Failed to retrieve data for hero ID: 22090
+2024-09-02 14:22:43,643:WARNING:Failed to retrieve data for hero ID: 22100
+2024-09-02 14:22:47,590:INFO:Processing hero: Bleddyn (ID: 22110)
+2024-09-02 14:22:47,593:INFO:Extracted data: {'Hero Name': 'Bleddyn', 'Health': '2434', 'Defense': '109', 'Attack': '131', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:48,667:WARNING:Failed to retrieve data for hero ID: 22120
+2024-09-02 14:22:52,400:INFO:Processing hero: Shahla (ID: 22130)
+2024-09-02 14:22:52,405:INFO:Extracted data: {'Hero Name': 'Shahla', 'Health': '2578', 'Defense': '118', 'Attack': '144', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:22:56,223:INFO:Processing hero: Ashqar (ID: 22140)
+2024-09-02 14:22:56,223:INFO:Extracted data: {'Hero Name': 'Ashqar', 'Health': '3599', 'Defense': '101', 'Attack': '124', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:00,400:INFO:Processing hero: Nord (ID: 22150)
+2024-09-02 14:23:00,417:INFO:Extracted data: {'Hero Name': 'Nord', 'Health': '3182', 'Defense': '93', 'Attack': '117', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:01,402:WARNING:Failed to retrieve data for hero ID: 22160
+2024-09-02 14:23:02,355:WARNING:Failed to retrieve data for hero ID: 22170
+2024-09-02 14:23:06,649:INFO:Processing hero: Irzillas (ID: 22180)
+2024-09-02 14:23:06,649:INFO:Extracted data: {'Hero Name': 'Irzillas', 'Health': '4019', 'Defense': '109', 'Attack': '150', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:11,159:INFO:Processing hero: Fitz (ID: 22190)
+2024-09-02 14:23:11,159:INFO:Extracted data: {'Hero Name': 'Fitz', 'Health': '3592', 'Defense': '99', 'Attack': '117', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:15,022:INFO:Processing hero: Olaf (ID: 22200)
+2024-09-02 14:23:15,022:INFO:Extracted data: {'Hero Name': 'Olaf', 'Health': '3125', 'Defense': '93', 'Attack': '103', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:19,178:INFO:Processing hero: Vojeh (ID: 22210)
+2024-09-02 14:23:19,178:INFO:Extracted data: {'Hero Name': 'Vojeh', 'Health': '3090', 'Defense': '89', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:22,641:INFO:Processing hero: Berengar (ID: 22220)
+2024-09-02 14:23:22,647:INFO:Extracted data: {'Hero Name': 'Berengar', 'Health': '4503', 'Defense': '125', 'Attack': '151', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:26,488:INFO:Processing hero: Hochadir (ID: 22230)
+2024-09-02 14:23:26,488:INFO:Extracted data: {'Hero Name': 'Hochadir', 'Health': '3495', 'Defense': '115', 'Attack': '143', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:27,445:WARNING:Failed to retrieve data for hero ID: 22240
+2024-09-02 14:23:31,420:INFO:Processing hero: Daphne (ID: 22250)
+2024-09-02 14:23:31,420:INFO:Extracted data: {'Hero Name': 'Daphne', 'Health': '2404', 'Defense': '111', 'Attack': '177', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:35,331:INFO:Processing hero: Taldie (ID: 22260)
+2024-09-02 14:23:35,331:INFO:Extracted data: {'Hero Name': 'Taldie', 'Health': '2385', 'Defense': '110', 'Attack': '142', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:39,036:INFO:Processing hero: Vasska (ID: 22270)
+2024-09-02 14:23:39,036:INFO:Extracted data: {'Hero Name': 'Vasska', 'Health': '3234', 'Defense': '98', 'Attack': '124', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:42,763:INFO:Processing hero: Ozul (ID: 22280)
+2024-09-02 14:23:42,763:INFO:Extracted data: {'Hero Name': 'Ozul', 'Health': '2625', 'Defense': '125', 'Attack': '154', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:46,601:INFO:Processing hero: Voresh (ID: 22290)
+2024-09-02 14:23:46,601:INFO:Extracted data: {'Hero Name': 'Voresh', 'Health': '2551', 'Defense': '113', 'Attack': '138', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:50,562:INFO:Processing hero: Premtsa (ID: 22300)
+2024-09-02 14:23:50,562:INFO:Extracted data: {'Hero Name': 'Premtsa', 'Health': '2701', 'Defense': '125', 'Attack': '152', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:54,705:INFO:Processing hero: Ghul’ende (ID: 22310)
+2024-09-02 14:23:54,709:INFO:Extracted data: {'Hero Name': 'Ghul’ende', 'Health': '2505', 'Defense': '116', 'Attack': '145', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:23:58,889:INFO:Processing hero: Zhar'loth (ID: 22320)
+2024-09-02 14:23:58,889:INFO:Extracted data: {'Hero Name': "Zhar'loth", 'Health': '2439', 'Defense': '112', 'Attack': '138', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:02,869:INFO:Processing hero: Elecebre (ID: 22330)
+2024-09-02 14:24:02,869:INFO:Extracted data: {'Hero Name': 'Elecebre', 'Health': '3427', 'Defense': '135', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:06,982:INFO:Processing hero: Durem (ID: 22340)
+2024-09-02 14:24:06,982:INFO:Extracted data: {'Hero Name': 'Durem', 'Health': '2700', 'Defense': '121', 'Attack': '153', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '0', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:11,516:INFO:Processing hero: Nimbus (ID: 22350)
+2024-09-02 14:24:11,530:INFO:Extracted data: {'Hero Name': 'Nimbus', 'Health': '2509', 'Defense': '106', 'Attack': '132', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:16,075:INFO:Processing hero: Gloin (ID: 22360)
+2024-09-02 14:24:16,090:INFO:Extracted data: {'Hero Name': 'Gloin', 'Health': '2354', 'Defense': '106', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:20,403:INFO:Processing hero: Orfenna (ID: 22370)
+2024-09-02 14:24:20,403:INFO:Extracted data: {'Hero Name': 'Orfenna', 'Health': '2522', 'Defense': '117', 'Attack': '142', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:24,467:INFO:Processing hero: Eirnin (ID: 22380)
+2024-09-02 14:24:24,468:INFO:Extracted data: {'Hero Name': 'Eirnin', 'Health': '2477', 'Defense': '111', 'Attack': '131', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:28,868:INFO:Processing hero: Altair (ID: 22390)
+2024-09-02 14:24:28,868:INFO:Extracted data: {'Hero Name': 'Altair', 'Health': '2314', 'Defense': '105', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:29,884:WARNING:Failed to retrieve data for hero ID: 22400
+2024-09-02 14:24:30,809:WARNING:Failed to retrieve data for hero ID: 22410
+2024-09-02 14:24:34,863:INFO:Processing hero: Perseus (ID: 22420)
+2024-09-02 14:24:34,863:INFO:Extracted data: {'Hero Name': 'Perseus', 'Health': '3894', 'Defense': '120', 'Attack': '121', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:35,745:WARNING:Failed to retrieve data for hero ID: 22430
+2024-09-02 14:24:36,728:WARNING:Failed to retrieve data for hero ID: 22440
+2024-09-02 14:24:40,376:INFO:Processing hero: Feliciberta (ID: 22450)
+2024-09-02 14:24:40,379:INFO:Extracted data: {'Hero Name': 'Feliciberta', 'Health': '3744', 'Defense': '113', 'Attack': '131', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:43,992:INFO:Processing hero: Majtan (ID: 22460)
+2024-09-02 14:24:43,994:INFO:Extracted data: {'Hero Name': 'Majtan', 'Health': '3844', 'Defense': '119', 'Attack': '134', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:47,703:INFO:Processing hero: Astaion (ID: 22470)
+2024-09-02 14:24:47,703:INFO:Extracted data: {'Hero Name': 'Astaion', 'Health': '2664', 'Defense': '124', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:48,585:WARNING:Failed to retrieve data for hero ID: 22480
+2024-09-02 14:24:52,209:INFO:Processing hero: Miro (ID: 22490)
+2024-09-02 14:24:52,209:INFO:Extracted data: {'Hero Name': 'Miro', 'Health': '3788', 'Defense': '115', 'Attack': '140', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:24:53,092:WARNING:Failed to retrieve data for hero ID: 22500
+2024-09-02 14:24:53,978:WARNING:Failed to retrieve data for hero ID: 22510
+2024-09-02 14:24:54,892:WARNING:Failed to retrieve data for hero ID: 22520
+2024-09-02 14:24:55,802:WARNING:Failed to retrieve data for hero ID: 22530
+2024-09-02 14:24:59,420:INFO:Processing hero: Tarulla (ID: 22540)
+2024-09-02 14:24:59,420:INFO:Extracted data: {'Hero Name': 'Tarulla', 'Health': '3588', 'Defense': '101', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:00,325:WARNING:Failed to retrieve data for hero ID: 22550
+2024-09-02 14:25:01,309:WARNING:Failed to retrieve data for hero ID: 22560
+2024-09-02 14:25:02,201:WARNING:Failed to retrieve data for hero ID: 22570
+2024-09-02 14:25:03,169:WARNING:Failed to retrieve data for hero ID: 22580
+2024-09-02 14:25:06,852:INFO:Processing hero: Vex (ID: 22590)
+2024-09-02 14:25:06,860:INFO:Extracted data: {'Hero Name': 'Vex', 'Health': '3300', 'Defense': '100', 'Attack': '132', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:07,759:WARNING:Failed to retrieve data for hero ID: 22600
+2024-09-02 14:25:08,622:WARNING:Failed to retrieve data for hero ID: 22610
+2024-09-02 14:25:10,102:WARNING:Failed to retrieve data for hero ID: 22620
+2024-09-02 14:25:10,965:WARNING:Failed to retrieve data for hero ID: 22630
+2024-09-02 14:25:14,762:INFO:Processing hero: Bronagh (ID: 22640)
+2024-09-02 14:25:14,762:INFO:Extracted data: {'Hero Name': 'Bronagh', 'Health': '3099', 'Defense': '92', 'Attack': '118', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:15,609:WARNING:Failed to retrieve data for hero ID: 22650
+2024-09-02 14:25:19,414:INFO:Processing hero: Alistair (ID: 22660)
+2024-09-02 14:25:19,414:INFO:Extracted data: {'Hero Name': 'Alistair', 'Health': '3138', 'Defense': '92', 'Attack': '114', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:20,319:WARNING:Failed to retrieve data for hero ID: 22670
+2024-09-02 14:25:24,540:INFO:Processing hero: Calavera (ID: 22680)
+2024-09-02 14:25:24,540:INFO:Extracted data: {'Hero Name': 'Calavera', 'Health': '3735', 'Defense': '109', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:28,615:INFO:Processing hero: Synarell (ID: 22690)
+2024-09-02 14:25:28,615:INFO:Extracted data: {'Hero Name': 'Synarell', 'Health': '2573', 'Defense': '115', 'Attack': '146', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:29,588:WARNING:Failed to retrieve data for hero ID: 22700
+2024-09-02 14:25:33,730:INFO:Processing hero: Yfeir (ID: 22710)
+2024-09-02 14:25:33,730:INFO:Extracted data: {'Hero Name': 'Yfeir', 'Health': '3825', 'Defense': '114', 'Attack': '133', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:37,706:INFO:Processing hero: Thalorian (ID: 22720)
+2024-09-02 14:25:37,706:INFO:Extracted data: {'Hero Name': 'Thalorian', 'Health': '3425', 'Defense': '125', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:38,802:WARNING:Failed to retrieve data for hero ID: 22730
+2024-09-02 14:25:39,924:WARNING:Failed to retrieve data for hero ID: 22740
+2024-09-02 14:25:40,897:WARNING:Failed to retrieve data for hero ID: 22750
+2024-09-02 14:25:41,968:WARNING:Failed to retrieve data for hero ID: 22760
+2024-09-02 14:25:46,151:INFO:Processing hero: Ylindra (ID: 22770)
+2024-09-02 14:25:46,153:INFO:Extracted data: {'Hero Name': 'Ylindra', 'Health': '3168', 'Defense': '93', 'Attack': '116', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:49,922:INFO:Processing hero: Fathomdown (ID: 22780)
+2024-09-02 14:25:49,924:INFO:Extracted data: {'Hero Name': 'Fathomdown', 'Health': '3622', 'Defense': '113', 'Attack': '135', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:54,172:INFO:Processing hero: Lincos (ID: 22790)
+2024-09-02 14:25:54,172:INFO:Extracted data: {'Hero Name': 'Lincos', 'Health': '2639', 'Defense': '118', 'Attack': '143', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:25:58,458:INFO:Processing hero: Aemonleyda (ID: 22800)
+2024-09-02 14:25:58,458:INFO:Extracted data: {'Hero Name': 'Aemonleyda', 'Health': '3683', 'Defense': '118', 'Attack': '155', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:02,453:INFO:Processing hero: Shinnah (ID: 22810)
+2024-09-02 14:26:02,453:INFO:Extracted data: {'Hero Name': 'Shinnah', 'Health': '2668', 'Defense': '122', 'Attack': '147', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:06,311:INFO:Processing hero: Theohein (ID: 22820)
+2024-09-02 14:26:06,311:INFO:Extracted data: {'Hero Name': 'Theohein', 'Health': '2445', 'Defense': '112', 'Attack': '133', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:07,309:WARNING:Failed to retrieve data for hero ID: 22830
+2024-09-02 14:26:11,631:INFO:Processing hero: Baelvernal (ID: 22840)
+2024-09-02 14:26:11,632:INFO:Extracted data: {'Hero Name': 'Baelvernal', 'Health': '2438', 'Defense': '108', 'Attack': '137', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:15,687:INFO:Processing hero: Pearl (ID: 22850)
+2024-09-02 14:26:15,687:INFO:Extracted data: {'Hero Name': 'Pearl', 'Health': '2467', 'Defense': '113', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:19,690:INFO:Processing hero: Cykkol (ID: 22860)
+2024-09-02 14:26:19,690:INFO:Extracted data: {'Hero Name': 'Cykkol', 'Health': '3188', 'Defense': '91', 'Attack': '118', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:23,445:INFO:Processing hero: Roberta (ID: 22870)
+2024-09-02 14:26:23,445:INFO:Extracted data: {'Hero Name': 'Roberta', 'Health': '2322', 'Defense': '103', 'Attack': '127', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:24,478:WARNING:Failed to retrieve data for hero ID: 22880
+2024-09-02 14:26:25,464:WARNING:Failed to retrieve data for hero ID: 22890
+2024-09-02 14:26:26,322:WARNING:Failed to retrieve data for hero ID: 22900
+2024-09-02 14:26:27,235:WARNING:Failed to retrieve data for hero ID: 22910
+2024-09-02 14:26:28,089:WARNING:Failed to retrieve data for hero ID: 22920
+2024-09-02 14:26:29,125:WARNING:Failed to retrieve data for hero ID: 22930
+2024-09-02 14:26:30,004:WARNING:Failed to retrieve data for hero ID: 22940
+2024-09-02 14:26:30,921:WARNING:Failed to retrieve data for hero ID: 22950
+2024-09-02 14:26:31,876:WARNING:Failed to retrieve data for hero ID: 22960
+2024-09-02 14:26:32,806:WARNING:Failed to retrieve data for hero ID: 22970
+2024-09-02 14:26:36,474:INFO:Processing hero: Drizzt Do'Urden (ID: 22980)
+2024-09-02 14:26:36,474:INFO:Extracted data: {'Hero Name': "Drizzt Do'Urden", 'Health': '3362', 'Defense': '117', 'Attack': '149', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:40,157:INFO:Processing hero: Theodemer (ID: 22990)
+2024-09-02 14:26:40,159:INFO:Extracted data: {'Hero Name': 'Theodemer', 'Health': '3680', 'Defense': '139', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:43,901:INFO:Processing hero: Feenja (ID: 23000)
+2024-09-02 14:26:43,901:INFO:Extracted data: {'Hero Name': 'Feenja', 'Health': '2833', 'Defense': '123', 'Attack': '141', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:26:44,876:WARNING:Failed to retrieve data for hero ID: 23010
+2024-09-02 14:26:45,730:WARNING:Failed to retrieve data for hero ID: 23020
+2024-09-02 14:26:46,609:WARNING:Failed to retrieve data for hero ID: 23030
+2024-09-02 14:26:47,556:WARNING:Failed to retrieve data for hero ID: 23040
+2024-09-02 14:26:48,466:WARNING:Failed to retrieve data for hero ID: 23050
+2024-09-02 14:26:49,326:WARNING:Failed to retrieve data for hero ID: 23060
+2024-09-02 14:26:50,261:WARNING:Failed to retrieve data for hero ID: 23070
+2024-09-02 14:26:51,263:WARNING:Failed to retrieve data for hero ID: 23080
+2024-09-02 14:26:52,221:WARNING:Failed to retrieve data for hero ID: 23090
+2024-09-02 14:26:53,081:WARNING:Failed to retrieve data for hero ID: 23100
+2024-09-02 14:26:53,982:WARNING:Failed to retrieve data for hero ID: 23110
+2024-09-02 14:26:57,684:INFO:Processing hero: Irma (ID: 23120)
+2024-09-02 14:26:57,685:INFO:Extracted data: {'Hero Name': 'Irma', 'Health': '3379', 'Defense': '112', 'Attack': '122', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:01,553:INFO:Processing hero: Estella (ID: 23130)
+2024-09-02 14:27:01,568:INFO:Extracted data: {'Hero Name': 'Estella', 'Health': '2429', 'Defense': '111', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:05,357:INFO:Processing hero: Gladros (ID: 23140)
+2024-09-02 14:27:05,375:INFO:Extracted data: {'Hero Name': 'Gladros', 'Health': '2400', 'Defense': '108', 'Attack': '141', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:09,261:INFO:Processing hero: Deverick (ID: 23150)
+2024-09-02 14:27:09,261:INFO:Extracted data: {'Hero Name': 'Deverick', 'Health': '2437', 'Defense': '111', 'Attack': '133', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:13,154:INFO:Processing hero: Elvis (ID: 23160)
+2024-09-02 14:27:13,154:INFO:Extracted data: {'Hero Name': 'Elvis', 'Health': '3189', 'Defense': '119', 'Attack': '118', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:17,425:INFO:Processing hero: Gareth (ID: 23170)
+2024-09-02 14:27:17,425:INFO:Extracted data: {'Hero Name': 'Gareth', 'Health': '3421', 'Defense': '104', 'Attack': '119', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:21,924:INFO:Processing hero: Garian (ID: 23180)
+2024-09-02 14:27:21,924:INFO:Extracted data: {'Hero Name': 'Garian', 'Health': '2428', 'Defense': '109', 'Attack': '124', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:26,076:INFO:Processing hero: Vicuc (ID: 23190)
+2024-09-02 14:27:26,076:INFO:Extracted data: {'Hero Name': 'Vicuc', 'Health': '2260', 'Defense': '104', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:30,169:INFO:Processing hero: Theodore (ID: 23200)
+2024-09-02 14:27:30,169:INFO:Extracted data: {'Hero Name': 'Theodore', 'Health': '2507', 'Defense': '112', 'Attack': '128', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:33,945:INFO:Processing hero: Catherine (ID: 23210)
+2024-09-02 14:27:33,945:INFO:Extracted data: {'Hero Name': 'Catherine', 'Health': '2434', 'Defense': '111', 'Attack': '115', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:37,811:INFO:Processing hero: Duling (ID: 23220)
+2024-09-02 14:27:37,811:INFO:Extracted data: {'Hero Name': 'Duling', 'Health': '3309', 'Defense': '119', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:42,074:INFO:Processing hero: Gumm (ID: 23230)
+2024-09-02 14:27:42,077:INFO:Extracted data: {'Hero Name': 'Gumm', 'Health': '2355', 'Defense': '108', 'Attack': '129', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:46,357:INFO:Processing hero: Isolde (ID: 23240)
+2024-09-02 14:27:46,373:INFO:Extracted data: {'Hero Name': 'Isolde', 'Health': '3390', 'Defense': '104', 'Attack': '118', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:50,443:INFO:Processing hero: Adolphus (ID: 23250)
+2024-09-02 14:27:50,443:INFO:Extracted data: {'Hero Name': 'Adolphus', 'Health': '2477', 'Defense': '110', 'Attack': '120', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:54,105:INFO:Processing hero: Liko (ID: 23260)
+2024-09-02 14:27:54,105:INFO:Extracted data: {'Hero Name': 'Liko', 'Health': '2376', 'Defense': '110', 'Attack': '123', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:27:58,182:INFO:Processing hero: Volthug (ID: 23270)
+2024-09-02 14:27:58,182:INFO:Extracted data: {'Hero Name': 'Volthug', 'Health': '3199', 'Defense': '98', 'Attack': '126', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:02,273:INFO:Processing hero: Nathaniel (ID: 23280)
+2024-09-02 14:28:02,273:INFO:Extracted data: {'Hero Name': 'Nathaniel', 'Health': '2415', 'Defense': '111', 'Attack': '125', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:06,214:INFO:Processing hero: Shook (ID: 23290)
+2024-09-02 14:28:06,214:INFO:Extracted data: {'Hero Name': 'Shook', 'Health': '2388', 'Defense': '107', 'Attack': '125', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:10,291:INFO:Processing hero: Uloar (ID: 23300)
+2024-09-02 14:28:10,291:INFO:Extracted data: {'Hero Name': 'Uloar', 'Health': '2326', 'Defense': '104', 'Attack': '130', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:15,631:INFO:Processing hero: Edgar (ID: 23310)
+2024-09-02 14:28:15,631:INFO:Extracted data: {'Hero Name': 'Edgar', 'Health': '3189', 'Defense': '114', 'Attack': '113', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:20,002:INFO:Processing hero: Altin (ID: 23320)
+2024-09-02 14:28:20,002:INFO:Extracted data: {'Hero Name': 'Altin', 'Health': '3201', 'Defense': '104', 'Attack': '117', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:24,163:INFO:Processing hero: Letalis (ID: 23330)
+2024-09-02 14:28:24,168:INFO:Extracted data: {'Hero Name': 'Letalis', 'Health': '3139', 'Defense': '98', 'Attack': '124', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:28,250:INFO:Processing hero: Yamyra (ID: 23340)
+2024-09-02 14:28:28,263:INFO:Extracted data: {'Hero Name': 'Yamyra', 'Health': '3183', 'Defense': '104', 'Attack': '110', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:32,339:INFO:Processing hero: Sallyanne (ID: 23350)
+2024-09-02 14:28:32,339:INFO:Extracted data: {'Hero Name': 'Sallyanne', 'Health': '3181', 'Defense': '109', 'Attack': '113', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:36,176:INFO:Processing hero: Elminster Aumar (ID: 23360)
+2024-09-02 14:28:36,176:INFO:Extracted data: {'Hero Name': 'Elminster Aumar', 'Health': '3138', 'Defense': '125', 'Attack': '123', 'Mastery': '0', 'Crit Rate': '0.1', 'Crit Dmg': '0.5', 'Accuracy': '0', 'Resistance': '0', 'Skill Haste': '', 'Subtitle_1': 'Lv.1\uff081-Star\uff09', 'Subtitle_2': 'Lv.1\uff081\u661f\uff09'}
+2024-09-02 14:28:36,192:INFO:Scraping completed. Total heroes scraped: 280

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Media Library</h1>
+    <div id="summary"></div>
+    <input type="text" id="search" placeholder="Search for a movie or series...">
+    <button onclick="searchMedia()">Search</button>
+    <div id="choicePrompt" style="display: none;">
+        <p id="choiceText"></p>
+        <button id="chooseMovie" onclick="chooseOption('movie')">Choose Movie</button>
+        <button id="chooseSeries" onclick="chooseOption('series')">Choose Series</button>
+    </div>
+    <button onclick="importData()">Import</button>
+    <input type="file" id="fileInput" accept="application/json" style="display:none;" onchange="handleFile(event)">
+
+    <button onclick="exportData()">Export</button>
+    <button id="toggleReviewColumn" class="toggle-review">Toggle Review Column</button>
+    <button class="remove-all" onclick="removeAllMovies()">Remove All</button>
+    <div class="links">
+        <a href="movie_results.html" target="_self">View Downloaded Page</a>
+    </div>
+    <table id="mediaTable" border="1">
+        <thead>
+            <tr>
+                <th>Poster</th>
+                <th>Type</th>
+                <th>Title</th>
+                <th>Original Title</th> <!-- Add this line -->
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Length</th>
+                <th>Rating</th>
+                <th>Description</th>
+                <th>Director</th>
+                <th>Actors</th>
+                <!--  <th class="collapsible">Review</th> -->
+                <th>TMDB Link</th>
+                <th>Toloka Link</th>
+                <th>Rutracker Link</th>
+                <th>Trailer</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="scripts/display.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/importExport.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

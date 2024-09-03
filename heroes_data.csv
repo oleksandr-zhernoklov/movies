@@ -1,0 +1,281 @@
+ID,Hero Name,Hero Type,Attribute_1,Attribute_2,Attribute_3,Attribute_4,Attribute_5,Attribute_6,Attribute_7,Attribute_8,Attribute_9,Attribute_10,Attribute_11,Attribute_12,Attribute_13,Attribute_14,Attribute_15,Attribute_16,Attribute_17,Attribute_18,Accuracy,Attack,Crit Dmg,Crit Rate,Defense,Health,Mastery,Range Control Text,Resistance,Skill Haste,Subtitle_1,Subtitle_2
+20000,Gillian,Luminary Cleric,Range,Legendary,Radiance,Support,Human,Cleric,,,,,,,,,,,,,0,111,0.5,0.1,132,3318,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20010,Beags,Demolitionist,Range,Rare,Fire,Burn,Goblin,Demolitionist,,,,,,,,,,,,,0,121,0.5,0.1,103,2180,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20020,Zraacs,Swindler,Range,Epic,Fire,Burn,Goblin,Demolitionist,,,,,,,,,,,,,0,131,0.5,0.1,116,2442,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20030,Shagrol,Intrepid Dual Blade,Melee,Epic,Lightning,Dauntless,Orc,Warrior,,,,,,,,,,,,,0,142,0.5,0.1,95,3447,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20040,Schaltar,Raging Cleric,Melee,Epic,Lightning,Dauntless,Valley Minotaur,Cleric,,,,,,,,,,,,,0,128,0.5,0.1,99,3397,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20050,Forbrit,Northland Blacksmith,Melee,Rare,Ice,Defense,Dwarf,Warrior,,,,,,,,,,,,,0,119,0.5,0.1,119,3406,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20060,Eurion,The Trailblazer,Melee,Legendary,Ice,Defense,Human,Warrior,,,,,,,,,,,,,0,131,0.5,0.1,134,3876,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20070,Hegio,Silver Rapier,Melee,Epic,Radiance,Rally,Human,Knight,,,,,,,,,,,,,0,133,0.5,0.1,100,3360,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20080,Vani,Orchard Girl,Range,Rare,Lightning,Dauntless,Rural Halfling,Sorcerer,,,,,,,,,,,,,0,141,0.5,0.1,102,2284,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20090,Lorarii,Dragon Blood Warrior,Melee,Rare,Poison,Poison,Human,Knight,,,,,,,,,,,,,0,120,0.5,0.1,92,3090,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20100,Herkert,Bay Reach Soldier,Melee,Common,Ice,Defense,Human,Warrior,,,,,,,,,,,,,0,114,0.5,0.1,83,2939,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20110,Philto,Debonair Gunner,Range,Legendary,Radiance,Rally,Human,Gunslinger,,,,,,,,,,,,,0,167,0.5,0.1,111,2531,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20120,Hvitar,Lady of Gale,Range,Legendary,Ice,Frost,Dragon,Master of Lineage,,,,,,,,,,,,,0,166,0.5,0.1,126,2541,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20130,Horace,Gutter Wolf,Range,Epic,Poison,Poison,Human,-,,,,,,,,,,,,,0,139,0.5,0.1,116,2521,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20140,Horrus,Blaze Hammer,Melee,Epic,Fire,Defense,Dwarf,Warrior,,,,,,,,,,,,,0,115,0.5,0.1,130,3598,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20150,Araces,Loyal Guard,Melee,Epic,Fire,Burn,Blazeland Lizardfolk,Warrior,,,,,,,,,,,,,0,126,0.5,0.1,83,3074,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20160,Ivellios,Ancident Wood,Range,Legendary,Lightning,Dauntless,wood elf,Shaman,,,,,,,,,,,,,0,153,0.5,0.1,123,2677,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20170,Martina,Armed Handmaid,Melee,Epic,Radiance,Rally,Human,Knight,,,,,,,,,,,,,0,135,0.5,0.1,92,3275,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20180,Usha,Wall of the Capital,Melee,Rare,Ice,Frost,Human,Knight,,,,,,,,,,,,,0,128,0.5,0.1,93,2955,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20190,Garrika,Fire of Dragon Blood,Melee,Legendary,Fire,Support,Human,Knight,,,,,,,,,,,,,0,138,0.5,0.1,116,4058,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20200,Lothair,Midnight,Melee,Legendary,Poison,Poison,Human,Scourge,,,,,,,,,,,,,0,159,0.5,0.1,108,3767,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20210,Garius,Vanguard Lance,Melee,Epic,Radiance,Defense,Human,Warlock,,,,,,,,,,,,,0,122,0.5,0.1,118,3483,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20220,Zadok,Lantern Phantom,Range,Epic,Necrosis,Summon,Undead,Summoner,,,,,,,,,,,,,0,140,0.5,0.1,104,2252,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20230,Karf,The One-eyed,Range,Legendary,Fire,Burn,Human,Gunslinger,,,,,,,,,,,,,0,142,0.5,0.1,123,2651,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20240,Dorkuraz,Frost Priest,Range,Epic,Ice,Frost,Frost Troll,Shaman,,,,,,,,,,,,,0,147,0.5,0.1,110,2293,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20250,Vidimir,Polymath,Range,Epic,Ice,Frost,Human,Wizard,,,,,,,,,,,,,0,134,0.5,0.1,101,2392,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20260,Enna,Forest Dweller,Range,Rare,Lightning,Support,wood elf,Druid,,,,,,,,,,,,,0,101,0.5,0.1,109,2323,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20270,Dench,Venomfang,Range,Rare,Poison,Poison,Orc,Wizard,,,,,,,,,,,,,0,116,0.5,0.1,103,2265,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20280,Eli,Forest Dweller,Range,Rare,Poison,Poison,Human,Ranger,,,,,,,,,,,,,0,132,0.5,0.1,101,2249,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20290,Jatjalea,Forest Priestess,Range,Legendary,Poison,Poison,wood elf,Druid,,,,,,,,,,,,,0,150,0.5,0.1,124,2704,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20300,Lorentheel,Residual Light,Range,Legendary,Radiance,Rally,wood elf,Druid,,,,,,,,,,,,,0,160,0.5,0.1,130,2543,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20310,Wellby,Traveling Trader,Range,Rare,Radiance,Rally,Rural Halfling,Wizard,,,,,,,,,,,,,0,138,0.5,0.1,106,2147,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20320,Huberg,Icebreaker,Range,Legendary,Radiance,Rally,Dwarf,Cleric,,,,,,,,,,,,,0,153,0.5,0.1,125,2585,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20330,Scharlach,Scarlet Unstill,Range,Legendary,Necrosis,Summon,The Unstill,Summoner,,,,,,,,,,,,,0,151,0.5,0.1,121,2818,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20340,Korth,Tribal Warrior,Range,Rare,Necrosis,Summon,Undead,Summoner,,,,,,,,,,,,,0,129,0.5,0.1,100,2244,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20350,Gaiolere,Soul Tormentor,Range,Legendary,Necrosis,Summon,Undead,Summoner,,,,,,,,,,,,,0,144,0.5,0.1,117,2741,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20360,Brody,Defthand,Melee,Epic,Fire,Support,Human,Ranger,,,,,,,,,,,,,0,125,0.5,0.1,107,3774,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20370,Awstin,Roamer,Range,Rare,Radiance,Support,Human,Ranger,,,,,,,,,,,,,0,121,0.5,0.1,105,2331,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20380,Dillon,Clan Defender,Range,Common,Lightning,Support,Human,Ranger,,,,,,,,,,,,,0,111,0.5,0.1,98,2279,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20390,Nedda,Boiling Blood,Range,Rare,Fire,Wild,Ridge Halfling,Sorcerer,,,,,,,,,,,,,0,136,0.5,0.1,103,2180,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20400,Errich,Big Horn,Range,Legendary,Fire,Wild,Ridge Halfling,Druid,,,,,,,,,,,,,0,153,0.5,0.1,121,2626,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20410,Flora,Crimson Iris,Range,Legendary,Fire,Wild,Human,Warlock,,,,,,,,,,,,,0,178,0.5,0.1,128,2527,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20420,Acilia,Sun Rose,Melee,Legendary,Radiance,Defense,Human,Paladin,,,,,,,,,,,,,0,123,0.5,0.1,120,4184,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20430,Grishnaar,Grand Chief,Melee,Legendary,Lightning,Defense,Orc,Warrior,,,,,,,,,,,,,0,128,0.5,0.1,141,3867,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20440,Lydia,Big Drinker,Melee,Epic,Lightning,Defense,Rural Halfling,Warrior,,,,,,,,,,,,,0,130,0.5,0.1,127,4038,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20450,Khrysos,Scorching Shaman,Melee,Legendary,Fire,Defense,Blazeland Lizardfolk,Shaman,,,,,,,,,,,,,0,135,0.5,0.1,129,4048,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20460,Jijel,Tribal Warrior,Range,Rare,Poison,Support,Forest Troll,Scourge,,,,,,,,,,,,,0,129,0.5,0.1,107,2429,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20470,Kamari,Light of Dragon Blood,Melee,Epic,Radiance,Defense,Human,Paladin,,,,,,,,,,,,,0,126,0.5,0.1,116,3721,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20480,Irina,Forest Dweller,Range,Rare,Lightning,Support,Human,Wizard,,,,,,,,,,,,,0,130,0.5,0.1,97,2336,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20490,Sailla,Forest Dweller,Melee,Common,Lightning,Support,wood elf,Ranger,,,,,,,,,,,,,0,105,0.5,0.1,87,3208,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20500,Immeral,The Uprooted,Melee,Rare,Lightning,Dauntless,wood elf,Ranger,,,,,,,,,,,,,0,120,0.5,0.1,89,3141,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20510,Whitacre,Tribal Warrior,Melee,Common,Poison,Poison,Blazeland Lizardfolk,Warrior,,,,,,,,,,,,,0,109,0.5,0.1,82,2961,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20520,Vicuz,Tribal Warrior,Melee,Common,Poison,Support,Forest Troll,Warrior,,,,,,,,,,,,,0,106,0.5,0.1,86,3206,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20530,Doraud,Stronghold Guard,Melee,Common,Poison,Support,Goblin,Warrior,,,,,,,,,,,,,0,104,0.5,0.1,87,3175,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20540,Clovis,Backlight Knight,Melee,Epic,Radiance,Defense,Human,Knight,,,,,,,,,,,,,0,119,0.5,0.1,120,3597,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20550,Mulier,Imperial Warrior,Melee,Rare,Radiance,Rally,Human,Knight,,,,,,,,,,,,,0,119,0.5,0.1,92,3112,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20560,Urzog,Bloodfang Guard,Melee,Common,Ice,Frost,Orc,Barbarian,,,,,,,,,,,,,0,112,0.5,0.1,81,2947,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20570,Aladiah,Spring of Iskalland,Range,Legendary,Ice,Support,,,,,,,,,,,,,,,0,125,0.5,0.1,121,2642,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20580,Grover,Witty Trickster,Melee,Rare,Lightning,Support,Human,Rogue,,,,,,,,,,,,,0,126,0.5,0.1,96,3138,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20590,Utior,Empire's Shadow,Range,Legendary,Necrosis,Support,Human,Wizard,,,,,,,,,,,,,0,141,0.5,0.1,125,3048,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20600,Questa,Medulla Devourer,Melee,Epic,Necrosis,Support,Human,Scourge,,,,,,,,,,,,,0,143,0.5,0.1,126,3464,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20610,Livia,Vagabond Knight,Melee,Rare,Fire,Defense,Human,Warrior,,,,,,,,,,,,,0,128,0.5,0.1,91,3675,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20620,Maashtur,Tiger-in-Crown,Melee,Legendary,Lightning,Defense,,,,,,,,,,,,,,,0,120,0.5,0.1,99,4522,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20630,Vicana,She-Wolf,Range,Legendary,Poison,Poison,Human,Ranger,,,,,,,,,,,,,0,150,0.5,0.1,117,3731,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20640,Iola,Truth,Range,Epic,Lightning,Support,Human,Wizard,,,,,,,,,,,,,0,138,0.5,0.1,107,2422,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20650,Sigrid,Defender,Range,Rare,Poison,Support,Human,Warrior,,,,,,,,,,,,,0,130,0.5,0.1,107,2344,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20660,Garett,The Faceless,Melee,Legendary,Lightning,Dauntless,Human,Warrior,,,,,,,,,,,,,0,137,0.5,0.1,117,3943,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20670,Durango,Ascetic Monk,Melee,Legendary,Poison,Poison,Human,Monk,,,,,,,,,,,,,0,148,0.5,0.1,112,3668,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20680,Arlow,Outlaw of the Wilds,Melee,Rare,Radiance,Rally,Human,Rogue,,,,,,,,,,,,,0,122,0.5,0.1,94,3020,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20690,Torrin,Loghtless Cleric,Range,Legendary,Necrosis,Support,The Unstill,Wizard,,,,,,,,,,,,,0,119,0.5,0.1,139,3168,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20700,Dane,Heretic,Range,Epic,Fire,Support,Human,Warlock,,,,,,,,,,,,,0,135,0.5,0.1,103,2565,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20710,Wilt,Reaper,Range,Rare,Ice,Frost,Human,Wizard,,,,,,,,,,,,,0,127,0.5,0.1,102,2261,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20720,Cato,Grey Wizard,Range,Common,Radiance,Rally,Human,Wizard,,,,,,,,,,,,,0,111,0.5,0.1,95,2278,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20730,Alton,Lute of Joy,Range,Legendary,Radiance,Rally,Rural Halfling,Bard,,,,,,,,,,,,,0,152,0.5,0.1,124,2689,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20740,Nastjenka,Ebony Beaked,Melee,Legendary,Lightning,Dauntless,Human,Scourge,,,,,,,,,,,,,0,157,0.5,0.1,113,3822,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20750,Eches,The Mort Fandango,Melee,Epic,Poison,Support,Human,Scourge,,,,,,,,,,,,,0,131,0.5,0.1,110,3610,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20760,Thea,Wanderer,Melee,Rare,Fire,Wild,Human,Ranger,,,,,,,,,,,,,0,129,0.5,0.1,91,3150,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20770,Vinyara,The Thorn,Range,Legendary,Ice,Support,The Unstill,Wizard,,,,,,,,,,,,,0,150,0.5,0.1,125,2631,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20780,Heksandra,Whisperer,Range,Rare,Poison,Support,Human,Wizard,,,,,,,,,,,,,0,119,0.5,0.1,117,2578,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20790,Meggan,Clan Maid,Range,Rare,Necrosis,Support,Human,Wizard,,,,,,,,,,,,,0,115,0.5,0.1,110,2438,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20800,Merideth,Wall of the Capital,Range,Common,Radiance,Support,Human,Cleric,,,,,,,,,,,,,0,109,0.5,0.1,98,2251,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20810,Felicity,Candle Lamp,Range,Legendary,Fire,Wild,Human,Sorcerer,,,,,,,,,,,,,0,151,0.5,0.1,122,2714,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20820,Paixton,Dark Flame,Melee,Legendary,Fire,Burn,,,,,,,,,,,,,,,0,141,0.5,0.1,110,3713,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20830,Tamar,The Safe Haven,Range,Legendary,Lightning,Support,Human,Wizard,,,,,,,,,,,,,0,140,0.5,0.1,115,2825,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20840,Thelendor,Lord of the Crescent Moon,Melee,Legendary,Radiance,Rally,Sheen Elf,Arcane Warrior,,,,,,,,,,,,,0,170,0.5,0.1,108,3430,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20850,Hirvolm,Tower Guardian,Melee,Epic,Lightning,Lightning Blast,Sheen Elf,Arcane Warrior,,,,,,,,,,,,,0,127,0.5,0.1,100,3400,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20860,Broll,Sailor,Melee,Rare,Radiance,Rally,Sheen Elf,Warrior,,,,,,,,,,,,,0,120,0.5,0.1,90,3084,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20870,Evania,Guard of the Crescent Moon,Melee,Rare,Radiance,Rally,Sheen Elf,Warrior,,,,,,,,,,,,,0,124,0.5,0.1,100,3118,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20880,Narzilla,Songstress,Range,Epic,Radiance,Aura,,,,,,,,,,,,,,,0,130,0.5,0.1,112,2439,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20890,Tharivol,Silver Moon Sentinel,Range,Legendary,Lightning,Dauntless,Sheen Elf,Ranger,,,,,,,,,,,,,0,138,0.5,0.1,119,2709,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20900,Caledo,Guard of the Crescent Moon,Melee,Rare,Radiance,Support,Sheen Elf,Warrior,,,,,,,,,,,,,0,113,0.5,0.1,110,3267,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20910,Nessa,The Duskblade,Melee,Epic,Radiance,Support,Sheen Elf,Arcane Warrior,,,,,,,,,,,,,0,135,0.5,0.1,105,3408,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20920,Lossenia,Lady of Stars,Range,Legendary,Ice,Frost,Sheen Elf,Wizard,,,,,,,,,,,,,0,155,0.5,0.1,126,2722,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20930,Ardreth,Lunar Halo,Melee,Legendary,Radiance,Defense,Sheen Elf,Paladin,,,,,,,,,,,,,0,135,0.5,0.1,137,3731,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20940,Tathlyn,Eyes of Clairvoyance,Range,Epic,Radiance,Rally,Sheen Elf,Ranger,,,,,,,,,,,,,0,127,0.5,0.1,113,2542,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20950,Alvis,The Hypocrite,Range,Epic,Radiance,Rally,Sheen Elf,Cleric,,,,,,,,,,,,,0,129,0.5,0.1,118,2455,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20960,Quarion,Wizard of the Crescenf Moon,Range,Rare,Radiance,Support,Sheen Elf,Wizard,,,,,,,,,,,,,0,105,0.5,0.1,105,2436,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20970,Mithrasea,The Unblinded,Range,Legendary,Radiance,Support,Sheen Elf,Cleric,,,,,,,,,,,,,0,136,0.5,0.1,125,3127,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+20980,Kailes,Wizard of the Crescent Moon,Range,Rare,Radiance,Rally,Sheen Elf,Wizard,,,,,,,,,,,,,0,126,0.5,0.1,105,2275,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+20990,Lucien,Wings of Dawn,Melee,Legendary,Ice,Defense,Sheen Elf,Arcane Warrior,,,,,,,,,,,,,0,132,0.5,0.1,109,3589,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21000,Soveliss,Driftwood Guard,Range,Epic,Ice,Support,wood elf,Ranger,,,,,,,,,,,,,0,126,0.5,0.1,110,2636,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21010,Ergander,Trapped Beast,Melee,Legendary,Poison,Defense,Deep Elf,Warrior,,,,,,,,,,,,,0,137,0.5,0.1,125,4150,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21020,Quaesitia,Soul Sunderer,Melee,Legendary,Necrosis,Defense,Deep Elf,Warrior,,,,,,,,,,,,,0,142,0.5,0.1,122,3912,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21030,Auster,Frozen Edge,Range,Legendary,Ice,Frost,Deep Elf,Ranger,,,,,,,,,,,,,0,160,0.5,0.1,121,2515,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21040,Tioh,Underground Warrior,Melee,Rare,Necrosis,Summon,Deep Elf,Warrior,,,,,,,,,,,,,0,122,0.5,0.1,89,2984,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21050,Thia,Heretic Girl,Range,Epic,Necrosis,Support,Deep Elf,Ranger,,,,,,,,,,,,,0,129,0.5,0.1,115,2673,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21060,Adrie,Crossbow Patrol,Range,Rare,Necrosis,Support,Deep Elf,Ranger,,,,,,,,,,,,,0,119,0.5,0.1,104,2402,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21070,Aspalta,Assassin,Melee,Legendary,Necrosis,Shadow,,,,,,,,,,,,,,,0,137,0.5,0.1,109,3619,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21080,Lethander,Shadow Emissary,Range,Epic,Ice,Support,Deep Elf,Wizard,,,,,,,,,,,,,0,131,0.5,0.1,106,2368,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21090,Cifla,Underground Warrior,Melee,Rare,Necrosis,Shadow,Deep Elf,Scourge,,,,,,,,,,,,,0,116,0.5,0.1,92,2955,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21100,Sacredeia,Overlord of Unyielding Silk,Range,Legendary,Poison,Corrosion,Deep Elf,Wizard,,,,,,,,,,,,,0,166,0.5,0.1,124,2675,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21110,Noteera,Ferrywoman,Melee,Rare,Poison,Poison,Deep Elf,Scourge,,,,,,,,,,,,,0,120,0.5,0.1,102,3173,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21120,Beldelle,Glacial Sunbeam,Melee,Legendary,Ice,Ice Blast,Dwarf,Warrior,,,,,,,,,,,,,0,162,0.5,0.1,112,3786,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21130,Thurnus,The Thunderous,Melee,Epic,Lightning,Dauntless,Dwarf,Warrior,,,,,,,,,,,,,0,132,0.5,0.1,100,3456,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21140,Berrik,Iskalland Warrior,Melee,Rare,Radiance,Defense,Dwarf,Warrior,,,,,,,,,,,,,0,121,0.5,0.1,126,3404,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21150,Huldork,Clan Fire,Range,Legendary,Fire,Support,Dwarf,Gunslinger,,,,,,,,,,,,,0,150,0.5,0.1,125,2816,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21160,Gardrus,Storm Shaver,Range,Epic,Ice,Support,Dwarf,Ranger,,,,,,,,,,,,,0,127,0.5,0.1,113,2537,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21170,Rhash,Darkfire,Range,Legendary,Fire,Wild,Orc,Sorcerer,,,,,,,,,,,,,0,157,0.5,0.1,123,2736,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21180,Gerthin,Revenant Frostblade,Melee,Epic,Ice,Ice Blast,Dwarf,Warrior,,,,,,,,,,,,,0,137,0.5,0.1,103,3433,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21190,Careth,Iskalland Eagle,Range,Epic,Radiance,Aura,,,,,,,,,,,,,,,0,135,0.5,0.1,106,2379,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21200,Zhorak,Devout Acolyte,Range,Legendary,Ice,Ice Blast,Orc,Shaman,,,,,,,,,,,,,0,126,0.5,0.1,111,2415,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21210,Gitouna,Craftsman,Melee,Epic,Radiance,Rally,Dwarf,Warrior,,,,,,,,,,,,,0,122,0.5,0.1,97,3228,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21220,Dora,Tribal Artisan,Range,Rare,Lightning,Support,Dwarf,Ranger,,,,,,,,,,,,,0,120,0.5,0.1,106,2358,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21240,Dain,Tribal Defender,Melee,Rare,Radiance,Defense,Dwarf,Warrior,,,,,,,,,,,,,0,113,0.5,0.1,118,3281,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21250,Malak,Warden of Bones,Melee,Legendary,Poison,Defense,Valley Minotaur,Warrior,,,,,,,,,,,,,0,139,0.5,0.1,118,3812,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21260,Alfie,Cheery Pollyanna,Range,Epic,Fire,Wild,Rural Halfling,Wizard,,,,,,,,,,,,,0,133,0.5,0.1,105,2512,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21270,Rose,Encyclopedia,Range,Legendary,Radiance,Support,Rural Halfling,Wizard,,,,,,,,,,,,,0,148,0.5,0.1,120,3052,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21280,Lyle,Necromancer,Range,Epic,Fire,Burn,Ridge Halfling,Wizard,,,,,,,,,,,,,0,130,0.5,0.1,113,2497,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21290,Rowena,Spine of Frost,Range,Epic,Ice,Frost,Ridge Halfling,Ranger,,,,,,,,,,,,,0,140,0.5,0.1,111,2416,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21300,Corrin,Sower,Range,Epic,Poison,Poison,Ridge Halfling,Wizard,,,,,,,,,,,,,0,140,0.5,0.1,115,2501,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21310,Stanguem,Drummer of Vigilance,Melee,Legendary,Lightning,Defense,,,,,,,,,,,,,,,0,122,0.5,0.1,131,3600,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21320,Talwer,Toadstool,Melee,Legendary,Poison,Defense,Goblin,Scourge,,,,,,,,,,,,,0,132,0.5,0.1,114,3925,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21330,Fizzle,Wandering Fuse,Range,Rare,Lightning,Support,Goblin,Demolitionist,,,,,,,,,,,,,0,121,0.5,0.1,107,2316,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21340,Mera,Eclipsed Melody,Range,Epic,Necrosis,Summon,,,,,,,,,,,,,,,0,127,0.5,0.1,104,3412,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21350,Ghellid,Toxic Foliage,Melee,Epic,Poison,Support,Goblin,Scourge,,,,,,,,,,,,,0,121,0.5,0.1,111,3385,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21360,Tatoth,Spikeball,Range,Epic,Necrosis,Shadow,Goblin,Scourge,,,,,,,,,,,,,0,145,0.5,0.1,107,2286,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21370,Halramar,Darkmane,Range,Legendary,Poison,Support,,,,,,,,,,,,,,,0,138,0.5,0.1,122,2677,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21380,Bronwyn,Honest Man,Range,Rare,Fire,Wild,Rural Halfling,Wizard,,,,,,,,,,,,,0,130,0.5,0.1,103,2415,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21390,Felosia,Hymn of Guardianship,Range,Legendary,Ice,Support,wood elf,Druid,,,,,,,,,,,,,0,129,0.5,0.1,119,2608,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21410,Victor,Grinning Tiger,Melee,Legendary,Fire,Support,,,,,,,,,,,,,,,0,139,0.5,0.1,113,3713,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21420,Dallbam,Cursed Miner,Melee,Epic,Ice,Defense,Deep Gnome,Warrior,,,,,,,,,,,,,0,123,0.5,0.1,108,3692,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21430,Haldy,Scarred Hireling,Melee,Rare,Lightning,Lightning Blast,,,,,,,,,,,,,,,0,119,0.5,0.1,96,3200,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21440,Seidic,Maritime Miner,Range,Epic,Ice,Ice Blast,Gnome,Ranger,,,,,,,,,,,,,0,135,0.5,0.1,106,2478,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21450,Journ,Jawbreaker,Range,Legendary,Fire,Support,Deep Gnome,Wizard,,,,,,,,,,,,,0,143,0.5,0.1,126,2539,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21460,Donella,The Glittering Puppeteer,Melee,Legendary,Radiance,Support,Gnome,Summoner,,,,,,,,,,,,,0,148,0.5,0.1,120,3752,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21470,Rephe,Miner,Melee,Rare,Ice,Support,Deep Gnome,Warrior,,,,,,,,,,,,,0,118,0.5,0.1,97,3593,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21480,Nissa,Cavern's Light,Range,Legendary,Lightning,Lightning Blast,Deep Gnome,Summoner,,,,,,,,,,,,,0,148,0.5,0.1,128,2768,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21490,Follie,Orb of Flames,Range,Epic,Fire,Wild,Deep Gnome,Wizard,,,,,,,,,,,,,0,130,0.5,0.1,104,2469,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21500,Diantha,Forest Dream,Range,Legendary,Radiance,Aura,,,,,,,,,,,,,,,0,139,0.5,0.1,120,2668,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21510,Gegnu,Jinxed Miner,Melee,Epic,Poison,Corrosion,Deep Gnome,Warrior,,,,,,,,,,,,,0,120,0.5,0.1,99,3700,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21520,Perkunte,Thunder of Order,Range,Legendary,Lightning,Lightning Blast,Dragon,Master of Lineage,,,,,,,,,,,,,0,167,0.5,0.1,118,2696,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21530,Deeno,Toxic Arrow,Range,Epic,Poison,Poison,,,,,,,,,,,,,,,0,136,0.5,0.1,114,2413,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21540,Manda,Spray-and-pray,Range,Epic,Lightning,Lightning Blast,Gnome,Summoner,,,,,,,,,,,,,0,130,0.5,0.1,125,2451,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21550,Gerana,Apprentice Mechanic,Range,Rare,Lightning,Support,Gnome,Wizard,,,,,,,,,,,,,0,123,0.5,0.1,103,2473,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21560,Sutha,Storm Gemera,Melee,Legendary,Lightning,Dauntless,The Unstill,Warrior,,,,,,,,,,,,,0,152,0.5,0.1,102,3924,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21570,Rasran,Bloodfang Warrior,Melee,Rare,Poison,Corrosion,Orc,Barbarian,,,,,,,,,,,,,0,119,0.5,0.1,87,3109,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21580,Naguk,Thunder Cleaver,Melee,Epic,Lightning,Defense,Orc,Warrior,,,,,,,,,,,,,0,128,0.5,0.1,102,3385,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21590,Gragrir,Hero-no-more,Melee,Epic,Poison,Corrosion,Orc,Warrior,,,,,,,,,,,,,0,130,0.5,0.1,99,3409,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21600,Aryasso,Lucky Star,Melee,Rare,Lightning,Lightning Blast,Orc,Warrior,,,,,,,,,,,,,0,120,0.5,0.1,88,3184,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21610,Fihrah,The Ember,Range,Epic,Fire,Support,Orc,Ranger,,,,,,,,,,,,,0,126,0.5,0.1,113,2552,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21620,Rava,Frozen Remedy,Range,Epic,Ice,Frost,Orc,Shaman,,,,,,,,,,,,,0,128,0.5,0.1,111,2419,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21630,Gusni,Bloodfang Warrior,Range,Rare,Ice,Support,Orc,Warrior,,,,,,,,,,,,,0,123,0.5,0.1,108,2312,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21640,Stegamoffyn,Cursebinder,Range,Legendary,Poison,Support,wood elf,Druid,,,,,,,,,,,,,0,147,0.5,0.1,117,2662,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21660,Dubok,Bloodfang Guard,Range,Rare,Fire,Support,Orc,Shaman,,,,,,,,,,,,,0,117,0.5,0.1,119,2456,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21670,Frurbath,Muddied Demon,Melee,Epic,Poison,Defense,Forest Troll,Shaman,,,,,,,,,,,,,0,115,0.5,0.1,126,3718,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21680,Sifris,Debotee,Range,Epic,Poison,Support,Human,Cleric,,,,,,,,,,,,,0,117,0.5,0.1,118,2686,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21690,Isitarian,Fanatic,Range,Epic,Necrosis,Summon,Human,Cleric,,,,,,,,,,,,,0,141,0.5,0.1,112,2455,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21700,Oggok,Toxic Witchdoctor,Range,Legendary,Poison,Support,Forest Troll,Shaman,,,,,,,,,,,,,0,140,0.5,0.1,123,2926,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21710,Trolgar,Frost Fang,Melee,Legendary,Ice,Frost,Frost Troll,Barbarian,,,,,,,,,,,,,0,153,0.5,0.1,118,3642,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21720,Gulal,Channeler,Range,Rare,Ice,Support,Frost Troll,Ranger,,,,,,,,,,,,,0,127,0.5,0.1,103,2269,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21730,Dalk,Shadow of Decay,Range,Legendary,Necrosis,Defense,Forest Troll,Ranger,,,,,,,,,,,,,0,143,0.5,0.1,126,2587,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21740,Ripekas,Spectral Troll,Melee,Legendary,Necrosis,Defense,The Unstill,Scourge,,,,,,,,,,,,,0,156,0.5,0.1,136,3876,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21750,Loris,Believer,Melee,Rare,Ice,Defense,Human,Warrior,,,,,,,,,,,,,0,108,0.5,0.1,107,3290,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21760,Aschetius,Malfeasant,Melee,Legendary,Fire,Burn,Dragon,Master of Lineage,,,,,,,,,,,,,0,159,0.5,0.1,107,3703,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21770,Lelwanis,Lady of Dark Ruins,Melee,Legendary,Necrosis,Summon,Dragon,Master of Lineage,,,,,,,,,,,,,0,150,0.5,0.1,114,3709,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21780,Shai'nachtan,King of Calamity,Melee,Legendary,Lightning,Lightning Blast,The Unstill,Warrior,,,,,,,,,,,,,0,141,0.5,0.1,110,3769,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21800,Tonalnan,Fiery Guard,Melee,Epic,Fire,Wild,Blazeland Lizardfolk,Sorcerer,,,,,,,,,,,,,0,142,0.5,0.1,99,3362,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21810,Eleuia,Frightful Foreman,Range,Rare,Necrosis,Summon,Blazeland Lizardfolk,Barbarian,,,,,,,,,,,,,0,129,0.5,0.1,109,2299,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21820,Ihuicatl,Blitzen,Range,Epic,Lightning,Support,Blazeland Lizardfolk,Wizard,,,,,,,,,,,,,0,128,0.5,0.1,115,2530,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21830,Dargo,Sorcerer of Fatality,Range,Epic,Poison,Corrosion,,,,,,,,,,,,,,,0,137,0.5,0.1,111,2446,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21840,Yagnatz,Amateur Cook,Range,Rare,Lightning,Dauntless,Swamp Lizardfolk,Ranger,,,,,,,,,,,,,0,128,0.5,0.1,103,2263,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21850,Kyrza,Overkiller,Melee,Epic,Necrosis,Support,Swamp Lizardfolk,Scourge,,,,,,,,,,,,,0,124,0.5,0.1,105,3422,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21860,Sabrina,Poison Vine,Range,Rare,Poison,Corrosion,,,,,,,,,,,,,,,0,117,0.5,0.1,101,2249,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21870,Reytah,Queen of the Swamp,Range,Legendary,Poison,Support,Swamp Lizardfolk,Shaman,,,,,,,,,,,,,0,146,0.5,0.1,125,2518,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21880,Bionphray,Tyrannical Horn,Melee,Legendary,Lightning,Defense,Valley Minotaur,Warrior,,,,,,,,,,,,,0,142,0.5,0.1,133,3938,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21890,Terez,Enraged Warrior,Melee,Common,Lightning,Dauntless,Valley Minotaur,Warrior,,,,,,,,,,,,,0,110,0.5,0.1,87,2982,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21900,Pargu,Abyssal Howl,Range,Epic,Ice,Support,Valley Minotaur,Druid,,,,,,,,,,,,,0,126,0.5,0.1,112,2648,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+21910,Olgan,Gatekeeper,Melee,Epic,Ice,Frost,Valley Minotaur,Warrior,,,,,,,,,,,,,0,125,0.5,0.1,99,3505,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21920,Percival,Crimson Robe,Range,Rare,Fire,Burn,The Unstill,Wizard,,,,,,,,,,,,,0,118,0.5,0.1,104,2302,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21930,Joyce,Emissary of Fortune,Range,Epic,Necrosis,Summon,Human,Sorcerer,,,,,,,,,,,,,0,139,0.5,0.1,111,2448,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21940,Haug,Mountain Keeper,Range,Rare,Lightning,Dauntless,Valley Minotaur,Warrior,,,,,,,,,,,,,0,127,0.5,0.1,104,2345,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21950,Caraman,Runaway Flame,Melee,Epic,Fire,Wild,Undead,Sorcerer,,,,,,,,,,,,,0,133,0.5,0.1,107,3249,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21960,Phaessa,Auric Kith,Range,Legendary,Radiance,Support,Blazeland Lizardfolk,Sorcerer,,,,,,,,,,,,,0,129,0.5,0.1,123,2810,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21970,Caspar,Maniac Whiteface,Range,Legendary,Fire,Wild,Human,Sorcerer,,,,,,,,,,,,,0,147,0.5,0.1,123,2544,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21980,Zethos,Mountain Keeper,Range,Rare,Ice,Frost,Valley Minotaur,Warrior,,,,,,,,,,,,,0,129,0.5,0.1,102,2274,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+21990,Chitter,Speculator,Melee,Epic,Necrosis,Shadow,,,,,,,,,,,,,,,0,127,0.5,0.1,100,3456,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22000,Zadie,Iron Blade,Melee,Rare,Fire,Support,Ratfolk,Rogue,,,,,,,,,,,,,0,119,0.5,0.1,90,3245,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22010,Twitch,Corpse Flinger,Range,Legendary,Poison,Poison,Ratfolk,Scourge,,,,,,,,,,,,,0,165,0.5,0.1,125,2569,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22020,Shink,Flutter Ear,Melee,Epic,Poison,Poison,Ratfolk,Rogue,,,,,,,,,,,,,0,129,0.5,0.1,100,3345,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22030,Whisk,Boneface,Melee,Legendary,Poison,Corrosion,Ratfolk,Scourge,,,,,,,,,,,,,0,151,0.5,0.1,110,3176,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22040,Zeffi,Granny Prophet,Range,Legendary,Lightning,Support,Ratfolk,Shaman,,,,,,,,,,,,,0,136,0.5,0.1,128,2806,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22050,Rook,Micelord,Range,Legendary,Poison,Corrosion,Ratfolk,Summoner,,,,,,,,,,,,,0,140,0.5,0.1,125,2898,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22060,Sagomir,Knight-at-Heart,Melee,Legendary,Radiance,Defense,Horsefolk,Warrior,,,,,,,,,,,,,0,140,0.5,0.1,121,4174,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22080,Nadja,Frost Tusk,Range,Epic,Ice,Ice Blast,,,,,,,,,,,,,,,0,140,0.5,0.1,111,2502,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22110,Bleddyn,Tundra Ranger,Range,Epic,Ice,Ice Blast,Human,Ranger,,,,,,,,,,,,,0,131,0.5,0.1,109,2434,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22130,Shahla,Terpsichorean,Range,Legendary,Radiance,Aura,,,,,,,,,,,,,,,0,144,0.5,0.1,118,2578,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22140,Ashqar,Fervent Grit,Melee,Epic,Fire,Support,,,,,,,,,,,,,,,0,124,0.5,0.1,101,3599,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22150,Nord,Northland Warrior,Melee,Rare,Ice,Ice Blast,Human,Warrior,,,,,,,,,,,,,0,117,0.5,0.1,93,3182,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22180,Irzillas,King of Desolation,Melee,Legendary,Necrosis,Summon,Undead,Warrior,,,,,,,,,,,,,0,150,0.5,0.1,109,4019,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22190,Fitz,Undead Warrior,Melee,Rare,Necrosis,Defense,Undead,Warrior,,,,,,,,,,,,,0,117,0.5,0.1,99,3592,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22200,Olaf,Undead Warrior,Melee,Common,Necrosis,Defense,Undead,Warrior,,,,,,,,,,,,,0,103,0.5,0.1,93,3125,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22210,Vojeh,Undead Sorcerer,Range,Rare,Ice,Frost,Undead,Wizard,,,,,,,,,,,,,0,120,0.5,0.1,89,3090,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22220,Berengar,Treader of the Dead,Melee,Legendary,Necrosis,Defense,Undead,Death Knight,,,,,,,,,,,,,0,151,0.5,0.1,125,4503,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22230,Hochadir,Winter Cavalry,Melee,Legendary,Ice,Frost,Undead,Death Knight,,,,,,,,,,,,,0,143,0.5,0.1,115,3495,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22250,Daphne,Moon Casket,Range,Legendary,Necrosis,Shadow,Undead,Wizard,,,,,,,,,,,,,0,177,0.5,0.1,111,2404,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22260,Taldie,The Mad-eye Envoy,Range,Epic,Necrosis,Shadow,The Unstill,Wizard,,,,,,,,,,,,,0,142,0.5,0.1,110,2385,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22270,Vasska,Shadowcloak,Melee,Rare,Necrosis,Summon,The Unstill,Scourge,,,,,,,,,,,,,0,124,0.5,0.1,98,3234,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22280,Ozul,The Crimson Nightmare,Range,Legendary,Necrosis,Shadow,Human,Warlock,,,,,,,,,,,,,0,154,0.5,0.1,125,2625,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22290,Voresh,The Pale Cantor,Range,Epic,Ice,Support,The Unstill,Wizard,,,,,,,,,,,,,0,138,0.5,0.1,113,2551,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22300,Premtsa,Bearer of Death,Range,Legendary,Necrosis,Summon,The Unstill,Wizard,,,,,,,,,,,,,0,152,0.5,0.1,125,2701,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22310,Ghul’ende,Silent Echo,Range,Legendary,Necrosis,Support,Fallen Soul Monsters,Sorcerer,,,,,,,,,,,,,0,145,0.5,0.1,116,2505,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22320,Zhar'loth,The Corrupted,Range,Epic,Necrosis,Support,Fallen Soul Monsters,Sorcerer,,,,,,,,,,,,,0,138,0.5,0.1,112,2439,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22330,Elecebre,Mesmerizing Singer,Range,Legendary,Ice,Support,Nymph,Sorcerer,,,,,,,,,,,,,0,122,0.5,0.1,135,3427,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22340,Durem,Stoutbeard,Range,Legendary,Fire,Burn,Aerial Dwarf,Gunslinger,,,,,,,,,,,,,0,153,0.5,0.1,121,2700,0,Lv.1（1星）,0,0,Lv.1（1-Star）,Lv.1（1星）
+22350,Nimbus,Storm Falcon,Range,Epic,Lightning,Dauntless,Aerial Dwarf,-,,,,,,,,,,,,,0,132,0.5,0.1,106,2509,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22360,Gloin,Aerial Watcher,Range,Rare,Fire,Support,Aerial Dwarf,-,,,,,,,,,,,,,0,122,0.5,0.1,106,2354,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22370,Orfenna,Thunder-Inspired,Range,Legendary,Lightning,Lightning Blast,,,,,,,,,,,,,,,0,142,0.5,0.1,117,2522,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22380,Eirnin,Will of Steel,Range,Epic,Fire,Burn,,,,,,,,,,,,,,,0,131,0.5,0.1,111,2477,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22390,Altair,Aerial Watcher,Range,Rare,Lightning,Dauntless,Aerial Dwarf,Ranger,,,,,,,,,,,,,0,127,0.5,0.1,105,2314,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22420,Perseus,Hexapod Preyer,Melee,Legendary,Necrosis,Support,,,,,,,,,,,,,,,0,121,0.5,0.1,120,3894,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22450,Feliciberta,Weaver,Melee,Legendary,Ice,Support,,,,,,,,,,,,,,,0,131,0.5,0.1,113,3744,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22460,Majtan,Sparkle Tusk,Melee,Legendary,Fire,Burn,,,,,,,,,,,,,,,0,134,0.5,0.1,119,3844,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22470,Astaion,Sunshader,Range,Legendary,Necrosis,Support,,,,,,,,,,,,,,,0,135,0.5,0.1,124,2664,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22490,Miro,Map Master,Melee,Legendary,Ice,Ice Blast,,,,,,,,,,,,,,,0,140,0.5,0.1,115,3788,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22540,Tarulla,Enchanting Blade,Melee,Epic,Radiance,Support,,,,,,,,,,,,,,,0,119,0.5,0.1,101,3588,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22590,Vex,Bounty in Blood,Melee,Epic,Lightning,Support,,,,,,,,,,,,,,,0,132,0.5,0.1,100,3300,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22640,Bronagh,Ratscal,Melee,Rare,Poison,Poison,,,,,,,,,,,,,,,0,118,0.5,0.1,92,3099,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22660,Alistair,Stranger,Melee,Rare,Fire,Support,,,,,,,,,,,,,,,0,114,0.5,0.1,92,3138,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22680,Calavera,Jinxed Dancer,Melee,Legendary,Poison,Support,,,,,,,,,,,,,,,0,128,0.5,0.1,109,3735,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22690,Synarell,Blazing Dawn,Range,Legendary,Fire,Support,,,,,,,,,,,,,,,0,146,0.5,0.1,115,2573,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22710,Yfeir,New Leaf,Melee,Legendary,Radiance,Support,,,,,,,,,,,,,,,0,133,0.5,0.1,114,3825,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22720,Thalorian,Forest Guardian,Melee,Epic,Lightning,Dauntless,,,,,,,,,,,,,,,0,128,0.5,0.1,125,3425,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22770,Ylindra,Tattered Garment,Melee,Rare,Necrosis,Support,,,,,,,,,,,,,,,0,116,0.5,0.1,93,3168,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22780,Fathomdown,Torrential Voltage,Melee,Legendary,Lightning,Defense,,,,,,,,,,,,,,,0,135,0.5,0.1,113,3622,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22790,Lincos,Melody of Myriad Tides,Range,Legendary,Radiance,Aura,,,,,,,,,,,,,,,0,143,0.5,0.1,118,2639,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22800,Aemonleyda,Phantasma of the Reef,Melee,Legendary,Radiance,Aura,,,,,,,,,,,,,,,0,155,0.5,0.1,118,3683,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22810,Shinnah,Undertaker,Range,Legendary,Ice,Ice Blast,Merfolk,Shaman,,,,,,,,,,,,,0,147,0.5,0.1,122,2668,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22820,Theohein,Mecha Maniac,Range,Epic,Radiance,Aura,,,,,,,,,,,,,,,0,133,0.5,0.1,112,2445,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22840,Baelvernal,Karmic Inverter,Range,Epic,Necrosis,Support,,,,,,,,,,,,,,,0,137,0.5,0.1,108,2438,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22850,Pearl,Misty Sea Gem,Range,Epic,Poison,Support,,,,,,,,,,,,,,,0,127,0.5,0.1,113,2467,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22860,Cykkol,Misty Sea Guard,Melee,Rare,Radiance,Aura,,,,,,,,,,,,,,,0,118,0.5,0.1,91,3188,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22870,Roberta,Misty Sea Guard,Range,Rare,Ice,Ice Blast,,,,,,,,,,,,,,,0,127,0.5,0.1,103,2322,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22980,Drizzt Do'Urden,Twinblade Ranger,Melee,Legendary,Ice,Frost,Drow,Ranger,,,,,,,,,,,,,0,149,0.5,0.1,117,3362,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+22990,Theodemer,Corpse Heir,Melee,Legendary,Ice,Defense,,,,,,,,,,,,,,,0,130,0.5,0.1,139,3680,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23000,Feenja,Silent Bride,Range,Legendary,Ice,Support,,,,,,,,,,,,,,,0,141,0.5,0.1,123,2833,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23120,Irma,Nightwatchman,Melee,Epic,Necrosis,Defense,Ridge Halfling,Warrior,,,,,,,,,,,,,0,122,0.5,0.1,112,3379,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23130,Estella,Spectralight,Range,Epic,Necrosis,Support,Human,Wizard,,,,,,,,,,,,,0,120,0.5,0.1,111,2429,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23140,Gladros,Simpering,Range,Epic,Necrosis,Support,Blazeland Lizardfolk,Warrior,,,,,,,,,,,,,0,141,0.5,0.1,108,2400,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23150,Deverick,Diener,Range,Epic,Necrosis,Support,Valley Minotaur,Wizard,,,,,,,,,,,,,0,133,0.5,0.1,111,2437,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23160,Elvis,Shield of Protection,Melee,Epic,Ice,Defense,Undead,Warrior,,,,,,,,,,,,,0,118,0.5,0.1,119,3189,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23170,Gareth,Frontier Blade,Melee,Epic,Poison,Defense,Human,Knight,,,,,,,,,,,,,0,119,0.5,0.1,104,3421,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23180,Garian,Serendipitous Guard,Range,Epic,Poison,Support,Human,Wizard,,,,,,,,,,,,,0,124,0.5,0.1,109,2428,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23190,Vicuc,The Ever Cherished,Range,Epic,Poison,Support,wood elf,Druid,,,,,,,,,,,,,0,128,0.5,0.1,104,2260,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23200,Theodore,Great Choice,Range,Epic,Poison,Support,Dwarf,Ranger,,,,,,,,,,,,,0,128,0.5,0.1,112,2507,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23210,Catherine,The Remnant Sun,Range,Epic,Radiance,Support,Human,Wizard,,,,,,,,,,,,,0,115,0.5,0.1,111,2434,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23220,Duling,Rusty Nail,Melee,Epic,Radiance,Defense,Dwarf,Warrior,,,,,,,,,,,,,0,120,0.5,0.1,119,3309,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23230,Gumm,Luminaura,Range,Epic,Radiance,Support,Forest Troll,Shaman,,,,,,,,,,,,,0,129,0.5,0.1,108,2355,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23240,Isolde,The Pursuer,Melee,Epic,Fire,Defense,Human,Warrior,,,,,,,,,,,,,0,118,0.5,0.1,104,3390,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23250,Adolphus,Spider Mother's Faithful,Range,Epic,Fire,Support,Deep Elf,Wizard,,,,,,,,,,,,,0,120,0.5,0.1,110,2477,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23260,Liko,Flame Eater,Range,Epic,Fire,Support,Human,Sorcerer,,,,,,,,,,,,,0,123,0.5,0.1,110,2376,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23270,Volthug,The Outrunner,Melee,Epic,Lightning,Defense,Orc,Warrior,,,,,,,,,,,,,0,126,0.5,0.1,98,3199,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23280,Nathaniel,Nightwatchman,Range,Epic,Lightning,Support,Human,Wizard,,,,,,,,,,,,,0,125,0.5,0.1,111,2415,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23290,Shook,Faithful Servant,Range,Epic,Lightning,Support,Ratfolk,Rogue,,,,,,,,,,,,,0,125,0.5,0.1,107,2388,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23300,Uloar,Deepwood,Range,Rare,Necrosis,Support,wood elf,Druid,,,,,,,,,,,,,0,130,0.5,0.1,104,2326,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23310,Edgar,The Betrayed,Melee,Rare,Necrosis,Defense,Human,Ranger,,,,,,,,,,,,,0,113,0.5,0.1,114,3189,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23320,Altin,Forest Dweller,Melee,Rare,Poison,Defense,wood elf,Warrior,,,,,,,,,,,,,0,117,0.5,0.1,104,3201,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23330,Letalis,Gloomgarb,Range,Rare,Poison,Support,The Unstill,Wizard,,,,,,,,,,,,,0,124,0.5,0.1,98,3139,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23340,Yamyra,Unbridled Heart,Melee,Rare,Fire,Defense,Rural Halfling,Warrior,,,,,,,,,,,,,0,110,0.5,0.1,104,3183,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23350,Sallyanne,Blue Shield,Melee,Rare,Lightning,Defense,Human,Warrior,,,,,,,,,,,,,0,113,0.5,0.1,109,3181,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
+23360,Elminster Aumar,Sage of Shadowdale,Range,Legendary,Fire,Support,,,,,,,,,,,,,,,0,123,0.5,0.1,125,3138,0,Lv.1（1星）,0,,Lv.1（1-Star）,Lv.1（1星）
