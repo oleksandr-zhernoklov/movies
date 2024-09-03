@@ -181,7 +181,7 @@ def generate_html_table(successful_results):
     rendered_html = template.render(successful_results=successful_results)
 
     # Save the rendered HTML to a file
-    with open('movie_results.html', 'w', encoding='utf-8') as html_file:
+    with open('./movie_results.html', 'w', encoding='utf-8') as html_file:
         html_file.write(rendered_html)
 
     print('HTML file generated successfully: movie_results.html')
@@ -216,16 +216,13 @@ def parse_ftp_listing(listing):
 def size_in_gb(size_bytes):
     return size_bytes / (1024 ** 3)  # Convert bytes to gigabytes
 
-
-def extract_year(filename):
-    year_pattern = re.compile(r'\((\d{4})\)')
+    # Regular expression pattern to extract the year from file names
+def extract_year(filename,year_pattern):
     match = year_pattern.search(filename)
     if match:
         return match.group(1)
     return None
-
 # Function to process video files from multiple directories
-
 def process_video_files(directories, tmdb_api_key, ftp_details=None):
     video_files = []
     ftp_file_sizes = {}
@@ -251,6 +248,9 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
     successful_results = []
     failed_results = []
 
+
+
+    
     # TMDB API request
     for file in video_files:
         # Extract the filename without extension
@@ -266,15 +266,19 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
 
         # Extract the movie name
         pattern = r"^(.*?)\s\(\d{4}\)"
+        year_pattern = re.compile(r'\((\d{4})\)')
+        file_year = extract_year(filename,year_pattern)
+
+
         match = re.match(pattern, filename)
         if match:
             movie_name = match.group(1)
-            print(match.group(1),'---- ',file)
+            #print(match.group(1) +" path: "+file)
         else:
-            # No regexp found
+            # No movie found
             failed_results.append({'File': file, 'Result': 'No regexp'})
+            print(file+ 'Result : No regexp')
             continue
-        file_year = extract_year(filename)
 
         # Make a request to TMDB API to search for the movie
         url = f"https://api.themoviedb.org/3/search/movie?api_key={tmdb_api_key}&query={movie_name}"
@@ -292,7 +296,6 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
                 movie_genre_ids = movie['genre_ids']
                 movie_id = movie['id']
                 movie_year = movie['release_date'][:4] if movie['release_date'] else 'N/A'
-
                 # Check if file_year matches movie_year
                 if file_year != movie_year:
                     # Try to find the correct movie year
@@ -302,7 +305,6 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
                     else:
                         failed_results.append({'File': file, 'Result': f'Unable to find corresponding movie year for {filename}'})
                         continue
-
                 # Map genre ids to corresponding values
                 genre_values = [get_genre_value(genre_id) for genre_id in movie_genre_ids]
 
@@ -339,6 +341,7 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
                     'Poster': movie_poster,
                     'Trailer': trailer_link
                 })
+                print(match.group(1) +" path: "+file +" Title: "+ movie_title+" Year: "+movie_year)
             else:
                 # No movie found
                 failed_results.append({'File': file, 'Result': 'No movie found'})
@@ -348,7 +351,6 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
 
     successful_results = sorted(successful_results, key=lambda x: x.get('Year') or '')
     return successful_results, failed_results
-
 def find_movie_year(movie_title, file_year):
     # Implement your logic to find the correct movie year
     # based on the movie title and file year
@@ -361,8 +363,6 @@ def find_movie_year(movie_title, file_year):
         return closest_match[0]
     else:
         return None
-
-
 def save_results_to_csv_and_excel(successful_results, failed_results):
     # Save successful results to CSV file
     successful_csv_path = 'successful_results.csv'
@@ -398,7 +398,7 @@ def save_results_to_csv_and_excel(successful_results, failed_results):
 def main():
     # List of directories to process
     directories = [
-        r'G:/Movies'
+        r'G:/Movies/'
         # Add more directories as needed
     ]
 
