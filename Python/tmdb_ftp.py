@@ -98,6 +98,7 @@ def generate_html_table(successful_results):
                 <th>Rutracker Link</th>
                 <th>Poster</th>
                 <th>Trailer</th>
+                <th>Source</th>
             </tr>
         </thead>
         <tbody>
@@ -119,6 +120,7 @@ def generate_html_table(successful_results):
                     <td><a href="https://rutracker.org/forum/tracker.php?nm={{ result['Title'] }}" target="_blank">Rutracker</a></td>
                     <td class="poster-column"><img src="{{ result['Poster'] }}" alt="Poster"></td>
                     <td><a href="{{ result['Trailer'] }}" target="_blank">Trailer</a></td>
+                    <td>{{ result['Source'] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -187,7 +189,7 @@ def generate_html_table(successful_results):
     print('HTML file generated successfully: movie_results.html')
 
 # Function to get FTP file listing
-def get_ftp_listing(host, user, password, working_dir='2tb/Download2/Movies'):
+def get_ftp_listing(host, user, password, working_dir='/2tb/Download2/Movies'):
     try:
         ftp = ftplib.FTP(host, user, password)
         if working_dir:
@@ -232,7 +234,7 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
         for root, dirs, files in os.walk(directory):
             for file in files:
                 if file.lower().endswith(('.mp4', '.avi', '.mkv')):
-                    video_files.append(os.path.join(root, file))
+                    video_files.append((os.path.join(root, file), 'local'))
     
     # Process FTP directory if details are provided
     if ftp_details:
@@ -241,24 +243,21 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
             parsed_files = parse_ftp_listing(ftp_listing)
             for name, size in parsed_files:
                 if name.lower().endswith(('.mp4', '.avi', '.mkv')):
-                    video_files.append(name)
-                    ftp_file_sizes[name] = round(size_in_gb(size),2)
+                    video_files.append((name, 'ftp'))
+                    ftp_file_sizes[name] = round(size_in_gb(size), 2)
 
     # Lists to store successful and failed results
     successful_results = []
     failed_results = []
 
-
-
-    
     # TMDB API request
-    for file in video_files:
+    for file, source in video_files:
         # Extract the filename without extension
         filename = os.path.splitext(os.path.basename(file))[0]
         file_gb = round(os.path.getsize(file) / (1024 * 1024 * 1024), 2) if os.path.exists(file) else 'N/A'
 
         # If file is from FTP, use the FTP file size
-        if file in ftp_file_sizes:
+        if source == 'ftp' and file in ftp_file_sizes:
             file_gb = ftp_file_sizes[file]
 
         # Remove year from filename (inside brackets or after dot)
@@ -267,17 +266,14 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
         # Extract the movie name
         pattern = r"^(.*?)\s\(\d{4}\)"
         year_pattern = re.compile(r'\((\d{4})\)')
-        file_year = extract_year(filename,year_pattern)
-
+        file_year = extract_year(filename, year_pattern)
 
         match = re.match(pattern, filename)
         if match:
             movie_name = match.group(1)
-            #print(match.group(1) +" path: "+file)
         else:
             # No movie found
             failed_results.append({'File': file, 'Result': 'No regexp'})
-            print(file+ 'Result : No regexp')
             continue
 
         # Make a request to TMDB API to search for the movie
@@ -288,60 +284,59 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
             # Request successful
             data = response.json()
             if data['results']:
-                # Get the first movie result
-                movie = data['results'][0]
+                # Get the first movie result that matches the file's year
+                movie = next(
+                    (movie for movie in data['results'] if movie.get('release_date', '').startswith(file_year)), 
+                    None
+                )
 
-                # Extract relevant information from the response
-                movie_title = movie['title']
-                movie_genre_ids = movie['genre_ids']
-                movie_id = movie['id']
-                movie_year = movie['release_date'][:4] if movie['release_date'] else 'N/A'
-                # Check if file_year matches movie_year
-                if file_year != movie_year:
-                    # Try to find the correct movie year
-                    correct_year = find_movie_year(movie_title, file_year)
-                    if correct_year:
-                        movie_year = correct_year
-                    else:
-                        failed_results.append({'File': file, 'Result': f'Unable to find corresponding movie year for {filename}'})
-                        continue
-                # Map genre ids to corresponding values
-                genre_values = [get_genre_value(genre_id) for genre_id in movie_genre_ids]
+                if movie:
+                    # Extract relevant information from the response
+                    movie_title = movie['title']
+                    movie_genre_ids = movie['genre_ids']
+                    movie_id = movie['id']
+                    movie_year = movie['release_date'][:4] if movie['release_date'] else 'N/A'
 
-                # Get movie details
-                details_url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={tmdb_api_key}&append_to_response=videos"
-                details_response = requests.get(details_url)
-                details_data = details_response.json()
+                    # Map genre ids to corresponding values
+                    genre_values = [get_genre_value(genre_id) for genre_id in movie_genre_ids]
 
-                movie_length = details_data.get('runtime', 'N/A')
-                movie_rating = details_data.get('vote_average', 'N/A')
-                movie_description = details_data.get('overview', 'N/A')
-                movie_poster = f"https://image.tmdb.org/t/p/w200{details_data.get('poster_path', '')}"
-                tmdb_link = f"https://www.themoviedb.org/movie/{movie_id}"
-                
-                # Extract trailer information
-                videos_data = details_data.get('videos', {})
-                trailer = next((video for video in videos_data.get('results', []) if video['type'] == 'Trailer'), None)
-                trailer_link = f"https://www.youtube.com/watch?v={trailer['key']}" if trailer else 'N/A'
+                    # Get movie details
+                    details_url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={tmdb_api_key}&append_to_response=videos"
+                    details_response = requests.get(details_url)
+                    details_data = details_response.json()
 
-                # Store successful result
-                successful_results.append({
-                    'File': file.replace(",", ""),
-                    'File_gb': file_gb,
-                    'Title': movie_title,
-                    'Genre': genre_values,
-                    'TMDB ID': movie_id,
-                    'Year': movie_year,
-                    'Length': movie_length,
-                    'TMDB Link': tmdb_link,
-                    'Description': movie_description,
-                    'Rating': movie_rating,
-                    'Toloka Link': f"https://toloka.to/tracker.php?nm={movie_title}",
-                    'Rutracker Link': f"https://rutracker.org/forum/tracker.php?nm={movie_title}",
-                    'Poster': movie_poster,
-                    'Trailer': trailer_link
-                })
-                print(match.group(1) +" path: "+file +" Title: "+ movie_title+" Year: "+movie_year)
+                    movie_length = details_data.get('runtime', 'N/A')
+                    movie_rating = details_data.get('vote_average', 'N/A')
+                    movie_description = details_data.get('overview', 'N/A')
+                    movie_poster = f"https://image.tmdb.org/t/p/w200{details_data.get('poster_path', '')}"
+                    tmdb_link = f"https://www.themoviedb.org/movie/{movie_id}"
+
+                    # Extract trailer information
+                    videos_data = details_data.get('videos', {})
+                    trailer = next((video for video in videos_data.get('results', []) if video['type'] == 'Trailer'), None)
+                    trailer_link = f"https://www.youtube.com/watch?v={trailer['key']}" if trailer else 'N/A'
+
+                    # Store successful result
+                    successful_results.append({
+                        'File': file.replace(",", ""),
+                        'File_gb': file_gb,
+                        'Title': movie_title,
+                        'Genre': genre_values,
+                        'TMDB ID': movie_id,
+                        'Year': movie_year,
+                        'Length': movie_length,
+                        'TMDB Link': tmdb_link,
+                        'Description': movie_description,
+                        'Rating': movie_rating,
+                        'Toloka Link': f"https://toloka.to/tracker.php?nm={movie_title}",
+                        'Rutracker Link': f"https://rutracker.org/forum/tracker.php?nm={movie_title}",
+                        'Poster': movie_poster,
+                        'Trailer': trailer_link,
+                        'Source': source  # Adding source information (local or ftp)
+                    })
+                    print(match.group(1) +" path: "+file +" Title: "+ movie_title+" Year: "+movie_year)
+                else:
+                    failed_results.append({'File': file, 'Result': 'No movie found for the file year'})
             else:
                 # No movie found
                 failed_results.append({'File': file, 'Result': 'No movie found'})
@@ -351,6 +346,7 @@ def process_video_files(directories, tmdb_api_key, ftp_details=None):
 
     successful_results = sorted(successful_results, key=lambda x: x.get('Year') or '')
     return successful_results, failed_results
+
 def find_movie_year(movie_title, file_year):
     # Implement your logic to find the correct movie year
     # based on the movie title and file year
@@ -366,7 +362,7 @@ def find_movie_year(movie_title, file_year):
 def save_results_to_csv_and_excel(successful_results, failed_results):
     # Save successful results to CSV file
     successful_csv_path = 'successful_results.csv'
-    successful_fields = ['File', 'File_gb', 'Title', 'Genre', 'TMDB ID', 'Year', 'Length', 'TMDB Link', 'Description', 'Rating', 'Toloka Link', 'Rutracker Link', 'Poster', 'Trailer']
+    successful_fields = ['File', 'File_gb', 'Title', 'Genre', 'TMDB ID', 'Year', 'Length', 'TMDB Link', 'Description', 'Rating', 'Toloka Link', 'Rutracker Link', 'Poster', 'Trailer','Source']
 
     with open(successful_csv_path, 'w', newline='', encoding='utf-8') as successful_file:
         writer = csv.DictWriter(successful_file, fieldnames=successful_fields)
@@ -407,7 +403,7 @@ def main():
         'host': '45.152.75.187',
         'user': 'saf',
         'pass': 'iMV9vDHFM@9Drvb',
-        'path': '2tb/Download2/Movies'
+        'path': '/2tb/Download2/Movies'
     }
 
     # TMDB API key
